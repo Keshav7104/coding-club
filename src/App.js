@@ -1,10 +1,12 @@
-
+import Nav  from './Components/layout/navbar';
 import './App.css';
+// import  Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <h1>nit ap coding club</h1>
+    <div >
+      <Nav></Nav>
+      <Footer></Footer>
     </div>
   );
 }
