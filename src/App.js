@@ -1,13 +1,19 @@
 import Nav  from './Components/layout/navbar';
-import Footer from './Components/Footer';
+import Footer from './Components/layout/Footer';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import './App.css';
 
+
 function App() {
+
   return (
-    <div >
+      <Router>
       <Nav></Nav>
+      <Routes>
+        <Route path='/'/>
+      </Routes>
       <Footer></Footer>
-    </div>
+      </Router>
   );
 }
 
