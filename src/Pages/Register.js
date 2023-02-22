@@ -22,8 +22,8 @@ const Register = (props) => {
       const registerschema = yup.object().shape({
         fullname : yup.string("Your should consist only alphabets").required("Please enter your name"),
         email : yup.string().email("Please Provide an Valid email").required("Please Provide an Valid email"),
-        branch : yup.string().oneOf(["cse",'ece','ee','me','ce',null]).required(),
-        roll : yup.string().max(11).min(8).required("Please enter your Academic Roll-No."),
+        branch : yup.string().required("Please enter your branch in which you are studying"),
+        roll : yup.string().max(11,"please give correct Roll-No.").min(8,"please give correct Roll-No.").required("Please enter your Academic Roll-No."),
         year : yup.number("Year should be a no. 1-4").required("Please Enter your year of course").min(1,"Year should be a no. 1-4").max(4,"Year should be a no. 1-4"),
         prolan : yup.string()
       })
@@ -51,27 +51,41 @@ const Register = (props) => {
           <form  onSubmit={handleSubmit(onsubmit)}>
             <h2>Register Here</h2>
             <div className="input error">
-              <label htmlFor='Name' />
+              <p>Name</p>
             <input type="text" placeholder="Enter your full name" {...register("fullname")}/>
             <span>{errors.fullname?.message}</span>
             </div>
             <div className="input error">
+              <p>Email</p>
             <input type="text" placeholder="Enter your email" {...register("email")}/>
             <span>{errors.email?.message}</span>
             </div>
+            <div className='input error'>
+              <p>Course</p>
+              <input type="radio" name="Course" value="UG" />
+              <label for="UG">UG</label>
+              <input type="radio" name="Course" value="PG" />
+              <label for="PG">PG</label>
+              <input type="radio" name="Course" value="Phd" />
+              <label for="Phd">Phd</label>
+            </div>
             <div className="input error">
-            <input type="text" placeholder="Branch(cse,ece,ee,me,ce)" {...register("branch")}/>
+              <p>Branch</p>
+            <input type="text" placeholder="Branch" {...register("branch")}/>
             <span>{errors.branch?.message}</span>
             </div>
             <div className="input error">
+              <p>Roll-no.</p>
             <input type="text" placeholder="Enter your roll-no" {...register("roll")}/>
             <span>{errors.roll?.message}</span>
             </div>
             <div className="input error">
+              <p>Year</p>
             <input type='number' placeholder="Enter your year of studying" {...register("year")}/>
             <span>{errors.year?.message}</span>
             </div>
             <div className="input error">
+              <p>Preferred Coding language</p>
             <input type="text" placeholder="Enter any language if you know" {...register("prolan")}/>
             <span>{errors.prolan?.message}</span>
             </div>
@@ -82,14 +96,17 @@ const Register = (props) => {
           <form onSubmit={handleSubmit2(checkadmin)}>
             <h2>login</h2>
             <div className='input error'>
+              <p>Login-id</p>
             <input type="text" placeholder='Enter your login-id' {...register2("login")}/>
             <span>{errors2.login?.message}</span>
             </div>
             <div className='input error'>
+              <p>Password</p>
                 <input type="password" placeholder='Password' {...register2("password")} />
                 <span>{errors2.password?.message}</span>
             </div>
             <div className='input errors'>
+              <p>confirm-Password</p>
                 <input type="password" placeholder='Confirm-Password' {...register2("confirmPassword")} />
                 <span>{errors2.confirmPassword?.message}</span>
             </div>
