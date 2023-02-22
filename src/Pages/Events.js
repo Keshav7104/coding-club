@@ -10,7 +10,7 @@ return(
    <div id="wrapper">
 
 <div className="container">
-    <img src={background} className="background" width={100}/>
+    <img src={background} className="background"/>
     <img src={foreground } className="foreground"/>
     <h1>EVENTS</h1>
 
