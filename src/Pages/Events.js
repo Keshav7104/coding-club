@@ -1,16 +1,18 @@
 import React from "react";
 import './Events.css'
+import background from './background.png'
+import foreground from './foreground.png'
 
-export default function Events() {
+ function Events () {
 
 return(
     <>
-    <div id="wrapper">
+   <div id="wrapper">
 
 <div className="container">
-    <img src="./background.png" className="background"/>
-    <img src="foreground.png" className="foreground"/>
-    <h1>ADVENTURE</h1>
+    <img src={background} className="background" width={100}/>
+    <img src={foreground } className="foreground"/>
+    <h1>EVENTS</h1>
 
 </div>
 
@@ -22,7 +24,7 @@ return(
         voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
         ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
         autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <br> </br>
+     
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
         repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
         blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
@@ -39,7 +41,7 @@ return(
         voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
         ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
         autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <br> </br>
+        <hr></hr>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
         repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
         blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
@@ -56,7 +58,7 @@ return(
         voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
         ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
         autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <br> </br>
+        <hr></hr>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
         repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
         blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
@@ -73,7 +75,7 @@ return(
         voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
         ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
         autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <br> </br>
+        <hr></hr>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
         repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
         blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
@@ -86,6 +88,9 @@ return(
 
 
 </div>
- </>
+
+     </>
 );
 }
+
+export default Events 
