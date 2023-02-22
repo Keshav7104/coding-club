@@ -23,6 +23,7 @@ function App() {
         <Route path="/events" element={<Events />}/>
         
       </Routes>
+
       <Footer></Footer>
       </Router>
       </Admin.Provider>
