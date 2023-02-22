@@ -68,7 +68,7 @@ export default function Nav() {
                 </NavLink>
             </li>
             <li  >
-                <NavLink className="list-item" to='./'>Register
+                <NavLink className="list-item" to='/Register'>Register
                 </NavLink>
             </li>
             </ul>

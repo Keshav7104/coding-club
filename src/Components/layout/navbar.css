@@ -4,68 +4,74 @@
   box-sizing: border-box;
   font-family: Open sans;
 }
-html,body{
-  height: 100%;
+
+html, body {
+  /* height: 100%; */
   width: 100%;
 }
-.theme-light{
+
+.theme-light {
   width: 100%;
   --color-nav:lightseagreen;
   --color-navte:white;
   --color-logo:lightseagreen;
-  --color-top : white;
-  --color-navdo : rgb(20, 126, 121);
-  --color-navs : #a3b2b2;
-  --color-navho : #046264;
-  --color-navhote : white;
-  --color-navhodo : #034142;
-  --color-navhori : #034142;
-  --color-coding : white;
-  --color-pundit : lightseagreen;
-  --color-butt :black;
-  --color-buttte : cyan;
+  --color-top: white;
+  --color-navdo: rgb(20, 126, 121);
+  --color-navs: #a3b2b2;
+  --color-navho: #046264;
+  --color-navhote: white;
+  --color-navhodo: #034142;
+  --color-navhori: #034142;
+  --color-coding: white;
+  --color-pundit: lightseagreen;
+  --color-butt:black;
+  --color-buttte: cyan;
   --color-top:white;
   --backclip: url("../img&vid/light-nav-back.gif");
   --rgba: 233,233,233;
 }
-.theme-dark{
+
+.theme-dark {
   width: 100%;
   --color-navdo:darkcyan;
   --color-navte:black;
   --color-logo: #83d1d3;
-  --color-top : black;
-  --color-nav : #83d1d3;
-  --color-navs : white;
-  --color-navho : #83d1d3;
-  --color-navhote : white;
-  --color-navhodo : #068385;
-  --color-navhori : #068385;
-  --color-coding : #83d1d3;
-  --color-pundit : black;
-  --color-butt :white;
-  --color-buttte : #057274;
+  --color-top: black;
+  --color-nav: #83d1d3;
+  --color-navs: white;
+  --color-navho: #83d1d3;
+  --color-navhote: white;
+  --color-navhodo: #068385;
+  --color-navhori: #068385;
+  --color-coding: #83d1d3;
+  --color-pundit: black;
+  --color-butt:white;
+  --color-buttte: #057274;
   --color-navbar:#83d1d3;
-  --backclip : url("../img&vid/dark-nav-back.gif");
+  --backclip: url("../img&vid/dark-nav-back.gif");
   --rgba: 0,0,0;
 }
-ul{
+
+ul {
   list-style: none;
   margin-top: 50px;
   margin-right: 50px;
   float: right;
   top: 0em;
 }
-li{
+
+li {
   display: inline-block;
 }
+
 .list-item {
   background: var(--color-nav);
   text-align: center;
-  height: 3em;           /*  li-tags */
+  height: 3em; /*  li-tags */
   width: 5em;
   line-height: 2.5em;
   position: relative;
-  display:flow-root;
+  display: flow-root;
   text-decoration: none;
   box-shadow: 2em 1.5em var(--color-navs);
   transition: all 0.25s linear;
@@ -73,25 +79,22 @@ li{
 }
 .list-item:hover {
   background: var(--color-navho);
-  color: var(--color-navhote);         /* float-up box face */
+  color: var(--color-navhote); /* float-up box face */
   transform: translate(-0.5em, -0.5em);
   transition: all 0.25s linear;
   box-shadow: 2em 1em 0 #a3b2b2;
   text-decoration: none;
 }
-.list-item:hover:before, .list-item:hover:after {
+.list-item:hover:after, .list-item:hover:before {
   transition: all 0.25s linear;
 }
 .list-item:hover:before {
   background: var(--color-navhodo);
-  width: 0.6em;               /* float-up box right side */
+  width: 0.6em; /* float-up box right side */
   top: 0.7em;
   left: 2.6em;
   height: 5.1em;
 }
-
-
-
 .list-item:hover:after {
   background: var(--color-navhori);
   width: 0.6em;
@@ -108,7 +111,7 @@ li{
 }
 .list-item:after {
   height: 3em;
-  width:0.6em;
+  width: 0.6em;
   left: 5em;
   top: 0.25em;
   transform: skewY(40deg);
@@ -118,9 +121,10 @@ li{
   width: 0.5em;
   top: 0.75em;
   left: 2.6em;
-  transform: rotate(90deg) skew(0deg,-50deg); 
+  transform: rotate(90deg) skew(0deg, -50deg);
 }
-h1{
+
+h1 {
   display: inline-block;
   width: 48%;
   height: 200px;
@@ -130,38 +134,40 @@ h1{
   font-size: 60px;
   color: var(--color-coding);
 }
-span{
+h1 span {
   color: var(--color-pundit);
 }
-.logo{
+
+.logo {
   -webkit-text-stroke: 2.5px var(--color-logo);
 }
-.top{
+
+.top {
   height: 300px;
-  width:100%;
+  width: 100%;
   display: block;
   height: 150px;
-  background:   linear-gradient(270deg, rgba(var(--rgba), 0.7),rgba(var(--rgba), 0.7)) ,var(--backclip);
+  background: linear-gradient(270deg, rgba(var(--rgba), 0.7), rgba(var(--rgba), 0.7)), var(--backclip);
 }
-button{
+
+button {
   float: left;
   top: 5em;
-  height:30px;
-  width:30px;
+  height: 30px;
+  width: 30px;
   border: none;
   background-color: var(--color-butt);
   color: var(--color-buttte);
 }
 
 @media (max-width: 1000px) {
-  h1{
+  h1 {
     width: 36%;
     font-size: 50px;
   }
-  ul{
-    width:50%;
+  ul {
+    width: 50%;
     margin-right: 0;
     margin-top: 20px;
   }
-
-}
+}/*# sourceMappingURL=navbar.css.map */
