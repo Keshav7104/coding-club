@@ -8,12 +8,12 @@ import foreground from './foreground.png'
 return(
     <>
    <div id="wrapper">
-
+    <div id="sol">
 <div className="container">
     <img src={background} className="background"/>
     <img src={foreground } className="foreground"/>
     <h1>EVENTS</h1>
-
+    </div>
 </div>
 
 <section>

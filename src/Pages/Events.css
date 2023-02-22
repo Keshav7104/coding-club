@@ -5,15 +5,18 @@
 }
 
 #wrapper{
-    height:100vh;
+    /* height:100vh; */
     overflow-x: hidden;
     perspective: 10px;
     margin: 0;
     padding: 0;
 }
 
+#sol{
+    height: 100vh;
+}
 .container{
-    position:relative;
+    position:sticky;
     height: 100%;
     width: 100%;
     display:flex;
@@ -21,6 +24,7 @@
     align-items: center;
     transform-style: preserve-3d;
     z-index: -1;
+    
 }
 
 .background{
