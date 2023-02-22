@@ -1,50 +1,80 @@
 import './navbar.css'
-// import useLocalStorage from 'react-dom';
+import { NavLink } from 'react-router-dom';
+import{useThemeDetector} from '../Hooks/Theme' //this hook would be used in loading of page it is here just to demostrate
+//this is subjected to changed
+import { useEffect } from 'react';
+
+
 export default function Nav() {
 
-    // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // const [theme, setTheme] = useLocalStorage("theme", defaultDark ? "dark" : "light");
 
-    // const toggleTheme =() =>{
-    //     const newTheme = theme === 'light' ? 'dark' : 'light';
-    //     setTheme(newTheme);
-    // }
+    const isdark =useThemeDetector();
+    const themecheck = () =>{
+    
+    if(isdark){
+        let ele = document.getElementById("theme-div");
+        ele.classList.add("theme-dark");
+        ele.classList.remove("theme-light");
+    }
+    }
 
+    useEffect(() => {
+        themecheck();
+    });
+
+    const changetheme =() =>{
+        let ele=document.getElementById("theme-div");
+        if(ele.classList.contains("theme-light")){
+        ele.classList.remove("theme-light");
+        ele.classList.add("theme-dark");
+        let pu =document.getElementById("pundit")
+        pu.classList.add("logo");
+        let co = document.getElementById("coding");
+        co.classList.remove("logo");
+        }
+        else{
+            ele.classList.remove("theme-dark");
+            ele.classList.add("theme-light");
+            let pu =document.getElementById("pundit")
+            pu.classList.remove("logo");
+            let co = document.getElementById("coding");
+            co.classList.add("logo");
+        }
+    }
 
     return(
-        <div className="nav theme-light" id="theme">
-            <h1>Coding<span>Pundits</span></h1>
-        <ul>
+        <div className='theme-light'  id="theme-div">
+        <div className='top'>
+            <h1 id='coding' className='logo'>Coding<span id='pundit'>Pundits</span></h1>
+            <ul>
            <li  >
-                <a className="list-item" href="#">Home
-                </a>
+                <NavLink className="list-item" to='./'>Home
+                </NavLink>
             </li> 
             <li  >
-                <a className="list-item" href="#">Resources
-                </a>
+                <NavLink className="list-item" to='./'>Resources
+                </NavLink>
             </li>
             <li  >
-                <a className="list-item" href="#">Events
-                </a>
+                <NavLink className="list-item" to='./'>Events
+                </NavLink>
             </li>
             <li  >
-                <a className="list-item" href="#">Our Team
-                </a>
+                <NavLink className="list-item" to='./'>Our Team
+                </NavLink>
             </li>
             <li  >
-                <a className="list-item" href="#">Alumni
-                </a>
+                <NavLink className="list-item" to='./'>Alumni
+                </NavLink>
             </li>
             <li  >
-                <a className="list-item" href="#">Register
-                </a>
+                <NavLink className="list-item" to='./'>Register
+                </NavLink>
             </li>
-            {/* <li>
-                <a className="list-item" href="#">contact_us
-                </a>
-            </li> */}
-        </ul>
-        {/* <button onClick={toggleTheme()}>theme</button> */}
+            </ul>
+            <button onClick={() => changetheme()}>A</button>
+        </div>
+ 
         </div>
     );
 }
