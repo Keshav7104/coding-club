@@ -24,24 +24,29 @@ html,body{
   --color-pundit : lightseagreen;
   --color-butt :black;
   --color-buttte : cyan;
+  --color-top:white;
+  --backclip: url("../img&vid/light-nav-back.gif");
+  --rgba: 233,233,233;
 }
 .theme-dark{
   width: 100%;
   --color-navdo:darkcyan;
   --color-navte:black;
-  --color-logo: cyan;
-  --color-top:black;
-  --color-nav : cyan;
+  --color-logo: #83d1d3;
+  --color-top : black;
+  --color-nav : #83d1d3;
   --color-navs : white;
-  --color-navho : #08a4a7;
+  --color-navho : #83d1d3;
   --color-navhote : white;
   --color-navhodo : #068385;
   --color-navhori : #068385;
-  --color-coding : cyan;
+  --color-coding : #83d1d3;
   --color-pundit : black;
   --color-butt :white;
   --color-buttte : #057274;
-  --color-navbar:cyan;
+  --color-navbar:#83d1d3;
+  --backclip : url("../img&vid/dark-nav-back.gif");
+  --rgba: 0,0,0;
 }
 ul{
   list-style: none;
@@ -122,7 +127,7 @@ h1{
   text-align: center;
   justify-items: center;
   padding-top: 20px;
-  font-size: 80px;
+  font-size: 60px;
   color: var(--color-coding);
 }
 span{
@@ -136,7 +141,7 @@ span{
   width:100%;
   display: block;
   height: 150px;
-  background-color: var(--color-top);
+  background:   linear-gradient(270deg, rgba(var(--rgba), 0.7),rgba(var(--rgba), 0.7)) ,var(--backclip);
 }
 button{
   float: left;
@@ -151,11 +156,12 @@ button{
 @media (max-width: 1000px) {
   h1{
     width: 36%;
+    font-size: 50px;
   }
   ul{
-    width:40%;
-    margin-right: 10px;
-    margin-top: 100px;
+    width:50%;
+    margin-right: 0;
+    margin-top: 20px;
   }
 
 }
