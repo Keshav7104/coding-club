@@ -1,16 +1,23 @@
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup'
+import {yupResolver} from '@hookform/resolvers/yup';
+import { useContext } from 'react';
+import { Admin } from '../App';
 
-function Register (){
+const Register = (props) => {
+
+  const {setIsadmin}= useContext(Admin);
     const onsubmit=(data)=>{
         console.log(data);
-        //this should be send to server or club data manager using backend
+        // this should be send to server or club data manager using backend
       }
 
-      // const checkadmin=(data)=>{
-      //   if(data.login====)
-      // }
+      const checkadmin=(data)=>{
+        if(data.login==="keshav"){  //add here admins login id and passwords to login as admins and change the webpage
+          setIsadmin(1);
+          // console.log(isadmin);
+        }
+      }
     
       const registerschema = yup.object().shape({
         fullname : yup.string("Your should consist only alphabets").required("Please enter your name"),
@@ -72,7 +79,7 @@ function Register (){
             <input type='submit'/>
             </div>
           </form>
-          <form onSubmit={handleSubmit2(onsubmit)}>
+          <form onSubmit={handleSubmit2(checkadmin)}>
             <h2>login</h2>
             <div className='input error'>
             <input type="text" placeholder='Enter your login-id' {...register2("login")}/>

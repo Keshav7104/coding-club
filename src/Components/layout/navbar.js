@@ -56,7 +56,7 @@ export default function Nav() {
                 </NavLink>
             </li>
             <li  >
-                <NavLink className="list-item" to='./'>Events
+                <NavLink className="list-item" to='./events'>Events
                 </NavLink>
             </li>
             <li  >
