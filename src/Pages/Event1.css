@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(130, 179, 208);
+ }
+ .card{
+     width: 20rem;
+ }
+ .card:hover{
+     box-shadow: 5px 10px 1px #40696b!important;
+ }
+ .card-body{
+     padding: 3rem 0 !important;
+ }
+ .card-text{
+     font-size: o.9rem;
+     padding: 0.4rem 1.9rem;
+ }
+ .container-fluid .row{
+     padding-top: 6rem;
+     padding-bottom: 10rem;
+ }
+ .card-img-top{
+     transform: scale(1);
+ }
+ .card-img-top:hover{
+     transform: scale(1.8);
+ }
+ .overflow{
+     overflow: hidden;
+ }
