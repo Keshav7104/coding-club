@@ -1,7 +1,7 @@
 import './navbar.css'
 import { NavLink } from 'react-router-dom';
 import{useThemeDetector} from '../Hooks/Theme' //this hook would be used in loading of page it is here just to demostrate
-//this is subjected to changed
+//this is subjected to change
 import { useEffect } from 'react';
 
 
@@ -23,7 +23,7 @@ export default function Nav() {
     });
 
     const changetheme =() =>{
-        let ele=document.getElementById("theme-div");
+        let ele=document.getElementById("theme-div");//ele=div given for theme
         if(ele.classList.contains("theme-light")){
         ele.classList.remove("theme-light");
         ele.classList.add("theme-dark");
@@ -52,7 +52,7 @@ export default function Nav() {
                 </NavLink>
             </li> 
             <li  >
-                <NavLink className="list-item" to='./'>Resources
+                <NavLink className="list-item" to='./News'>News
                 </NavLink>
             </li>
             <li  >

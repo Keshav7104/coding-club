@@ -5,6 +5,7 @@ import './App.css';
 import Register from './Pages/Register';
 import Events from './Pages/Events';
 import { useState,createContext } from 'react';
+// import News from './Pages/News';
 
 export const Admin = createContext();
 
@@ -21,6 +22,7 @@ function App() {
       
         <Route path="/register" element={<Register />}/>
         <Route path="/events" element={<Events />}/>
+        {/* <Route path="/news" element={<News />}/> */}
         
       </Routes>
 

@@ -1,28 +1,61 @@
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import { Admin } from '../App';
+import './Register.css'
 
-const Register = (props) => {
+const Register = () => {
 
-  const {setIsadmin}= useContext(Admin);
+  const [Admins,SetAdmins] =useState([
+    {
+      id: "Keshav",pass:"07/01/2004"
+    },
+    {
+      id : "Vanshika",pass: "02/08/2002"
+    },
+    {
+      id: "Sachin", pass: "29/9/2003"
+    }
+  ]);
+
+  const {isadmin,setIsadmin}= useContext(Admin);
     const onsubmit=(data)=>{
         console.log(data);
         // this should be send to server or club data manager using backend
       }
 
       const checkadmin=(data)=>{
-        if(data.login==="keshav"){  //add here admins login id and passwords to login as admins and change the webpage
-          setIsadmin(1);
-          // console.log(isadmin);
+        for(let i=0;i<Admins.length;i++){
+          if(Admins[i].id===data.login){
+           for(let j=0;j<Admins.length;j++){
+            if(Admins[i].pass===data.confirmPassword){
+              setIsadmin(1);
+              console.log("hello!");
+            }
+           }
+          }
         }
+      }
+
+
+      if(isadmin===1){
+        let ele =document.getElementById('Admin');
+        ele.classList.remove('Admins');
+        let ele2 =document.getElementById('Admin2');
+        ele2.classList.remove('Admins');
+      }
+      const Addadmin =() =>{
+        let name =document.getElementById("adminname").value;
+        let pass1 =document.getElementById("adminpass").value;
+        let newadmin ={ id : name,pass : pass1};
+        SetAdmins([...Admins,newadmin]);
       }
     
       const registerschema = yup.object().shape({
-        fullname : yup.string("Your should consist only alphabets").required("Please enter your name"),
+        fullname : yup.string("Your name should consist only alphabets").required("Please enter your name"),
         email : yup.string().email("Please Provide an Valid email").required("Please Provide an Valid email"),
-        branch : yup.string().required("Please enter your branch in which you are studying"),
+        branch : yup.string().required("Please enter the branch in which you are studying"),
         roll : yup.string().max(11,"please give correct Roll-No.").min(8,"please give correct Roll-No.").required("Please enter your Academic Roll-No."),
         year : yup.number("Year should be a no. 1-4").required("Please Enter your year of course").min(1,"Year should be a no. 1-4").max(4,"Year should be a no. 1-4"),
         prolan : yup.string()
@@ -30,7 +63,7 @@ const Register = (props) => {
 
       const loginschema = yup.object().shape({
         login : yup.string().required("Please give your login-id"),
-        password : yup.string().required("Enter your password to login").min(4).max(8),
+        password : yup.string().required("Enter your password to login").min(4).max(15),
         confirmPassword : yup.string().required("Verify Password again").oneOf([yup.ref("password"),null],"password does not match")
       })
     
@@ -114,6 +147,18 @@ const Register = (props) => {
                 <input type='submit' />
             </div>
           </form>
+          <div className='Admins' id='Admin'>
+            <p>Add-Admin</p>
+            <input type="text" id='adminname' name='Login-id' />
+            <input type="password" id='adminpass' name='password' />
+            <input type="submit" onClick={Addadmin}/>
+          </div>
+          <div className='Admins' id='Admin2'>
+            <p>Remove Admin</p>
+            <div>{Admins.map((user,key) => {
+              return <div>{key+1}. {user.id}</div>
+            })}</div>
+          </div>
           </div>
         )
 }
