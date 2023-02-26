@@ -1,56 +1,120 @@
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
-import { useContext,useState } from 'react';
+import { useContext,useState,useEffect } from 'react';
 import { Admin } from '../App';
-import './Register.css'
+import { db } from '../Config/firebase'
+import {getDocs,collection,addDoc} from 'firebase/firestore'
+// import './Register.css'
 
 const Register = () => {
+  //boolean to determine is admin loged in or not
+  const {setIsadmin}= useContext(Admin);
 
-  const [Admins,SetAdmins] =useState([
-    {
-      id: "Keshav",pass:"07/01/2004"
-    },
-    {
-      id : "Vanshika",pass: "02/08/2002"
-    },
-    {
-      id: "Sachin", pass: "29/9/2003"
+//adding a member in database
+  const members = collection(db,"Members");
+  const [memberlist,setMemberlist] = useState([]);
+
+  const getlist = async () =>{
+    try{
+        const data = await getDocs(members);
+        const filterdata = data.docs.map((doc) => ({
+          ...doc.data(),
+          id : doc.id
+        }));
+        setMemberlist(filterdata);
+        
     }
-  ]);
+    catch(err){
+      console.error(err);
+    }
+  }
+      const Admins = collection(db,"Admins");
+      const [Adminlist,setAdminlist] =useState([]);
+  const getAdmins = async () =>{
+    try{
+    const data1 = await getDocs(Admins);
+    const filterdata1= data1.docs.map((doc)=>({
+      ...doc.data(),
+      id : doc.id
+    }));
+    setAdminlist(filterdata1);
+  }
+  catch(err){
+    console.error(err);
+  }
+  }
+  useEffect(()=>{
+    getlist();
+    getAdmins();
+  });
 
-  const {isadmin,setIsadmin}= useContext(Admin);
-    const onsubmit=(data)=>{
-        console.log(data);
-        // this should be send to server or club data manager using backend
+
+    const onsubmit=async(data)=>{
+      try{
+          for(let i=0;i<memberlist.length;i++){
+            if(memberlist[i].Name===data.fullname){
+              if(memberlist[i].Email===data.email){
+                if(memberlist[i].Roll===data.roll){
+                  alert("can't register with same roll-no.");
+                  break;
+                }
+                else{
+                  alert("can't register with same email")
+                  break;
+                }
+              }
+              else{
+                alert("can't register with same username")
+                break;
+              }
+            }
+          else{
+            await addDoc(members,{
+              Name : data.fullname,
+              Email : data.email,
+              Branch : data.branch,
+              Year : data.year,
+              Language : data.prolan,
+              Roll : data.roll
+            })
+            alert("Congrats you are registerd");
+            break;
+          }
+          } 
+      }
+      catch(err){
+        console.error(err);
+      }
       }
 
+      //admin log-in
+
+
       const checkadmin=(data)=>{
-        for(let i=0;i<Admins.length;i++){
-          if(Admins[i].id===data.login){
-           for(let j=0;j<Admins.length;j++){
-            if(Admins[i].pass===data.confirmPassword){
+        for(let i=0;i<Adminlist.length;i++){
+          if(Adminlist[i].Id===data.login){
+            if(Adminlist[i].Password===data.password){
               setIsadmin(1);
               console.log("hello!");
             }
            }
           }
         }
-      }
 
 
-      if(isadmin===1){
-        let ele =document.getElementById('Admin');
-        ele.classList.remove('Admins');
-        let ele2 =document.getElementById('Admin2');
-        ele2.classList.remove('Admins');
-      }
-      const Addadmin =() =>{
-        let name =document.getElementById("adminname").value;
-        let pass1 =document.getElementById("adminpass").value;
-        let newadmin ={ id : name,pass : pass1};
-        SetAdmins([...Admins,newadmin]);
-      }
+      // if(isadmin===1){
+      //   let ele =document.getElementById('Admin');
+      //   ele.classList.remove('Admins');
+      //   let ele2 =document.getElementById('Admin2');
+      //   ele2.classList.remove('Admins');
+      // }
+      // const Addadmin =() =>{
+      //   let name =document.getElementById("adminname").value;
+      //   let pass1 =document.getElementById("adminpass").value;
+      //   let newadmin ={ id : name,pass : pass1};
+      //   SetAdmins([...Admins,newadmin]);
+      // }
     
       const registerschema = yup.object().shape({
         fullname : yup.string("Your name should consist only alphabets").required("Please enter your name"),
@@ -63,8 +127,7 @@ const Register = () => {
 
       const loginschema = yup.object().shape({
         login : yup.string().required("Please give your login-id"),
-        password : yup.string().required("Enter your password to login").min(4).max(15),
-        confirmPassword : yup.string().required("Verify Password again").oneOf([yup.ref("password"),null],"password does not match")
+        password : yup.string().required("Enter your password to login").min(4).max(15)
       })
     
       const {register,handleSubmit,formState : {errors} } = useForm({
@@ -93,7 +156,7 @@ const Register = () => {
             <input type="text" placeholder="Enter your email" {...register("email")}/>
             <span>{errors.email?.message}</span>
             </div>
-            <div className='input error'>
+            {/* <div className='input error'>
               <p>Course</p>
               <input type="radio" name="Course" value="UG" />
               <label for="UG">UG</label>
@@ -101,7 +164,7 @@ const Register = () => {
               <label for="PG">PG</label>
               <input type="radio" name="Course" value="Phd" />
               <label for="Phd">Phd</label>
-            </div>
+            </div> */}
             <div className="input error">
               <p>Branch</p>
             <input type="text" placeholder="Branch" {...register("branch")}/>
@@ -138,29 +201,12 @@ const Register = () => {
                 <input type="password" placeholder='Password' {...register2("password")} />
                 <span>{errors2.password?.message}</span>
             </div>
-            <div className='input errors'>
-              <p>confirm-Password</p>
-                <input type="password" placeholder='Confirm-Password' {...register2("confirmPassword")} />
-                <span>{errors2.confirmPassword?.message}</span>
+            <div>
+              <input type="submit" />
             </div>
-            <div className='submit '>
-                <input type='submit' />
-            </div>
-          </form>
-          <div className='Admins' id='Admin'>
-            <p>Add-Admin</p>
-            <input type="text" id='adminname' name='Login-id' />
-            <input type="password" id='adminpass' name='password' />
-            <input type="submit" onClick={Addadmin}/>
-          </div>
-          <div className='Admins' id='Admin2'>
-            <p>Remove Admin</p>
-            <div>{Admins.map((user,key) => {
-              return <div>{key+1}. {user.id}</div>
-            })}</div>
-          </div>
-          </div>
-        )
+            </form>
+         </div>
+        );
 }
 
 export default Register

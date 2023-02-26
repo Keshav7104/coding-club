@@ -2,15 +2,22 @@ import './navbar.css'
 import { NavLink } from 'react-router-dom';
 import{useThemeDetector} from '../Hooks/Theme' //this hook would be used in loading of page it is here just to demostrate
 //this is subjected to change
-import { useEffect } from 'react';
+import { useEffect,useContext } from 'react';
+import {Admin} from '../../App'
 
 
 export default function Nav() {
 
-
+    const {isadmin} =useContext(Admin);
     const isdark =useThemeDetector();
     const themecheck = () =>{
     
+
+        if(isadmin){
+            let ele = document.getElementById("Admin");
+            ele.classList.remove("Admin");
+            ele.classList.add("Display");
+        }
     if(isdark){
         let ele = document.getElementById("theme-div");
         ele.classList.add("theme-dark");
@@ -60,15 +67,11 @@ export default function Nav() {
                 </NavLink>
             </li>
             <li  >
-                <NavLink className="list-item" to='./'>Our Team
-                </NavLink>
-            </li>
-            <li  >
-                <NavLink className="list-item" to='./'>Alumni
-                </NavLink>
-            </li>
-            <li  >
                 <NavLink className="list-item" to='/Register'>Register
+                </NavLink>
+            </li>
+            <li  id='Admin' className='Admin'>
+                <NavLink className="list-item" to='./'>Admin
                 </NavLink>
             </li>
             </ul>

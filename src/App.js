@@ -3,7 +3,8 @@ import Footer from './Components/layout/Footer';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import './App.css';
 import Register from './Pages/Register';
-import Events from './Pages/Events';
+// import Events from './Pages/Events';
+import Event1 from './Pages/Event1';
 import { useState,createContext } from 'react';
 // import News from './Pages/News';
 
@@ -21,8 +22,7 @@ function App() {
       <Routes>
       
         <Route path="/register" element={<Register />}/>
-        <Route path="/events" element={<Events />}/>
-        {/* <Route path="/news" element={<News />}/> */}
+        <Route path="/events" element={<Event1 />}/>
         
       </Routes>
 
