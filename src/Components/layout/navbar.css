@@ -149,7 +149,7 @@ li {
   width: 100%;
   display: block;
   height: 150px;
-  background: linear-gradient(270deg, rgba(var(--rgba), 0.7), rgba(var(--rgba), 0.7)), var(--backclip);
+  /* background: linear-gradient(270deg, rgba(var(--rgba), 0.7), rgba(var(--rgba), 0.7)); */
 }
 
 button {
