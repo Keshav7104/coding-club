@@ -5,6 +5,7 @@ import './App.css';
 import Register from './Pages/Register';
 // import Events from './Pages/Events';
 import Event1 from './Pages/Event1';
+import Form from './Register/Form';
 import { useState,createContext } from 'react';
 // import News from './Pages/News';
 
@@ -23,7 +24,7 @@ function App() {
       
         <Route path="/register" element={<Register />}/>
         <Route path="/events" element={<Event1 />}/>
-        
+        <Route path="/register" element={<Form />}/>
       </Routes>
 
       <Footer></Footer>

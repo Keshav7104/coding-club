@@ -10,13 +10,6 @@ html, body {
   width: 100%;
 }
 
-.Admin{
-  display: none;
-}
-.Display{
-  display: inline-block;
-}
-
 .theme-light {
   width: 100%;
   --color-nav:lightseagreen;
@@ -156,7 +149,7 @@ li {
   width: 100%;
   display: block;
   height: 150px;
-  /* background: linear-gradient(270deg, rgba(var(--rgba), 0.7), rgba(var(--rgba), 0.7)), var(--backclip); */
+  background: linear-gradient(270deg, rgba(var(--rgba), 0.7), rgba(var(--rgba), 0.7)), var(--backclip);
 }
 
 button {
@@ -170,15 +163,12 @@ button {
 }
 
 @media (max-width: 1000px) {
-  #coding,#pundit{
+  h1 {
     width: 36%;
-    font-size: 40px;
-  }
-  .logo{
-    -webkit-text-stroke: 2px var(--color-logo);
+    font-size: 50px;
   }
   ul {
-    width: 38%;
+    width: 50%;
     margin-right: 0;
     margin-top: 20px;
   }
