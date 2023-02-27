@@ -6,6 +6,7 @@ import Register from './Pages/Register';
 // import Events from './Pages/Events';
 import Event1 from './Pages/Event1';
 import { useState,createContext } from 'react';
+// import News from './Pages/News';
 
 export const Admin = createContext();
 
