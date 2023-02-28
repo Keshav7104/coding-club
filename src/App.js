@@ -8,11 +8,12 @@ import Event1 from './Pages/Event1';
 import Form from './Register/Form';
 import { useState,createContext } from 'react';
 // import News from './Pages/News';
-
+import Intro from './Components/Home/Intro';
+import About from './Components/Home/About';
 export const Admin = createContext();
 
 function App() {
-
+  
   const [isadmin, setIsadmin] =useState(0);
 
   return (
@@ -24,7 +25,6 @@ function App() {
       
         <Route path="/register" element={<Register />}/>
         <Route path="/events" element={<Event1 />}/>
-        <Route path="/register" element={<Form />}/>
       </Routes>
 
       <Footer></Footer>
