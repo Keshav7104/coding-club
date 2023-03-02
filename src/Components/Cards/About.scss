@@ -1,5 +1,5 @@
-  /*  Helper Styles */
-  body {
+   /*  Helper Styles */
+   body {
     font-family: Varela Round;
     background: #f1f1f1;
 }
@@ -13,6 +13,9 @@ a {
 .card-sl {
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 248px;
+    height: 545px;
+
 }
 
 .card-image img {
@@ -65,15 +68,22 @@ bottom: 20px;
 }
 .container1{
 position: relative;
-bottom: 510px;
+bottom: 410px;
 left: 400px;
+width: 80%;
 }
 .container2{
 position: relative;
-bottom: 610px;
+bottom: 510px;
 left: 400px;
+width: 55%;
 }
 hr.style7 {
 border-top: 2px solid #000000;
 border-bottom: 1px solid #fff;
 }
+.container{
+    height: 1000px;
+}
+
+
