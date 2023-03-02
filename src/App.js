@@ -1,7 +1,6 @@
 import Nav  from './Components/layout/navbar';
 import Footer from './Components/layout/Footer';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import './App.css';
 import Register from './Pages/Register';
 // import Events from './Pages/Events';
 import Event1 from './Pages/Event1';
@@ -13,7 +12,7 @@ export const Admin = createContext();
 function App() {
 
   const [isadmin, setIsadmin] =useState(0);
-
+  // setIsadmin(0);
   return (
     <div>
       <Admin.Provider value={{isadmin, setIsadmin}}>

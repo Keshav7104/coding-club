@@ -5,7 +5,7 @@ import { useContext,useState,useEffect } from 'react';
 import { Admin } from '../App';
 import { db } from '../Config/firebase'
 import {getDocs,collection,addDoc} from 'firebase/firestore'
-// import './Register.css'
+import './Register.css'
 
 const Register = () => {
   //boolean to determine is admin loged in or not
@@ -31,19 +31,7 @@ const Register = () => {
   }
       const Admins = collection(db,"Admins");
       const [Adminlist,setAdminlist] =useState([]);
-  const getAdmins = async () =>{
-    try{
-    const data1 = await getDocs(Admins);
-    const filterdata1= data1.docs.map((doc)=>({
-      ...doc.data(),
-      id : doc.id
-    }));
-    setAdminlist(filterdata1);
-  }
-  catch(err){
-    console.error(err);
-  }
-  }
+
   useEffect(()=>{
     getlist();
     getAdmins();
@@ -98,39 +86,44 @@ const Register = () => {
               setIsadmin(1);
               console.log("hello!");
             }
+            else{
+              setIsadmin(0);
+            }
+           }
+           else{
+            setIsadmin(0);
            }
           }
         }
 
-
-      // if(isadmin===1){
-      //   let ele =document.getElementById('Admin');
-      //   ele.classList.remove('Admins');
-      //   let ele2 =document.getElementById('Admin2');
-      //   ele2.classList.remove('Admins');
-      // }
-      // const Addadmin =() =>{
-      //   let name =document.getElementById("adminname").value;
-      //   let pass1 =document.getElementById("adminpass").value;
-      //   let newadmin ={ id : name,pass : pass1};
-      //   SetAdmins([...Admins,newadmin]);
-      // }
-    
+        const getAdmins = async () =>{
+          try{
+          const data1 = await getDocs(Admins);
+          const filterdata1= data1.docs.map((doc)=>({
+            ...doc.data(),
+            id : doc.id
+          }));
+          setAdminlist(filterdata1);
+        }
+        catch(err){
+          console.error(err);
+        }
+        }
+    //Register form template
       const registerschema = yup.object().shape({
         fullname : yup.string("Your name should consist only alphabets").required("Please enter your name"),
         email : yup.string().email("Please Provide an Valid email").required("Please Provide an Valid email"),
         branch : yup.string().required("Please enter the branch in which you are studying"),
-        roll : yup.string().max(11,"please give correct Roll-No.").min(8,"please give correct Roll-No.").required("Please enter your Academic Roll-No."),
         year : yup.number("Year should be a no. 1-4").required("Please Enter your year of course").min(1,"Year should be a no. 1-4").max(4,"Year should be a no. 1-4"),
         prolan : yup.string()
       })
-
+      //Login form template
       const loginschema = yup.object().shape({
         login : yup.string().required("Please give your login-id"),
         password : yup.string().required("Enter your password to login").min(4).max(15)
       })
     
-      const {register,handleSubmit,formState : {errors} } = useForm({
+      const {register,handleSubmit } = useForm({
         resolver : yupResolver(registerschema),
         mode: "onBlur"
       });
@@ -140,72 +133,38 @@ const Register = () => {
         mode: "onBlur"
       })
 
-    
+
     
         return(
-            <div>
+          <>
+          <div className='body'>
+            <div className='main'>
+              <input type="checkbox" id='chk' aria-hidden="true" />
+              <div className='signup'>
           <form  onSubmit={handleSubmit(onsubmit)}>
-            <h2>Register Here</h2>
-            <div className="input error">
-              <p>Name</p>
-            <input type="text" placeholder="Enter your full name" {...register("fullname")}/>
-            <span>{errors.fullname?.message}</span>
-            </div>
-            <div className="input error">
-              <p>Email</p>
-            <input type="text" placeholder="Enter your email" {...register("email")}/>
-            <span>{errors.email?.message}</span>
-            </div>
-            {/* <div className='input error'>
-              <p>Course</p>
-              <input type="radio" name="Course" value="UG" />
-              <label for="UG">UG</label>
-              <input type="radio" name="Course" value="PG" />
-              <label for="PG">PG</label>
-              <input type="radio" name="Course" value="Phd" />
-              <label for="Phd">Phd</label>
-            </div> */}
-            <div className="input error">
-              <p>Branch</p>
+          <label htmlFor="chk" aria-hidden="true">Register</label>
+            <input type="text" placeholder="Name" {...register("fullname")}/>
+            <input type="text" placeholder="Email" {...register("email")}/>
             <input type="text" placeholder="Branch" {...register("branch")}/>
-            <span>{errors.branch?.message}</span>
-            </div>
-            <div className="input error">
-              <p>Roll-no.</p>
-            <input type="text" placeholder="Enter your roll-no" {...register("roll")}/>
-            <span>{errors.roll?.message}</span>
-            </div>
-            <div className="input error">
-              <p>Year</p>
-            <input type='number' placeholder="Enter your year of studying" {...register("year")}/>
-            <span>{errors.year?.message}</span>
-            </div>
-            <div className="input error">
-              <p>Preferred Coding language</p>
-            <input type="text" placeholder="Enter any language if you know" {...register("prolan")}/>
-            <span>{errors.prolan?.message}</span>
-            </div>
-            <div className="submit error">
-            <input type='submit'/>
-            </div>
+            <input type='number' placeholder="Year" {...register("year")}/>
+            <input type="text" placeholder="Preferred language" {...register("prolan")}/>
+            {/* <div>{message}</div> */}
+            <input type='submit' className='button'/>
           </form>
+          </div>
+          <div className='login'>
           <form onSubmit={handleSubmit2(checkadmin)}>
-            <h2>login</h2>
-            <div className='input error'>
-              <p>Login-id</p>
-            <input type="text" placeholder='Enter your login-id' {...register2("login")}/>
+          <label htmlFor="chk" aria-hidden="true">Login</label>
+            <input type="text" placeholder='Login-id' {...register2("login")}/>
             <span>{errors2.login?.message}</span>
-            </div>
-            <div className='input error'>
-              <p>Password</p>
-                <input type="password" placeholder='Password' {...register2("password")} />
-                <span>{errors2.password?.message}</span>
-            </div>
-            <div>
-              <input type="submit" />
-            </div>
+            <input type="password" placeholder='Password' {...register2("password")} />
+            <span>{errors2.password?.message}</span>
+            <input type="submit" className='button'/>
             </form>
+            </div>
          </div>
+         </div>
+         </>
         );
 }
 
