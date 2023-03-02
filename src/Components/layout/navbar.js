@@ -55,7 +55,7 @@ export default function Nav() {
             <h1 id='coding' className='logo'>Coding<span id='pundit'>Pundits</span></h1>
             <ul>
            <li  >
-                <NavLink className="list-item" to='./'>Home
+                <NavLink className="list-item" to=''>Home
                 </NavLink>
             </li> 
             <li  >

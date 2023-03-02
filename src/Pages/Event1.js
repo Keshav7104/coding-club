@@ -7,7 +7,6 @@ import c3 from '../Components/img&vid/card2.jpg';
 import pdf1 from '../Components/pdfs/pdf1.pdf'
 import pdf2 from '../Components/pdfs/pdf2.pdf'
 import pdf3 from '../Components/pdfs/pdf3.pdf'
-import e1 from '../Components/img&vid/bg3.gif'
 
 
 export default function Event1 (){
