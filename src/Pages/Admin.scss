@@ -1,0 +1,25 @@
+/* #non-admin{
+    color: transparent;
+    margin: 0;
+}
+
+#admin{
+    color: transparent;
+    margin: 0;
+} */
+
+.display{
+    color: black;
+}
+.non-display{
+    color: transparent;
+    background-color: transparent;
+        ::placeholder{
+            color: transparent;
+            opacity: 0;
+        }
+        input{
+            background-color: transparent;
+            color: transparent;
+        }
+}

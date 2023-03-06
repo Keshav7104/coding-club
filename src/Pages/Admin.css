@@ -1,0 +1,29 @@
+/* #non-admin{
+    color: transparent;
+    margin: 0;
+}
+
+#admin{
+    color: transparent;
+    margin: 0;
+} */
+.display {
+  color: black;
+}
+
+.non-display {
+  color: transparent;
+  background-color: transparent;
+}
+.non-display ::-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+.non-display ::placeholder {
+  color: transparent;
+  opacity: 0;
+}
+.non-display input {
+  background-color: transparent;
+  color: transparent;
+}/*# sourceMappingURL=Admin.css.map */
