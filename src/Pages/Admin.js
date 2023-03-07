@@ -1,7 +1,7 @@
 import React from "react";
 import { useState,useEffect,useContext } from 'react';//to hold input,get data from server,and info from other pages
 import { db } from "../Config/firebase";// data from server
-import {getDocs,collection,deleteDoc,doc,addDoc, updateDoc} from 'firebase/firestore'// functions to mainuplate data on server
+import { getDocs,collection,deleteDoc,doc,addDoc,updateDoc } from 'firebase/firestore'// functions to mainuplate data on server
 import { Info } from "../App";// context to get info from other page
 import { useForm } from 'react-hook-form';// to make efficent form to add admin
 import "./Admin.css";// stylesheets
@@ -10,7 +10,7 @@ export default function Admin(){
 
     const [master,setMaster] = useState([]);//admins list from server
 
-    const [newpass,setNewpass] =useState("");//new password variable
+    const [newpass,setNewpass] = useState("");//new password variable
 
     const [conpass,setConpass] = useState("");// variable to confirm password
 
@@ -37,10 +37,11 @@ export default function Admin(){
     const help = () =>{
         if(isadmin){
             let ele = document.getElementById("non-admin");
+            ele.classList.remove("message");
             ele.classList.add("non-display");
             let ele2 = document.getElementById("new");
             ele2.classList.remove("non-display");
-            ele2.classList.add("display");
+            ele2.classList.add("console");
         }
     }
 
@@ -74,6 +75,7 @@ export default function Admin(){
         if(newpass===conpass){
             const user = doc(db,"Admins",id);
             await updateDoc(user,{Password : newpass});
+            alert("password changed....");
         }
         else{
             setError("Please enter same passwords");
@@ -82,10 +84,10 @@ export default function Admin(){
 
     return(
         <>
-        <div id="non-admin" className="fuck">
+        <div id="non-admin" className="message">
            <h1>Sorry you don't have access</h1>
         </div>    
-        <div id="new" className="bitch non-display">
+        <div id="new" className="non-display">
             <div className="Add-admin">
                 <h1>New-Admin</h1>
                 <form onSubmit={handleSubmit(onsubmit)}>
@@ -94,12 +96,6 @@ export default function Admin(){
                 <input type="submit" />
                 </form>
             </div>
-            <div className="password">
-                <input type="password" placeholder="New-password" onChange={(e)=>setNewpass(e.target.value)} />
-                <input type="password" placeholder="Confirm-password" onChange={(e)=>setConpass(e.target.value)} />
-                <p>{error}</p>
-                <button onClick={()=>changePassword()}>Submit</button>
-            </div>
             <div className="Admin-list">
                 <h1>Current Admins are :- </h1>
                 {master.map((data) =>{
@@ -107,6 +103,13 @@ export default function Admin(){
                 <button onClick={()=>removeadmin(data.id)}>Remove</button></div>
                 })}
                 
+            </div>
+            <div className="password">
+                <h1>Change Password</h1>
+                <input type="password" placeholder="New-password" onChange={(e)=>setNewpass(e.target.value)} />
+                <input type="password" placeholder="Confirm-password" onChange={(e)=>setConpass(e.target.value)} />
+                <p>{error}</p>
+                <button onClick={()=>changePassword()}>Submit</button>
             </div>
         </div>
         </>
