@@ -1,17 +1,17 @@
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
-import { useContext,useState,useEffect } from 'react';
-import { Admin } from '../App';
-import { db } from '../Config/firebase'
-import {getDocs,collection,addDoc} from 'firebase/firestore'
-import './Register.css'
+import { yupResolver } from '@hookform/resolvers/yup';// to make for functional forms
+import { useContext,useState,useEffect } from 'react';// to get data from other pages,hold input and extract data from server
+import { Info } from '../App';// context of info passed by main page
+import { db } from '../Config/firebase'//server database
+import { getDocs,collection,addDoc }  from 'firebase/firestore'//functions to mainuplate server
+import './Register.css'//stylesheets
 
 const Register = () => {
-  //boolean to determine is admin loged in or not
-  const {setIsadmin}= useContext(Admin);
+  //boolean to determine is admin loged in or not and to store admin id
+  const {setIsadmin,setId}= useContext(Info);
 
-//adding a member in database
+//getting data from server
   const members = collection(db,"Members");
   const [memberlist,setMemberlist] = useState([]);
 
@@ -37,7 +37,7 @@ const Register = () => {
     getAdmins();
   });
 
-
+//adding memeber data to server
     const onsubmit=async(data)=>{
       try{
           for(let i=0;i<memberlist.length;i++){
@@ -84,7 +84,7 @@ const Register = () => {
           if(Adminlist[i].Id===data.login){
             if(Adminlist[i].Password===data.password){
               setIsadmin(1);
-              console.log("hello!");
+              setId(Adminlist[i].id);
             }
             else{
               setIsadmin(0);
@@ -95,7 +95,7 @@ const Register = () => {
            }
           }
         }
-
+//get list of current admins from server
         const getAdmins = async () =>{
           try{
           const data1 = await getDocs(Admins);
@@ -148,7 +148,6 @@ const Register = () => {
             <input type="text" placeholder="Branch" {...register("branch")}/>
             <input type='number' placeholder="Year" {...register("year")}/>
             <input type="text" placeholder="Preferred language" {...register("prolan")}/>
-            {/* <div>{message}</div> */}
             <input type='submit' className='button'/>
           </form>
           </div>
