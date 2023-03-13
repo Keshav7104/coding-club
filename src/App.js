@@ -6,6 +6,7 @@ import Register from './Pages/Register';
 import Event1 from './Pages/Event1';
 import Home from './Pages/Home';
 import Admin from './Pages/Admin';//different pages of our site
+import News from './Pages/News';
 
 export const Info = createContext();//context to pass only those value which are meant to used in that page not all info
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/events" element={<Event1 />}/>
         <Route path='/Admin' element={<Admin />} />
+        <Route path='/News' element={<News />} />
         <Route path='*' element={<h1>Sorry,you connected to wrong wire</h1>} />
         
       </Routes>

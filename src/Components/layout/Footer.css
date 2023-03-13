@@ -34,7 +34,7 @@
 	/* background: #666; */
 	/* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./footerimg.jpg); */
 	/* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./Untitled\ design.gif); */
-	background: linear-gradient(#057274,#000000b3), url(../img&vid/Untitled\ design.gif);
+	background: linear-gradient(lightseagreen,#000000b3), url(../img&vid/Untitled\ design.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

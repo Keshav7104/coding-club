@@ -6,9 +6,10 @@
 	// align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background: radial-gradient(circle, lightseagreen,  #b3e3e4, lightseagreen );
 }
 .main{
+	margin: 50px;
     align-self: center;
 	width: 350px;
 	height: 600px;

@@ -1,15 +1,9 @@
 import React from "react";
-import './Annoucement.css';
+import './Announcement.css';
 
 function Annoucement() {
  return (
    <div>
-     <link rel="stylesheet" href="Announcement.css" />
-     <meta charSet="UTF-8" />
-     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossOrigin="anonymous" />
      <section className="wrapper">
        <div className="container">
          <div className="row">
@@ -19,7 +13,7 @@ function Annoucement() {
          </div>
          <div className="row">
            <div className="col-sm-9 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?tech,street")'}}>
-               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">FRESHERS INTRODUCTION</small>
@@ -28,7 +22,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -38,7 +32,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?tree,nature")'}}>
-               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">MEET WITH ALUMNI</small>
@@ -47,7 +41,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -57,7 +51,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?computer,design")'}}>
-               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">MEET WITH ALUMNI</small>
@@ -66,7 +60,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -76,7 +70,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?tech,street")'}}>
-               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">COMPUTEX CUP</small>
@@ -85,7 +79,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -95,7 +89,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?tree,nature")'}}>
-               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature" alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">Coding Contest</small>
@@ -104,7 +98,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -114,7 +108,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?computer,design")'}}>
-               <img className="card-img d-none" src alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" />
+               <img className="card-img d-none" src alt="Goverment" />
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">GIT/GITHUB SESSION</small>
@@ -123,7 +117,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic placeholder image" style={{maxWidth: '50px'}} />
+                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
