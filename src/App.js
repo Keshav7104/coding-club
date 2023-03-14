@@ -16,7 +16,7 @@ function App() {
   const [id,setId] = useState("");//to hold the value of admin id
   return (
     <>
-      <Info.Provider value={{isadmin, setIsadmin,id,setId}}>
+      {/* <Info.Provider value={{isadmin, setIsadmin,id,setId}}>
       <Router>
       <Nav />
       <Routes>
@@ -32,7 +32,8 @@ function App() {
 
       <Footer></Footer>
       </Router>
-      </Info.Provider>
+      </Info.Provider> */}
+      <footer></footer>
       </>
   );
 }
