@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 *,
 *:before,
 *:after {
@@ -5,7 +8,7 @@
   font-family: Open sans;
 }
 ::-webkit-scrollbar{
-  width: 20px;
+  width: 15px;
 }
 
 /* Track */
@@ -28,62 +31,22 @@
 html{
   width: 100%;
 }
-body{
-  /* height: 100%; */
-  width: 100%;
-  &::-webkit-scrollbar-track{
-    background-color: #83d1d3;
-  }
-  &::-webkit-scrollbar-thumb{
-    background-color: #068385;
-    border-radius: 6px;
-    border: 3px solid #83d1d3;
-  }
-}
-.theme-light{
-  width: 100%;
-  --color-nav:lightseagreen;
-  --color-navte:white;
-  --color-logo:lightseagreen;
-  --color-top : white;
-  --color-navdo : rgb(20, 126, 121);
-  --color-navs : #a3b2b2;
-  --color-navho : #046264;
-  --color-navhote : white;
-  --color-navhodo : #034142;
-  --color-navhori : #034142;
-  --color-coding : white;
-  --color-pundit : lightseagreen;
-  --color-butt :black;
-  --color-buttte : cyan;
-  --color-top:white;
-  --backclip: url("../img&vid/light-nav-back.gif");
-  --rgba: 255,255,255;
-}
-.theme-dark{
-  width: 100%;
-  --color-navdo:darkcyan;
-  --color-navte:black;
-  --color-logo: #83d1d3;
-  --color-top : black;
-  --color-nav : #83d1d3;
-  --color-navs : white;
-  --color-navho : #83d1d3;
-  --color-navhote : white;
-  --color-navhodo : #068385;
-  --color-navhori : #068385;
-  --color-coding : #83d1d3;
-  --color-pundit : black;
-  --color-butt :white;
-  --color-buttte : #057274;
-  --color-navbar:#83d1d3;
-  --backclip : url("../img&vid/dark-nav-back.gif");
-  --rgba: 0,0,0;
-}
+// body{
+//   /* height: 100%; */
+//   width: 100%;
+//   &::-webkit-scrollbar-track{
+//     background-color: #83d1d3;
+//   }
+//   &::-webkit-scrollbar-thumb{
+//     background-color: #068385;
+//     border-radius: 6px;
+//     border: 3px solid #83d1d3;
+//   }
+// }
 ul{
   list-style: none;
   margin-top: 50px;
-  margin-right: 50px;
+  margin-right: 70px;
   float: right;
   top: 0em;
 }
@@ -91,7 +54,7 @@ li{
   display: inline-block;
 }
 .list-item {
-  background: var(--color-nav);
+  background: lightseagreen;
   text-align: center;
   height: 3em;           /*  li-tags */
   width: 5em;
@@ -99,13 +62,13 @@ li{
   position: relative;
   display:flow-root;
   text-decoration: none;
-  box-shadow: 2em 1.5em var(--color-navs);
+  box-shadow: 2em 1.5em #a3b2b2;
   transition: all 0.25s linear;
-  color: var(--color-navte);
+  color: white;
 
   &:hover {
-    background: var(--color-navho);
-    color: var(--color-navhote);         /* float-up box face */
+    background: #046264;
+    color: white;         /* float-up box face */
     transform: translate(-0.5em, -0.5em);
     transition: all 0.25s linear;
     box-shadow: 2em 1em 0 #a3b2b2;
@@ -116,7 +79,7 @@ li{
   }
 
   &:hover:before {
-    background: var(--color-navhodo);
+    background: #034142;
     width: 0.6em;               /* float-up box right side */
     top: 0.7em;
     left: 2.6em;
@@ -124,7 +87,7 @@ li{
   }
 
   &:hover:after {
-    background: var(--color-navhori);
+    background: #034142;
     width: 0.6em;
     left: 5em;
     height: 3em;
@@ -136,7 +99,7 @@ li{
     position: absolute;
     transition: all 0.25s linear;
     width: 0.5em;
-    background-color: var(--color-navdo);
+    background-color: darkcyan;
   }
 
   &:after {
@@ -158,28 +121,32 @@ li{
 #coding{
   display: inline-block;
   width: 48%;
-  height: 200px;
+  height: 100px;
   text-align: center;
   top: 0em;
   left: 35px;
   justify-items: center;
   padding-top: 20px;
-  font-size: 60px;
-  color: var(--color-coding);
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  color: white;
+  -webkit-text-stroke: 2.5px lightseagreen;
   #pundit{
-    color: var(--color-pundit);
+    color: lightseagreen;
   }
 }
 
-.logo{
-  -webkit-text-stroke: 2.5px var(--color-logo);
-}
 .top{
   height: 300px;
   width:100%;
   display: block;
   height: 150px;
-  background:   linear-gradient(270deg, rgba(var(--rgba), 0.8),rgba(var(--rgba), 0.8)) ,var(--backclip);
+  background:   rgba($color: #f1f1f1, $alpha: 0.9);
+  position: sticky;
+  top: 0em;
+  // box-shadow: 5px 5px gray;
+  z-index: 20;
+  // border-bottom: 5px black solid;
 }
 button{
   float: left;
@@ -192,21 +159,14 @@ button{
 }
 
 @media (max-width: 1000px) {
-  h1{
+  #coding{
     width: 36%;
-    font-size: 50px;
+    font-size: 60px;
   }
   ul{
     width:50%;
-    margin-right: 0;
+    margin-right: 0px;
     margin-top: 20px;
   }
 
-}
-
-.Admin{
-  display: none;
-}
-.Display{
-  display: inline-block;
 }
