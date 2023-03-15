@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@font-face {
+  font-family: Hacked;
+  src: url(https://hackedfont.com/HACKED.ttf);
+}
 *,
 *:before,
 *:after {
@@ -33,7 +36,7 @@ html {
 
 ul {
   list-style: none;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-right: 70px;
   float: right;
   top: 0em;
@@ -112,24 +115,28 @@ li {
   left: 35px;
   justify-items: center;
   padding-top: 20px;
-  font-family: "Oswald", sans-serif;
-  font-size: 80px;
-  color: white;
-  -webkit-text-stroke: 2.5px lightseagreen;
+  font-family: Hacked, sans-serif;
+  font-size: 60px;
+  color: lightseagreen;
 }
 #coding #pundit {
-  color: lightseagreen;
+  font-family: Hacked, sans-serif;
+  -webkit-text-stroke: 1.5px lightseagreen;
+  color: white;
 }
 
 .top {
-  height: 300px;
   width: 100%;
   display: block;
-  height: 150px;
-  background: rgba(241, 241, 241, 0.9);
+  height: 100px;
+  background: #f1f1f1;
   position: sticky;
   top: 0em;
+  box-shadow: 5px 0px 5px gray;
   z-index: 20;
+}
+.top:hover {
+  box-shadow: 5px 0px 15px gray;
 }
 
 button {
@@ -140,6 +147,19 @@ button {
   border: none;
   background-color: var(--color-butt);
   color: var(--color-buttte);
+}
+
+.active {
+  background-color: #046264;
+}
+.active::before, .active::after {
+  background-color: #034142;
+}
+.active:hover {
+  background-color: lightseagreen;
+}
+.active:hover::before, .active:hover::after {
+  background-color: darkcyan;
 }
 
 @media (max-width: 1000px) {

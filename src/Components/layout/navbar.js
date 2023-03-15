@@ -55,19 +55,19 @@ export default function Nav() {
                 <h1 id='coding'>Coding<span id='pundit'>Pundits</span></h1>
                 <ul>
                     <li>
-                        <NavLink className="list-item" to=''>Home
+                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='' >&#x3c;Home&#x3e;
                         </NavLink>
                     </li> 
                     <li>
-                        <NavLink className="list-item" to='./News'>News
+                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='./News'>&#x3c;News&#x3e;
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className="list-item" to='./Events'>Events
+                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='./Events'>&#x3c;Events&#x3e;
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className="list-item" to='/Register'>Register
+                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='/Register'>&#x3c;Register&#x3e;
                         </NavLink>
                     </li>
                 </ul>
