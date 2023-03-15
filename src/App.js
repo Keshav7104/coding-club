@@ -15,8 +15,8 @@ function App() {
   const [isadmin, setIsadmin] =useState(0);//0 if user is not admin 1 if user is admin
   const [id,setId] = useState("");//to hold the value of admin id
   return (
-    <>
-      {/* <Info.Provider value={{isadmin, setIsadmin,id,setId}}>
+     <>
+       <Info.Provider value={{isadmin, setIsadmin,id,setId}}>
       <Router>
       <Nav />
       <Routes>
@@ -24,7 +24,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path="/register" element={<Register />}/>
         <Route path="/events" element={<Event1 />}/>
-        {/* <Route path='/Admin' element={<Admin />} /> */}
+        {/* <Route path='/Admin' element={<Admin />} />  */}
         <Route path='/News' element={<News />} />
         <Route path='*' element={<h1>Sorry,you connected to wrong wire</h1>} />
         
@@ -32,7 +32,7 @@ function App() {
 
       <Footer></Footer>
       </Router>
-      </Info.Provider> */}
+      </Info.Provider>
       <footer></footer>
       </>
   );
