@@ -67,7 +67,7 @@ export default function Nav() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='/Register'>&#x3c;Register&#x3e;
+                        <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='/Register'>&#x3c;Register /&#x3e;
                         </NavLink>
                     </li>
                 </ul>
