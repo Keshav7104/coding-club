@@ -4,7 +4,7 @@ import './Announcement.css';
 function Annoucement() {
  return (
    <div>
-     <section className="wrapper">
+     <section className="wrapper1">
        <div className="container">
          <div className="row">
            <div className="col text-center mb-5">
