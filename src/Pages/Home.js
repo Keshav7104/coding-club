@@ -3,7 +3,7 @@ import Animation from './Animation.css';
 export default function Home (){
     return(
         <>
-       <Animation />
+       {/* <Animation /> */}
         <About />
         </>
     )
