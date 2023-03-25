@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@font-face {
+  font-family: Hacked;
+  src: url(https://hackedfont.com/HACKED.ttf);
+}
 *,
 *:before,
 *:after {
@@ -33,74 +36,70 @@ html {
 
 ul {
   list-style: none;
-  margin-top: 50px;
+  margin-top: 15px;
   margin-right: 70px;
   float: right;
   top: 0em;
 }
-
-li {
+ul li {
   display: inline-block;
 }
-
-.list-item {
+ul li .list-item {
   background: lightseagreen;
   text-align: center;
-  height: 3em; /*  li-tags */
-  width: 5em;
+  height: 2.5em; /*  li-tags */
+  width: 6em;
   line-height: 2.5em;
   position: relative;
   display: flow-root;
   text-decoration: none;
-  box-shadow: 2em 1.5em #a3b2b2;
+  box-shadow: 1em 1em #a3b2b2;
   transition: all 0.25s linear;
   color: white;
 }
-.list-item:hover {
-  background: #046264;
-  color: white; /* float-up box face */
-  transform: translate(-0.5em, -0.5em);
-  transition: all 0.25s linear;
-  box-shadow: 2em 1em 0 #a3b2b2;
-  text-decoration: none;
-}
-.list-item:hover:after, .list-item:hover:before {
-  transition: all 0.25s linear;
-}
-.list-item:hover:before {
-  background: #034142;
-  width: 0.6em; /* float-up box right side */
-  top: 0.7em;
-  left: 2.6em;
-  height: 5.1em;
-}
-.list-item:hover:after {
-  background: #034142;
-  width: 0.6em;
-  left: 5em;
-  height: 3em;
-  top: 0.2em;
-}
-.list-item:before, .list-item:after {
+ul li .list-item:before, ul li .list-item:after {
   content: "";
   position: absolute;
   transition: all 0.25s linear;
   width: 0.5em;
   background-color: darkcyan;
 }
-.list-item:after {
-  height: 3em;
-  width: 0.6em;
-  left: 5em;
-  top: 0.25em;
-  transform: skewY(40deg);
-}
-.list-item:before {
-  height: 5em;
+ul li .list-item:before {
+  height: 6em;
   width: 0.5em;
-  top: 0.75em;
-  left: 2.6em;
+  top: -0.25em;
+  left: 3em;
   transform: rotate(90deg) skew(0deg, -50deg);
+}
+ul li .list-item:after {
+  height: 2.7em;
+  width: 0.5em;
+  left: 6em;
+  top: 0.15em;
+  transform: skewY(30deg);
+}
+ul li .list-item:hover {
+  background: #046264;
+  color: white; /* float-up box face */
+  transform: translate(-0.5em, -0.5em);
+  transition: all 0.25s linear;
+  box-shadow: 1em 1em 0 #a3b2b2;
+  text-decoration: none;
+}
+ul li .list-item:hover:after, ul li .list-item:hover:before {
+  transition: all 0.25s linear;
+}
+ul li .active {
+  background-color: #046264;
+}
+ul li .active::before, ul li .active::after {
+  background-color: #034142;
+}
+ul li .active:hover {
+  background-color: lightseagreen;
+}
+ul li .active:hover::before, ul li .active:hover::after {
+  background-color: darkcyan;
 }
 
 #coding {
@@ -111,35 +110,29 @@ li {
   top: 0em;
   left: 35px;
   justify-items: center;
-  padding-top: 20px;
-  font-family: "Oswald", sans-serif;
-  font-size: 80px;
-  color: white;
-  -webkit-text-stroke: 2.5px lightseagreen;
+  padding-top: 5px;
+  font-family: Hacked, sans-serif;
+  font-size: 70px;
+  color: lightseagreen;
 }
 #coding #pundit {
-  color: lightseagreen;
+  font-family: Hacked, sans-serif;
+  -webkit-text-stroke: 1.5px lightseagreen;
+  color: white;
 }
 
 .top {
-  height: 300px;
   width: 100%;
   display: block;
-  height: 150px;
-  background: rgba(241, 241, 241, 0.9);
+  height: 80px;
+  background: #f1f1f1;
   position: sticky;
   top: 0em;
+  box-shadow: 5px 0px 5px gray;
   z-index: 20;
 }
-
-button {
-  float: left;
-  top: 5em;
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-color: var(--color-butt);
-  color: var(--color-buttte);
+.top:hover {
+  box-shadow: 5px 0px 15px gray;
 }
 
 @media (max-width: 1000px) {

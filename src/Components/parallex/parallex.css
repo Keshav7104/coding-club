@@ -25,7 +25,7 @@
     background-color:#cdeced ;
 }
 
-.container{
+.container1{
     position:sticky;
     height: 100%;
     width: 100%;
@@ -53,16 +53,16 @@
     z-index:-1;
 }
 
-h1{
+#new{
     position: absolute;
     top:5rem;
     font-size:10rem;
     letter-spacing:4px;
     color:white;
-    text-shadow:0 0 10px #012021;
+    /* text-shadow:0 0 10px #012021; */
 }
 
-section{
+#box{
     background-color: #cdeced;
     color: #001010;
     padding:5rem 0;
@@ -73,7 +73,7 @@ section{
     padding:0 10rem;
 }
 
-.text{
+.text1{
     font-size:1.5rem;
     padding: 0 10rem;
     margin: 5rem 0;
