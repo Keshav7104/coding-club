@@ -15,7 +15,7 @@ return(
     {/* <img src={background} className="background"/>
     <img src={foreground } className="foreground"/> */}
     <div className="bg"></div>
-    <h1 id="new">EVENTS</h1>
+    <h1 id="new">coding pundits</h1>
 
 </div>
 

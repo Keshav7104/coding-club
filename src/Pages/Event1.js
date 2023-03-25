@@ -12,6 +12,7 @@ import pdf3 from '../Components/pdfs/pdf3.pdf'
 export default function Event1 (){
     return(
         <>
+        <div  id="forbg">
        <div id="toptext"><h1>~:EVENTS:~</h1> </div>
             <div className="top1">
             </div>
@@ -43,6 +44,7 @@ export default function Event1 (){
                     </p>
                     {'\n'} The challenge began on 14th March 2020. Lets have look at the problem questions </div>} elink={pdf3}/></div>
             </div>
+        </div>
         </div>
        
         </>

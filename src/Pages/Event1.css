@@ -1,6 +1,6 @@
  .top1{
 padding: 15px;
-background-image: url(../Components/img&vid/card1.jpg);
+background-image: url(../Components/img&vid/card1.png);
 background-repeat: no-repeat;
 float:right;
 height: 370px;
@@ -13,7 +13,10 @@ margin-right: 30px;
     /* padding-top: 40rem; */
     padding-top: 0%;
  }
- 
+#forbg{
+    background: rgb(245,245,220);
+background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 50%, rgba(67,191,199,1) 100%);
+}
  #text2{
     text-align: left;
     line-height: 1.8;
@@ -32,7 +35,7 @@ margin-right: 30px;
     font-size: 60px;
     padding-left: 10%;
     -webkit-text-stroke: 3px lightseagreen;
-    color: white;
+    color: rgb(255, 255, 255);
 }
  .card{
      width: 20rem;
