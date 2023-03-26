@@ -20,7 +20,7 @@ return(
             <div className="content">
           </div>
           <div className="content1">
-                <p id="abc">CODINGPUNDITS</p>
+                <p id="abc">CODING_PUNDITS</p>
                 <TypeAnimation
       sequence={[
         'Eat Sleep,', // Types 'One'
