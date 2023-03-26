@@ -1,4 +1,4 @@
-
+import { TypeAnimation } from 'react-type-animation';
 import React from "react";
 import './parallex.css';
 // import background from './background.png'
@@ -21,6 +21,29 @@ return(
           </div>
           <div className="content1">
                 <p id="abc">CODINGPUNDITS</p>
+                <TypeAnimation
+      sequence={[
+        'Eat Sleep,', // Types 'One'
+        1000, // Waits 1s
+        'Code Repeat.', // Deletes 'One' and types 'Two'
+        2000, // Waits 2s // Types 'One'
+        'Fix the cause,', // Types 'One'
+        1000, // Waits 1s
+        'not the symptom.', // Types 'One'
+        2000, // Waits 1s
+        'Hands on Keys,', // Types 'One'
+        1000, // Waits 1s
+        'Eyes on Screens.', // Types 'One'
+        2000, // Waits 1s
+        () => {
+          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
+        }
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'550px', bottom:'420px' }}
+    />
                 </div>
         </div>
       </div>
