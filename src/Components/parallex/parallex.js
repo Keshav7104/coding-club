@@ -50,6 +50,29 @@ return(
 
 </p>
 </div>
+</div>
+<div className="main">
+<div className="content3">
+    
+        <div className="box"></div>
+        <div className="box box2"></div>
+        <div className="box"></div>
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2" />
+</div>
+</div>
+
                 </div>
         </div>
       </div>
@@ -111,7 +134,7 @@ return(
     </p>
     </section>  */} 
 
-</div>
+
 
      </>
 );
