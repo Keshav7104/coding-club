@@ -3,18 +3,24 @@ import React from "react";
 import './parallex.css'
 // import background from './background.png'
 // import foreground from './foreground.png'
-
+ import Animation from "./Animation";
+// import './Animation.css';
  function Parallex () {
 
 return(
     <>
     <div id="line"></div>
    <div id="wrapper">
+
+
+    
     
 <div className="container1">
     {/* <img src={background} className="background"/>
     <img src={foreground } className="foreground"/> */}
+
     <div className="bg"></div>
+    <Animation />
     <h1 id="new">EVENTS</h1>
 
 </div>
