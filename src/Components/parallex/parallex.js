@@ -1,29 +1,33 @@
 
 import React from "react";
-import './parallex.css'
+import './parallex.css';
 // import background from './background.png'
 // import foreground from './foreground.png'
- import Animation from "./Animation";
-// import './Animation.css';
  function Parallex () {
 
 return(
     <>
-    <div id="line"></div>
+    {/* <div id="line"></div> */}
    <div id="wrapper">
 
 
     
-    
+   
 <div className="container1">
-    {/* <img src={background} className="background"/>
-    <img src={foreground } className="foreground"/> */}
-
-    <div className="bg"></div>
-    <h1 id="new">EVENTS</h1>
+<div className="photo">
+         <div className="loading">
+        <div className="loading-text">
+            <div className="content">
+          </div>
+          <div className="content1">
+                <p id="abc">CODINGPUNDITS</p>
+                </div>
+        </div>
+      </div>
+      </div>
 
 </div>
-
+{/* 
 <section id="box">
     <h2 className="secHeading">Hands on Keys, Eyes on Screens!!!</h2>
     <p className="text1">
@@ -76,7 +80,7 @@ return(
         amet maiores libero sapiente voluptatem reprehenderit? Illum alias commodi cupiditate corporis mollitia
         ab quaerat, ipsum est excepturi vitae a sunt optio.
     </p>
-    </section>
+    </section>  */} 
 
 </div>
 
