@@ -124,8 +124,8 @@ ul li .active:hover::before, ul li .active:hover::after {
 .top {
   width: 100%;
   display: block;
-  height: 12vh;
-  background: #f1f1f1;
+  height: 80px;
+  background: #ffffff;
   position: sticky;
   top: 0em;
   box-shadow: 5px 0px 5px gray;

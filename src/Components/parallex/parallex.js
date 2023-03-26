@@ -20,7 +20,6 @@ return(
     <img src={foreground } className="foreground"/> */}
 
     <div className="bg"></div>
-    <Animation />
     <h1 id="new">EVENTS</h1>
 
 </div>
