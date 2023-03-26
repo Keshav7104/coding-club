@@ -8,7 +8,7 @@ function Annoucement() {
        <div className="container">
          <div className="row">
            <div className="col text-center mb-5">
-             <div id="toptext"><h1 className="display-4">ANNOUNCEMENTS</h1></div> 
+             <div id="toptext"className="display-4">ANNOUNCEMENTS</div> 
            </div>
          </div>
          <div className="row">
@@ -22,7 +22,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -41,7 +41,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -60,7 +60,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -79,7 +79,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -98,7 +98,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>
@@ -108,7 +108,7 @@ function Annoucement() {
                </div>
              </div></div>
            <div className="col-sm-12 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?computer,design")'}}>
-               <img className="card-img d-none" src alt="Goverment" />
+               {/* <img className="card-img d-none" src alt="Goverment" /> */}
                <div className="card-img-overlay d-flex flex-column">
                  <div className="card-body">
                    <small className="card-meta mb-2">GIT/GITHUB SESSION</small>
@@ -117,7 +117,7 @@ function Annoucement() {
                  </div>
                  <div className="card-footer">
                    <div className="media">
-                     <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} />
+                     {/* <img className="mr-3 rounded-circle" src="background.png" alt="Generic" style={{maxWidth: '50px'}} /> */}
                      <div className="media-body">
                        <h6 className="my-0 text-white d-block">Purushottam</h6>
                        <small>President of NSCC</small>

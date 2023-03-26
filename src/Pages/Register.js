@@ -142,7 +142,7 @@ const Register = () => {
               <input type="checkbox" id='chk' aria-hidden="true" />
               <div className='signup'>
           <form  onSubmit={handleSubmit(onsubmit)}>
-          <label htmlFor="chk" aria-hidden="true">Register</label>
+          <label htmlFor="chk" aria-hidden="true" id='up'>Register</label>
             <input type="text" placeholder="Name" {...register("fullname")}/>
             <input type="text" placeholder="Email" {...register("email")}/>
             <input type="text" placeholder="Branch" {...register("branch")}/>

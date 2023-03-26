@@ -13,7 +13,7 @@ export default function Event1 (){
     return(
         <>
         <div  id="forbg">
-       <div id="toptext"><h1>~:EVENTS:~</h1> </div>
+       <div id="toptext"><h1>EVENTS</h1> </div>
             <div className="top1">
             </div>
             <div id="top2">

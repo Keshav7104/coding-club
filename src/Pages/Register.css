@@ -16,7 +16,7 @@
   height: 550px;
   background: rgba(106, 200, 202, 0.8431372549);
   overflow: hidden;
-  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+  background: transparent;
   border-radius: 10px;
   box-shadow: 5px 20px 50px #000;
 }
@@ -24,8 +24,13 @@
   box-shadow: 5px 20px 80px #000;
 }
 
+#up {
+  margin-top: 40px;
+}
+
 #chk {
   display: none;
+  margin-top: 20px;
 }
 
 .signup {
@@ -81,10 +86,10 @@ input {
 }
 
 .login {
-  height: 560px;
-  background: #eee;
+  height: 500px;
+  background: #fffff0;
   border-radius: 60%/10%;
-  transform: translateY(-180px);
+  transform: translateY(-150px);
   transition: 0.8s ease-in-out;
 }
 

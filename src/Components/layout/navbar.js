@@ -7,7 +7,7 @@ export default function Nav() {
 
     return(
             <div className='top'>
-                <h1 id='coding'>Coding<span id='pundit'>Pundits</span></h1>
+                <h1 id='coding'>Coding<br className='Small'/><span id='pundit'>Pundits</span></h1>
                 <ul>
                     <li>
                         <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to='' >&#x3c;Home&#x3e;
