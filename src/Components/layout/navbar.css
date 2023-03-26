@@ -85,8 +85,9 @@ ul li .list-item:hover {
   transition: all 0.25s linear;
   box-shadow: 1em 1em 0 #a3b2b2;
   text-decoration: none;
+  font-weight: 500;
 }
-ul li .list-item:hover:after, ul li .list-item:hover:before {
+ul li .list-item:hover::before, ul li .list-item:hover::after {
   transition: all 0.25s linear;
 }
 ul li .active {
@@ -106,10 +107,8 @@ ul li .active:hover::before, ul li .active:hover::after {
   display: inline-block;
   width: 48%;
   height: 100px;
-  text-align: center;
   top: 0em;
-  left: 35px;
-  justify-items: center;
+  margin-left: 55px;
   padding-top: 5px;
   font-family: Hacked, sans-serif;
   font-size: 70px;
@@ -118,7 +117,10 @@ ul li .active:hover::before, ul li .active:hover::after {
 #coding #pundit {
   font-family: Hacked, sans-serif;
   -webkit-text-stroke: 1.5px lightseagreen;
-  color: white;
+  color: #fffff0;
+}
+#coding .Small {
+  display: none;
 }
 
 .top {
@@ -138,11 +140,24 @@ ul li .active:hover::before, ul li .active:hover::after {
 @media (max-width: 1000px) {
   #coding {
     width: 36%;
-    font-size: 60px;
+    font-size: 55px;
+    margin-left: 35px;
   }
   ul {
     width: 50%;
     margin-right: 0px;
     margin-top: 20px;
+  }
+}
+@media (max-width: 775px) {
+  #coding {
+    font-size: 50px;
+    margin-left: 15px;
+  }
+  #coding .Small {
+    display: inline;
+  }
+  .top {
+    height: 120px;
   }
 }/*# sourceMappingURL=navbar.css.map */

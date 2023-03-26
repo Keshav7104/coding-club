@@ -97,14 +97,14 @@
     @media (max-width: 767px){
       
     }
-    #toptext h1{
+    #toptext{
       /* padding-left: 35%; */
       padding-top: 10px;
-      font-weight: bold;
-      font-size: 60px;
+      // font-weight: bold;
+      font-size: 80px;
       padding-left: 10%;
-      -webkit-text-stroke: 3px lightseagreen;
-      color: white;
+      color: lightseagreen;
+      font-family: Consolas,monaco,monospace;
   }
   #text{
     text-decoration: none;

@@ -70,14 +70,13 @@
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-#toptext h1 {
+#toptext {
   /* padding-left: 35%; */
   padding-top: 10px;
-  font-weight: bold;
-  font-size: 60px;
+  font-size: 80px;
   padding-left: 10%;
-  -webkit-text-stroke: 3px lightseagreen;
-  color: white;
+  color: lightseagreen;
+  font-family: Consolas, monaco, monospace;
 }
 
 #text {

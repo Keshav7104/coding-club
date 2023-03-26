@@ -8,7 +8,7 @@ function Annoucement() {
        <div className="container">
          <div className="row">
            <div className="col text-center mb-5">
-             <div id="toptext"><h1 className="display-4">ANNOUNCEMENTS</h1></div> 
+             <div id="toptext"className="display-4">ANNOUNCEMENTS</div> 
            </div>
          </div>
          <div className="row">
