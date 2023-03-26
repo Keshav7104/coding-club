@@ -44,6 +44,12 @@ return(
       repeat={Infinity}
       style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'550px', bottom:'420px' }}
     />
+    <div className="content2">
+        <h2 className="display-4 text-center fw-boldest">CODING COACHES</h2>
+        <p class="boxcontent"><span className="boxtxt1">We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn.</span> <br /><span className="boxtxt2">We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge.</span><br /> <span className="boxtxt3">Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.</span>
+
+</p>
+</div>
                 </div>
         </div>
       </div>
