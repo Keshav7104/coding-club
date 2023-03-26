@@ -59,7 +59,9 @@ return(
         <div className="box"></div>
         <div className="box box2" />
         <div className="box" />
-        <div className="box box2" />
+        <div className="box box2"></div>
+        <div className="box" />
+        {/* <div className="box box2" />
         <div className="box" />
         <div className="box box2" />
         <div className="box" />
@@ -68,8 +70,7 @@ return(
         <div className="box box2" />
         <div className="box" />
         <div className="box box2" />
-        <div className="box" />
-        <div className="box box2" />
+        <div className='box' /> */}
 </div>
 </div>
 
