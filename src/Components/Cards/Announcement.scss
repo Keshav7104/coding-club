@@ -9,8 +9,13 @@
     //   height: 40px;
     //   width: 20px;
     // }
+    body{
+      background: rgb(245,245,220);
+    background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 50%, rgba(67,191,199,1) 100%);
+    }
     .wrapper1{margin:10vh;
-    margin-bottom : 20vh}
+    margin-bottom : 20vh;
+    }
     //post card styles
     
     .card{

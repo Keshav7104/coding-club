@@ -1,3 +1,8 @@
+body {
+  background: rgb(245, 245, 220);
+  background: linear-gradient(51deg, rgb(245, 245, 220) 0%, rgb(230, 245, 246) 50%, rgb(67, 191, 199) 100%);
+}
+
 .wrapper1 {
   margin: 10vh;
   margin-bottom: 20vh;
