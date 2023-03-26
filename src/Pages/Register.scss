@@ -6,24 +6,29 @@
 	// align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(90deg, rgba(106,200,202,1) 0%, rgba(233,231,148,0.46551120448179273) 100%);
+	background: rgb(245,245,220);
+	background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 50%, rgba(67,191,199,1) 100%);
 }
 .main{
-	margin: 100px;
+	margin-top: 25px;
     align-self: center;
 	width: 350px;
-	height: 600px;
-	background: red;
+	height: 550px;
+	background: #6ac8cad7;
 	overflow: hidden;
-	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	background: transparent;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
 	&:hover{
 		box-shadow: 5px 20px 80px #000;
 	}
 }
+#up{
+	margin-top: 40px;
+}
 #chk{
 	display: none;
+	margin-top: 20px;
 }
 .signup{
 	position: relative;
@@ -31,7 +36,7 @@
 	height: 100%;
 }
 label{
-	color: #fff;
+	color: #034142;
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
@@ -43,7 +48,7 @@ label{
 input{
 	width: 80%;
 	height: 40px;
-	background: #e0dede;
+	background: #9cdadb60;
 	justify-content: center;
 	display: flex;
 	margin: 20px auto;
@@ -61,7 +66,7 @@ input{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #034142;
+	background: lightseagreen;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -75,10 +80,10 @@ input{
 	background: #034142;
 }
 .login{
-	height: 560px;
-	background: #eee;
+	height: 500px;
+	background: #fffff0;
 	border-radius: 60% / 10%;
-	transform: translateY(-180px);
+	transform: translateY(-150px);
 	transition: .8s ease-in-out;
 }
 .login label{

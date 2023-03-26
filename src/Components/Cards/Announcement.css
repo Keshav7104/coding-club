@@ -1,3 +1,8 @@
+body {
+  background: rgb(245, 245, 220);
+  background: linear-gradient(51deg, rgb(245, 245, 220) 0%, rgb(230, 245, 246) 50%, rgb(67, 191, 199) 100%);
+}
+
 .wrapper1 {
   margin: 10vh;
   margin-bottom: 20vh;
@@ -73,9 +78,10 @@
 #toptext {
   /* padding-left: 35%; */
   padding-top: 10px;
+  font-weight: 500px;
   font-size: 80px;
   padding-left: 10%;
-  color: lightseagreen;
+  color: black;
   font-family: Consolas, monaco, monospace;
 }
 
@@ -86,4 +92,11 @@
 .abc {
   position: relative;
   left: 0px;
+}
+
+@media (max-width: 775px) {
+  #toptext {
+    font-weight: 300px;
+    font-size: 50px;
+  }
 }/*# sourceMappingURL=Announcement.css.map */
