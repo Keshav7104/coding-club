@@ -35,9 +35,6 @@ return(
         1000, // Waits 1s
         'Eyes on Screens.', // Types 'One'
         2000, // Waits 1s
-        () => {
-          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-        }
       ]}
       wrapper="span"
       cursor={true}
@@ -51,27 +48,37 @@ return(
 </p>
 </div>
 </div>
-<div className="main">
-<div className="content3">
-    
-        <div className="box"></div>
-        <div className="box box2"></div>
-        <div className="box"></div>
-        <div className="box box2" />
-        <div className="box" />
-        <div className="box box2"></div>
-        <div className="box" />
-        {/* <div className="box box2" />
-        <div className="box" />
-        <div className="box box2" />
-        <div className="box" />
-        <div className="box box2" />
-        <div className="box" />
-        <div className="box box2" />
-        <div className="box" />
-        <div className="box box2" />
-        <div className='box' /> */}
+
 </div>
+<div className="smain">
+<div className="content3" id='fuck'>
+    <div className='team'>Our team</div>
+        <div className="box">
+                <div className='profile'>
+                    <div className='about'>
+                        <span className='title'>Subhashis Banrjee</span>
+                        <br />cse faculty of our collage<br />under them we all learn coding skills<br />
+                        <ul>
+                          <li><a href='https://www.linkedin.com/in/pinakeswar-mahanta-30592616'>
+                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' width="20" height="20"/></a>
+                          </li>
+                          {/* <li><a href='#'></a>
+                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' width="20" height="20"/>
+                          </li> */}
+                        </ul>
+                        </div>
+                        <div className='image'></div>
+                        <p className='post'>Our Mentor</p>
+                        </div>
+        </div> 
+        <div className="box box2">fuck!!!@!
+        </div>
+        <div className="box"></div>
+        <div className="box box2" />
+        <div className="box" />
+        <div className="box box2"></div>
+        <div className="box" />
+        </div>
 </div>
 
                 </div>
@@ -79,61 +86,8 @@ return(
       </div>
       </div>
 
-</div>
-{/* 
-<section id="box">
-    <h2 className="secHeading">Hands on Keys, Eyes on Screens!!!</h2>
-    <p className="text1">
-    Keeping in mind competitive, demanding, and ever changing computer programming career, CODING PUNDITS aims at organising all possible events that helpn in staying up to date, creative and versatile in their journeys to master their fields.
-        <hr />
-        These events include <b>hackathons</b>,<b> workshops</b>, <b>classes</b>, <b>interactive sessions with alums</b> and other programs that fulfill the overarching goal of making programming exciting and accessible.
-        <hr />
 
-     <h4><i><b>Follow, celebrate, and support these fantastic events!!!</b></i></h4>
-        
-    </p>
-    <div className="bg bg1">
-        <h2 className="desc"><b>INCEPTION</b> </h2>
-        <p> <i>let the game begin</i></p>
-    </div>
-    <p className="text1">
-       The club conducted a Multiple Choice Question Quiz. It was amongst the students that had registered themselves for the membership of coding club. It was the first activity of our club and took place on 7th March 2020. 
-        <hr></hr>
-       Being the first activity here at Coding Pundits, the activity has a historical importance for the club and we are more than happy to showcase the questions asked and also the list of students selected in our first ever hunt,
-    </p>
-    <div className="bg bg2">
-        <h2 className="desc">PARA GLIDING</h2>
-    </div>
-    <p className="text1">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui necessitatibus commodi alias? Veritatis,
-        eligendi nisi. Amet exercitationem, recusandae dolore corrupti laborum aperiam repellendus natus
-        voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
-        ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
-        autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <hr></hr>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
-        repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
-        blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
-        amet maiores libero sapiente voluptatem reprehenderit? Illum alias commodi cupiditate corporis mollitia
-        ab quaerat, ipsum est excepturi vitae a sunt optio.
-    </p>
-    <div className="bg bg3">
-        <h2 className="desc">SURFING</h2>
-    </div>
-    <p className="text1">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui necessitatibus commodi alias? Veritatis,
-        eligendi nisi. Amet exercitationem, recusandae dolore corrupti laborum aperiam repellendus natus
-        voluptatem quam atque aliquam beatae. Odit deserunt nisi optio eveniet? Aliquam possimus molestiae,
-        ullam illum accusamus autem accusantium! Voluptate laboriosam eum saepe ex veritatis est? Numquam eaque
-        autem labore provident dolorum, velit omnis mollitia eos adipisci!
-        <hr></hr>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, itaque hic tempore rem eveniet sed
-        repudiandae molestiae magnam aut quod consequatur, harum, totam beatae fugiat ipsam? Explicabo,
-        blanditiis quod similique fugiat fugit ea expedita deleniti doloribus, delectus perferendis, tempore
-        amet maiores libero sapiente voluptatem reprehenderit? Illum alias commodi cupiditate corporis mollitia
-        ab quaerat, ipsum est excepturi vitae a sunt optio.
-    </p>
-    </section>  */} 
+
 
 
 
