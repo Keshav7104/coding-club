@@ -51,7 +51,7 @@ return(
 
 </div>
 <div className="smain">
-<div className="content3" id='fuck'>
+<div className="content3">
     <div className='team'>Our team</div>
         <div className="box" >
                 <div className='profile' id='first'>
@@ -73,7 +73,7 @@ return(
             <img src={binary} alt="hello" />
             <div className='about'>
               <span className='title'>Chandreshekar</span>
-              <br />lksbdo kefnwpief knfpiwe <br />bjka asduiu fejbw <br />
+              <br />3rd year student of Btech<br />under cse department<br />
               <ul>
                 <li><a href="https://google.com" target="blank">
                   <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
@@ -81,7 +81,7 @@ return(
                 
               </ul>
             </div>
-            <p className='post'>Boss</p>
+            <p className='post'>Our mentor</p>
           </div>
         </div>
         <div className="box">
