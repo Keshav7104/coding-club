@@ -164,6 +164,7 @@ h2 {
 }
 .profile .about ul {
   margin: 0px;
+  top: 10px;
 }
 .profile .about li {
   display: inline-block;

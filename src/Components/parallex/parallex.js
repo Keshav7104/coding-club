@@ -70,7 +70,7 @@ return(
         </div> 
         <div className="box box2">
           <div className='profile right'>
-            <img src={binary} alt="hello" />
+            <img src="https://avatars.githubusercontent.com/u/68462214" alt="hello" />
             <div className='about'>
               <span className='title'>Chandreshekar</span>
               <br />3rd year student of Btech<br />under cse department<br />
@@ -95,7 +95,7 @@ return(
                 </li>
               </ul>
             </div>
-            <img src={binary} alt="sir"/>
+            <img src="https://avatars.githubusercontent.com/u/81693090" alt="sir"/>
             <p className='post'>Our Mentor</p>
           </div>
         </div>
