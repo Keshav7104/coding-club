@@ -153,7 +153,7 @@ const Register = () => {
           </div>
           <div className='login'>
           <form onSubmit={handleSubmit2(checkadmin)}>
-          <label htmlFor="chk" aria-hidden="true">Login</label>
+          <label htmlFor="chk" aria-hidden="true">Admin</label>
             <input type="text" placeholder='Login-id' {...register2("login")}/>
             <span>{errors2.login?.message}</span>
             <input type="password" placeholder='Password' {...register2("password")} />

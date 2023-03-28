@@ -1,13 +1,13 @@
 import { TypeAnimation } from 'react-type-animation';
 import React from "react";
 import './parallex.css';
+import binary from './binary1.jpg';
 // import background from './background.png'
 // import foreground from './foreground.png'
  function Parallex () {
 
 return(
     <>
-    {/* <div id="line"></div> */}
    <div id="wrapper">
 
 
@@ -23,13 +23,13 @@ return(
                 <p id="abc">CODING_PUNDITS</p>
                 <TypeAnimation
       sequence={[
-        'Eat Sleep,', // Types 'One'
+        'Eat,Sleep,', // Types 'One'
         1000, // Waits 1s
-        'Code Repeat.', // Deletes 'One' and types 'Two'
+        'Code,Repeat.', // Deletes 'One' and types 'Two'
         2000, // Waits 2s // Types 'One'
         'Fix the cause,', // Types 'One'
         1000, // Waits 1s
-        'not the symptom.', // Types 'One'
+        'not the symptoms.', // Types 'One'
         2000, // Waits 1s
         'Hands on Keys,', // Types 'One'
         1000, // Waits 1s
@@ -53,27 +53,52 @@ return(
 <div className="smain">
 <div className="content3" id='fuck'>
     <div className='team'>Our team</div>
-        <div className="box">
-                <div className='profile'>
+        <div className="box" >
+                <div className='profile' id='first'>
                     <div className='about'>
                         <span className='title'>Subhashis Banrjee</span>
                         <br />cse faculty of our collage<br />under them we all learn coding skills<br />
                         <ul>
-                          <li><a href='https://www.linkedin.com/in/pinakeswar-mahanta-30592616'>
-                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' width="20" height="20"/></a>
+                          <li><a href="https://google.com" target="blank">
+                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
                           </li>
-                          {/* <li><a href='#'></a>
-                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' width="20" height="20"/>
-                          </li> */}
                         </ul>
                         </div>
-                        <div className='image'></div>
+                        <img src={binary} alt="sir"/>
                         <p className='post'>Our Mentor</p>
                         </div>
         </div> 
-        <div className="box box2">fuck!!!@!
+        <div className="box box2">
+          <div className='profile right'>
+            <img src={binary} alt="hello" />
+            <div className='about'>
+              <span className='title'>Chandreshekar</span>
+              <br />lksbdo kefnwpief knfpiwe <br />bjka asduiu fejbw <br />
+              <ul>
+                <li><a href="https://google.com" target="blank">
+                  <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
+                </li>
+                
+              </ul>
+            </div>
+            <p className='post'>Boss</p>
+          </div>
         </div>
-        <div className="box"></div>
+        <div className="box">
+          <div className='profile'>
+            <div className='about'>
+              <span className='title'>Purshotam</span>
+              <br />3rd year student of Btech<br />Under cse department<br />
+              <ul>
+                <li><a href="https://google.com" target="blank">
+                  <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
+                </li>
+              </ul>
+            </div>
+            <img src={binary} alt="sir"/>
+            <p className='post'>Our Mentor</p>
+          </div>
+        </div>
         <div className="box box2" />
         <div className="box" />
         <div className="box box2"></div>
