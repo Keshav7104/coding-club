@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer () {  
     return(
@@ -13,17 +14,17 @@ export default function Footer () {
 				<h3>Coding<span>Pundits</span></h3>
 
 				<p className="footer-links">
-					<a href="#" className="link-1">Home </a>
+					<Link to='/' className="link-1">Home </Link>
 				
-					<a href="#">Documentation </a>
+					<Link to='/News'>News</Link>
 				
-					<a href="#">Events </a>
+					<Link to='/Events'>Events </Link>
 					
-					<a href="#">Our Team </a>
+					<Link to='/Register'>Register</Link>
 					
-					<a href="#">Alumni </a>
+					<a href="https://discord.gg/7YJrqYE3">Discord </a>
 
-					<a href="#">Register</a>
+					<a href="https://github.com/Keshav7104/coding-club/issues">Report a bug</a>
 				</p>
 
 				<p className="footer-company-name">Coding Pundits © 2023</p>
@@ -56,14 +57,14 @@ export default function Footer () {
 					Coding Pundits aims to establish a coding culture on campus, reaching every student passionate about coding.<br></br> Here you'll be able to collaborate with others, learn from them and indeed teach them things you know. 
 				</p>
 				</div>
-				<div className="footer-icons">
+				{/* <div className="footer-icons">
 					<a href="#"><i className="fab fa-facebook-f"></i></a>
 					<a href="#"><i className="fa fa-twitter"></i></a>
 					<a href="#"><i className="fa fa-linkedin"></i></a>
 					<a href="#"><i className="fa fa-github"></i></a>
 
 
-			</div>
+			</div> */}
 			
 		</footer>
 		</div>

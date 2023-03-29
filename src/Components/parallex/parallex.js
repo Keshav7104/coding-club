@@ -2,17 +2,84 @@ import { TypeAnimation } from 'react-type-animation';
 import React from "react";
 import './parallex.css';
 import binary from './binary1.jpg';
+import Team from '../Cards/team';
 // import background from './background.png'
 // import foreground from './foreground.png'
  function Parallex () {
 
+  const team = [
+    {title : "Subhashis Banarjee",
+    about : "cse faculty of our collage under them we all learn coding skills",
+    img : binary,
+    post: "Our Mentor",
+    links : [
+      {to : "",icon : 'linkedin'}
+    ]
+  },
+  {title : "Chandreshekhar",
+  about : "3rd year student of Btech under cse department",
+  img : "https://avatars.githubusercontent.com/u/68462214",
+  post: "Our Mentor",
+  links : [
+    {to : "",icon : 'linkedin'}
+  ]
+  },
+  {
+    title : "Purshotam",
+    about : "3rd year student of Btech under cse department",
+    img : "https://avatars.githubusercontent.com/u/81693090",
+    post: "Our Mentor",
+    links : [
+      {to : "",icon : 'linkedin'}
+    ]
+  },
+  {
+    title : "Dev Singh Kanyal",
+    about : "3rd year student of Btech under cse Department",
+    img : "https://avatars.githubusercontent.com/u/77870205" ,
+    post : "Our Mentor",
+    links : [
+      {to : "",icon : 'linkedin'}
+    ]  
+  },
+  {
+    title : "Keshav Arora",
+    about : "2nd year student of B.tech under CSE department",
+    img : "https://avatars.githubusercontent.com/u/124811079",
+    post : "Site Developer",
+    links : [
+      {to : "",icon : 'linkedin'},
+      {to : "",icon : 'instagram'},
+      {to: "",icon : 'github'}
+    ]
+  },
+  {
+    title : "Vanshika Marwaha",
+    about : "2nd year student of B.tech under CSE department",
+    img : "https://avatars.githubusercontent.com/u/101502532?v=4",
+    post : "Site Developer",
+    links : [
+      {to : "",icon : 'linkedin'},
+      {to : "",icon : 'instagram'},
+      {to: "",icon : 'github'}
+    ]
+  },
+  {
+    title : "Sachin Pathak",
+    about : "2nd year student of B.tech under CSE department",
+    img : "https://avatars.githubusercontent.com/u/103988614?v=4",
+    post : "Site Developer",
+    links : [
+      {to : "",icon : 'linkedin'},
+      {to : "",icon : 'instagram'},
+      {to: "",icon : 'github'}
+    ]
+  }
+]
+
 return(
     <>
    <div id="wrapper">
-
-
-    
-   
 <div className="container1">
 <div className="photo">
          <div className="loading">
@@ -42,7 +109,7 @@ return(
       style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'550px', bottom:'420px' }}
     />
     <div className="content2">
-        <h2 className="display-4 text-center fw-boldest">CODING COACHES</h2>
+        <h2  id='coach'>CODING COACHES</h2>
         <p class="boxcontent"><span className="boxtxt1">We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn.</span> <br /><span className="boxtxt2">We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge.</span><br /> <span className="boxtxt3">Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.</span>
 
 </p>
@@ -53,56 +120,9 @@ return(
 <div className="smain">
 <div className="content3">
     <div className='team'>Our team</div>
-        <div className="box" >
-                <div className='profile' id='first'>
-                    <div className='about'>
-                        <span className='title'>Subhashis Banrjee</span>
-                        <br />cse faculty of our collage<br />under them we all learn coding skills<br />
-                        <ul>
-                          <li><a href="https://google.com" target="blank">
-                          <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
-                          </li>
-                        </ul>
-                        </div>
-                        <img src={binary} alt="sir"/>
-                        <p className='post'>Our Mentor</p>
-                        </div>
-        </div> 
-        <div className="box box2">
-          <div className='profile right'>
-            <img src="https://avatars.githubusercontent.com/u/68462214" alt="hello" />
-            <div className='about'>
-              <span className='title'>Chandreshekar</span>
-              <br />3rd year student of Btech<br />under cse department<br />
-              <ul>
-                <li><a href="https://google.com" target="blank">
-                  <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
-                </li>
-                
-              </ul>
-            </div>
-            <p className='post'>Our mentor</p>
-          </div>
-        </div>
-        <div className="box">
-          <div className='profile'>
-            <div className='about'>
-              <span className='title'>Purshotam</span>
-              <br />3rd year student of Btech<br />Under cse department<br />
-              <ul>
-                <li><a href="https://google.com" target="blank">
-                  <img src='https://img.icons8.com/fluent/40/000000/linkedin-circled.png' alt='linkedin' /></a>
-                </li>
-              </ul>
-            </div>
-            <img src="https://avatars.githubusercontent.com/u/81693090" alt="sir"/>
-            <p className='post'>Our Mentor</p>
-          </div>
-        </div>
-        <div className="box box2" />
-        <div className="box" />
-        <div className="box box2"></div>
-        <div className="box" />
+    {team.map((member,index)=>
+    <Team index={index} member={member} link={member.links}/>
+    )}
         </div>
 </div>
 

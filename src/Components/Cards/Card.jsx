@@ -10,7 +10,7 @@ import '../../Pages/Event1.css'
 <div className="card-body text-dark">
 <h4 className="card-title">{props.t}</h4>
 <p className="card-text text secondary">{props.abt}</p>
-<a href={props.elink} target={"_blank"} className="btn btn-outline-info">sneak into the questions</a>
+<a href={props.elink} target={"blank"} className="btn btn-outline-info">sneak into the questions</a>
 </div>
 </div>
     );

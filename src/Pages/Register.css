@@ -99,7 +99,7 @@ input {
 }
 
 #chk:checked ~ .login {
-  transform: translateY(-600px);
+  transform: translateY(-550px);
 }
 
 #chk:checked ~ .login label {

@@ -48,7 +48,7 @@
         left: 0;
         background: inherit;
         background: #E6F5F6;
-        background: linear-gradient(to bottom, #094246be 0%, #9cdadbbe 38%, #53c7cbbe 62%)
+        background: linear-gradient(to bottom, #094246be 0%, rgba(3, 68, 69, 0.9) 62%, rgba(4, 98, 100, 0.9) 38%);
       
       }
       //   -webkit-filter: grayscale(1);
@@ -64,8 +64,8 @@
          transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     
         .card-img-overlay {
-          transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-          background: linear-gradient(to bottom, #094246be 0%, #9cdadbbe 38%, #53c7cbbe 62%);
+          transition: all 800ms cubic-bezier(0.19, 1, 0.22, 0.5);
+          background: linear-gradient(to bottom, #094246be 0%, rgba(3, 68, 69, 0.9) 38%, rgba(4, 98, 100, 0.9) 62%);
          
           // background: rgb(35,79,109);
         //  background: linear-gradient(0deg, rgba(4,69,114,0.5) 0%, rgba(4,69,114,1) 100%);

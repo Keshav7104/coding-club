@@ -92,7 +92,7 @@ input{
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-600px);
+	transform: translateY(-550px);
 }
 #chk:checked ~ .login label{
 	transform: scale(1);	
@@ -100,10 +100,6 @@ input{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
-// span{
-//     font-size: 5px;
-//     color: white;
-// }
 .errors{
     float: right;
 }
