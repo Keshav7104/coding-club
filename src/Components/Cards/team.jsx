@@ -24,14 +24,14 @@ const Team =({member,index})=>{
       ))}
             </ul>
             </div>
-            <img src={member.img} alt="sir"/>
+            <img src={member.img} alt="team member"/>
             <p className='post'>{member.post}</p>
             </div>
     </div>
     
     const right =  <div className="box box2">
     <div className='profile right'>
-      <img src={member.img} alt="hello" />
+      <img src={member.img} alt="team member" />
       <div className='about'>
         <span className='title'>{member.title}</span><br />
         {member.about}<br />

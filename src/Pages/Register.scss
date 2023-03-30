@@ -103,3 +103,10 @@ input{
 .errors{
     float: right;
 }
+
+@media (max-width:500px) {
+	.main{
+		height: 550px;
+		width: 300px;
+	}
+}

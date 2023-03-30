@@ -106,7 +106,8 @@ return(
       wrapper="span"
       cursor={true}
       repeat={Infinity}
-      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'550px', bottom:'420px' }}
+      className="type"
+      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'50%', bottom:'420px' }}
     />
     <div className="content2">
         <h2  id='coach'>CODING COACHES</h2>
