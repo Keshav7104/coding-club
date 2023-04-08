@@ -80,10 +80,6 @@ import Team from '../Cards/team';
 return(
     <>
    <div id="wrapper">
-<div className="container1">
-<div className="photo">
-         <div className="loading">
-        <div className="loading-text">
             <div className="content">
           </div>
           <div className="content1">
@@ -107,17 +103,20 @@ return(
       cursor={true}
       repeat={Infinity}
       className="type"
-      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'50%', bottom:'420px' }}
+      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
     />
-    <div className="content2">
+          </div>
+    <div className="hello">
         <h2  id='coach'>CODING COACHES</h2>
-        <p class="boxcontent"><span className="boxtxt1">We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn.</span> <br /><span className="boxtxt2">We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge.</span><br /> <span className="boxtxt3">Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.</span>
+        <p>We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn<br /><br />
+        We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge<br /><br />
+        Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.<br /><br />
 
-</p>
-</div>
-</div>
+         </p>
+     </div>
 
-</div>
+
+
 <div className="smain">
 <div className="content3">
     <div className='team'>Our team</div>
@@ -127,9 +126,9 @@ return(
         </div>
 </div>
 
-                </div>
-        </div>
-      </div>
+                
+        
+      
       </div>
 
 
