@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import React from "react";
 import './parallex.css';
+// import '../Cards/team.css'
 import binary from './binary1.jpg';
 import Team from '../Cards/team';
 // import background from './background.png'
@@ -13,7 +14,7 @@ import Team from '../Cards/team';
     img : binary,
     post: "Our Mentor",
     links : [
-      {to : "",icon : 'linkedin'}
+      {to : "https://google.com",icon : 'linkedin'}
     ]
   },
   {title : "Chandreshekhar",
@@ -118,25 +119,16 @@ return(
 
 
 <div className="smain">
-<div className="content3">
+  <div className="content3">
     <div className='team'>Our team</div>
     {team.map((member,index)=>
     <Team index={index} member={member} link={member.links}/>
     )}
-        </div>
+
+  </div>
 </div>
-
-                
-        
-      
-      </div>
-
-
-
-
-
-
-     </>
+</div>
+</>
 );
 }
 

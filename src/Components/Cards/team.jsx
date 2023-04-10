@@ -11,47 +11,51 @@ const Team =({member,index})=>{
         github: "https://img.icons8.com/dusk/40/null/github.png"
       }
     
-    const left = <div className="box" >
-    <div className='profile'>
-        <div className='about'>
-            <span className='title'>{member.title}</span><br/>
-            {member.about}<br />
-            <ul>
-            {member.links.map(link => (
-        <li><a href={link.to}>
-          <img alt="" src={icons[link.icon]} width="32" height="32" />
-        </a></li>
-      ))}
-            </ul>
-            </div>
-            <img src={member.img} alt="team member"/>
-            <p className='post'>{member.post}</p>
-            </div>
-    </div>
-    
-    const right =  <div className="box box2">
-    <div className='profile right'>
-      <img src={member.img} alt="team member" />
-      <div className='about'>
-        <span className='title'>{member.title}</span><br />
-        {member.about}<br />
-        <ul>
-        {member.links.map(link => (
-        <li><a href={link.to}>
-          <img alt="" src={icons[link.icon]} width="32" height="32" />
-        </a></li>
-      ))}
-        </ul>
+    const left =   <div className='box3'>
+    <div className='detail2'>
+      <div className='title'>{member.title}</div>
+      <div className='about'>{member.about}</div>
       </div>
-      <p className='post'>{member.post}</p>
+    <div className='image2'><img src={member.img} alt="team-member" /></div>
+    <div className='links2'>
+      <ul>
+      {member.links.map(link => (
+        <li><a href={link.to}>
+          <img alt="" src={icons[link.icon]} width="32" height="32" />
+        </a></li>
+      ))}
+      </ul>
     </div>
+    <div className='post2'>
+      <div className='border'>{member.post}</div>
+    </div>
+  </div>
+    
+    const right =      <div className='last'>
+    <div className='image'>
+      <img src={member.img} alt="team-member" />
+    </div>
+    <div className='detail'>
+      <div className='title'>{member.title}</div>
+      <br /><div className='about'>{member.about}</div>
+    </div>
+    <div className='post1'>
+      <div className='border'>{member.post}</div>
+    </div>
+    <div className='links'>
+    <ul>
+    {member.links.map(link => (
+        <li><a href={link.to}>
+          <img alt="" src={icons[link.icon]} width="32" height="32" />
+        </a></li>
+      ))}
+    </ul>
+    </div> 
   </div>
 
   let card;
     if(index===0){
         card=left;
-        // const first =document.getElementsByClassName("box");
-        // first[0].classList.add("first");
     }
     else{
         if(index%2===0){
@@ -63,7 +67,7 @@ const Team =({member,index})=>{
           }
     }
     useEffect(()=>{
-       const first = document.getElementsByClassName("box");
+       const first = document.getElementsByClassName("box3");
        first[0].classList.add("first");
       });
     return(

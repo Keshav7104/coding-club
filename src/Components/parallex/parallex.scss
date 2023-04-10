@@ -10,7 +10,6 @@
 }
 
 #wrapper{
-    /* height:100vh; */
     overflow-x: hidden;
     perspective: 10px;
     margin: 0;
@@ -29,14 +28,13 @@
 
 #abc{
     position: relative;
-    /* top: 170px; */
     bottom: 380px;
     font-family: Hacked, sans-serif;
     font-size: 110px;
     text-align: center;
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
-    /* white-space: nowrap; */
+
 
 }
 .content1{
@@ -45,8 +43,6 @@
     height: 0vh;
 }
 .hello{
-    // position: relative;
-    // top: 10%;
     height: 60vh;
     width: 100vw;
     text-align: center;
@@ -69,7 +65,7 @@
 .smain{
     overflow: hidden;
     
-    height: 100vh;
+    height: 50vw;
     width: 100vw;
     margin: 0px;
 }
@@ -85,14 +81,11 @@
     display: grid;
     position: relative;
     justify-items: center;
-    perspective:650px;
+    perspective:600px;
     perspective-origin: center center;
-    // text-align: right;
-    /* // Previously JS was needed, but with body { height: 100% } instead of body { height: 100vh }, it works!
-    // perspective-origin: center calc((var(--s, 1) * 1px) + 50%); */
+
     .team{
         position: relative;
-        // float: right;
         left:20%;
         top:140%;
         font-size:80px;
@@ -101,25 +94,26 @@
 
     }
   }
+
 @media (max-width:1000px) {
-    #abc{
-        font-size: 100px;
-    }
-   .content2{
-    h2{
-        bottom: 20vw;
-        font-size: 50px;
-        }
-    .boxtxt1{
-        bottom: 18vw;
-    }
-    .boxtxt2{
-        bottom: 15vw;
-    }
-    .boxtxt3{
-        bottom: 12vw;
-    }
-   }
+//     #abc{
+//         font-size: 100px;
+//     }
+//    .content2{
+//     h2{
+//         bottom: 20vw;
+//         font-size: 50px;
+//         }
+//     .boxtxt1{
+//         bottom: 18vw;
+//     }
+//     .boxtxt2{
+//         bottom: 15vw;
+//     }
+//     .boxtxt3{
+//         bottom: 12vw;
+//     }
+//    }
     // .smain{
     //     height: 100vh;
     //     width: 100vw;
@@ -127,9 +121,10 @@
     //     top: 0%;
     // }
     .content3{
-        // perspective: 0px;
-        // perspective-origin: 0%;
+        // perspective: 500px;
+        // perspective-origin: center center;
         // top: -7.5em;
+        // grid-template-rows: 0px 200px;
         .team{
         font-size: 60px;
         margin-top: 0;
