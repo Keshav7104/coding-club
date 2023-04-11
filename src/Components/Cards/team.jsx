@@ -11,7 +11,7 @@ const Team =({member,index})=>{
         github: "https://img.icons8.com/dusk/40/null/github.png"
       }
     
-    const left =   <div className='box3'>
+    const left =   <div className='left'>
     <div className='detail2'>
       <div className='title'>{member.title}</div>
       <div className='about'>{member.about}</div>
@@ -27,11 +27,11 @@ const Team =({member,index})=>{
       </ul>
     </div>
     <div className='post2'>
-      <div className='border'>{member.post}</div>
+      <div className='border2'>{member.post}</div>
     </div>
   </div>
     
-    const right =      <div className='last'>
+    const right =      <div className='right'>
     <div className='image'>
       <img src={member.img} alt="team-member" />
     </div>
@@ -40,12 +40,12 @@ const Team =({member,index})=>{
       <br /><div className='about'>{member.about}</div>
     </div>
     <div className='post1'>
-      <div className='border'>{member.post}</div>
+      <div className='border1'>{member.post}</div>
     </div>
     <div className='links'>
     <ul>
-    {member.links.map(link => (
-        <li><a href={link.to}>
+    {member.links.map((link) => (
+        <li key={member.links.to}><a href={link.to}>
           <img alt="" src={icons[link.icon]} width="32" height="32" />
         </a></li>
       ))}
@@ -63,11 +63,11 @@ const Team =({member,index})=>{
           }
           else{
             card=right;
-            console.log(index);
+            // console.log(index);
           }
     }
     useEffect(()=>{
-       const first = document.getElementsByClassName("box3");
+       const first = document.getElementsByClassName("left");
        first[0].classList.add("first");
       });
     return(
