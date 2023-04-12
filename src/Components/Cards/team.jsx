@@ -20,7 +20,7 @@ const Team =({member,index})=>{
     <div className='links2'>
       <ul>
       {member.links.map(link => (
-        <li><a href={link.to}>
+        <li key={crypto.randomUUID()}><a href={link.to}>
           <img alt="" src={icons[link.icon]} width="32" height="32" />
         </a></li>
       ))}
@@ -45,7 +45,7 @@ const Team =({member,index})=>{
     <div className='links'>
     <ul>
     {member.links.map((link) => (
-        <li key={member.links.to}><a href={link.to}>
+        <li key={crypto.randomUUID()}><a href={link.to}>
           <img alt="" src={icons[link.icon]} width="32" height="32" />
         </a></li>
       ))}
@@ -69,6 +69,7 @@ const Team =({member,index})=>{
     useEffect(()=>{
        const first = document.getElementsByClassName("left");
        first[0].classList.add("first");
+       first[1].classList.add("senior");
       });
     return(
         <>

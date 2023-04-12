@@ -24,10 +24,7 @@ function App() {
             <Route path="/events" element={<Event1 />} />
             {/* <Route path='/Admin' element={<Admin />} />  */}
             <Route path="/News" element={<News />} />
-            <Route
-              path="*"
-              element={<h1>Sorry,you connected to wrong wire</h1>}
-            />
+            <Route path="*" element={<h1>Sorry,you connected to wrong wire</h1>}/>
           </Routes>
 
           <Footer></Footer>

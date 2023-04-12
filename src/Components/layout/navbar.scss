@@ -34,24 +34,8 @@
 html{
   width: 100%;
 }
-// body{
-//   /* height: 100%; */
-//   width: 100%;
-//   &::-webkit-scrollbar-track{
-//     background-color: #83d1d3;
-//   }
-//   &::-webkit-scrollbar-thumb{
-//     background-color: #068385;
-//     border-radius: 6px;
-//     border: 3px solid #83d1d3;
-//   }
-// }
 ul{
   list-style: none;
-  margin-top: 15px;
-  margin-right: 70px;
-  float: right;
-  top: 0em;
   li{
     display: inline-block;
     .list-item {
@@ -101,24 +85,7 @@ ul{
         &::before,&::after{
           transition: all 0.25s linear;
         }
-      }
-    
-      // &:hover:before {
-      //   background: #034142;
-      //   width: 0.6em;               /* float-up box right side */
-      //   top: 0.7em;
-      //   left: 2.6em;
-      //   height: 5.1em;
-      // }
-    
-    //   &:hover:after {
-    //     background: #034142;
-    //     width: 0.6em;
-    //     left: 5em;
-    //     height: 3em;
-    //     top: 0.2em;
-    //   }
-    
+      }    
     }
     .active{
       background-color: #046264;
@@ -173,13 +140,26 @@ ul{
   box-shadow: 5px 0px 5px gray;
   z-index: 20;
   // border-bottom: 5px black solid;
+  .desk{
+    margin-top: 15px;
+    margin-right: 70px;
+    float: right;
+    top: 0em;
+  }
+  .mobile{
+    display: none;
+  }
   &:hover{
     box-shadow: 5px 0px 15px gray;
   }
 }
 
+.code{
+  display: none;
+}
 @media (max-width: 1000px) {
   #coding{
+    margin-top: 7px;
     width: 36%;
     font-size: 55px;
     margin-left: 35px;
@@ -189,18 +169,58 @@ ul{
     margin-right: 0px;
     margin-top: 20px;
   }
+  
 }
 
 @media(max-width: 775px){
-  #coding{
-    font-size: 50px;
-    margin-left: 15px;
-    .Small{
-      display: inline;
-    }
+  .code{
+    display: flex;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 20%;
+    right: 5%;
+    cursor: pointer;
   }
   .top{
-    height: 120px;
+    .desk{
+      display: none;
+    }
+    .mobile{
+      display: flex;
+      ul{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 67px;
+        right: 0em;
+        width: 26em;
+        height: 4em;
+        background-color: #ffffff;
+        // border-top: 5px solid black;
+      }
+    }
   }
 }
 
+@media (max-width:500px) {
+  #coding{
+    font-size: 45px;
+    margin-left: 20px;
+  }
+  .top{
+    .mobile{
+      ul{
+        flex-direction:column;
+        right: 5em;
+        width: 3em;
+        height: 10em;
+      }
+    }
+  }
+  *{
+    ::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}

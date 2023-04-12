@@ -41,6 +41,14 @@
     background: rgb(245,245,220);
     background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 50%, rgba(67,191,199,1) 100%);
     height: 0vh;
+    .type{
+        font-family: Consolas;
+        font-size: 2em;
+        display: inline-block;
+        position: relative;
+        left: 40%;
+        bottom: 400px;
+    }
 }
 .hello{
     height: 60vh;
@@ -96,38 +104,52 @@
   }
 
 @media (max-width:1000px) {
-//     #abc{
-//         font-size: 100px;
-//     }
-//    .content2{
-//     h2{
-//         bottom: 20vw;
-//         font-size: 50px;
-//         }
-//     .boxtxt1{
-//         bottom: 18vw;
-//     }
-//     .boxtxt2{
-//         bottom: 15vw;
-//     }
-//     .boxtxt3{
-//         bottom: 12vw;
-//     }
-//    }
-    // .smain{
-    //     height: 100vh;
-    //     width: 100vw;
-    //     position: relative;
-    //     top: 0%;
-    // }
+    #abc{
+        font-size: 90px;
+    }
+    .hello{
+        height: 55vh;
+        #coach{
+            font-size: 60px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
     .content3{
-        // perspective: 500px;
-        // perspective-origin: center center;
-        // top: -7.5em;
-        // grid-template-rows: 0px 200px;
         .team{
-        font-size: 60px;
+        font-size: 50px;
         margin-top: 0;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    #abc{
+        font-size: 55px;
+        bottom: 350px;
+    }
+    .content1{
+        .type{
+            font-size: 1.5em;
+            left: 20%;
+            bottom: 370px;
+        }
+    }
+    .hello{
+        height: 47vh;
+        #coach{
+            font-size: 30px;
+        }
+        p{
+            margin-inline: 2px;
+            font-size: 11px;
+        }
+    }
+    .smain{
+        height: 100vh;
+        .team{
+            font-size: 30px;
         }
     }
 }

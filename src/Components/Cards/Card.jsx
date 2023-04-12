@@ -9,7 +9,7 @@ import '../../Pages/Event1.css'
 </div>
 <div className="card-body text-dark">
 <h4 className="card-title">{props.t}</h4>
-<p className="card-text text secondary"><div><p>{props.abt}</p></div><br /><br /><br />{props.line}</p>
+<div className="card-text text secondary"><div><div>{props.abt}</div></div><br /><br /><br />{props.line}</div>
 <a href={props.elink} target={"blank"} className="btn btn-outline-info">sneak into the questions</a>
 </div>
 </div>

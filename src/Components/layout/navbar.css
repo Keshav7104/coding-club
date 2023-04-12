@@ -36,10 +36,6 @@ html {
 
 ul {
   list-style: none;
-  margin-top: 15px;
-  margin-right: 70px;
-  float: right;
-  top: 0em;
 }
 ul li {
   display: inline-block;
@@ -133,12 +129,26 @@ ul li .active:hover::before, ul li .active:hover::after {
   box-shadow: 5px 0px 5px gray;
   z-index: 20;
 }
+.top .desk {
+  margin-top: 15px;
+  margin-right: 70px;
+  float: right;
+  top: 0em;
+}
+.top .mobile {
+  display: none;
+}
 .top:hover {
   box-shadow: 5px 0px 15px gray;
 }
 
+.code {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   #coding {
+    margin-top: 7px;
     width: 36%;
     font-size: 55px;
     margin-left: 35px;
@@ -150,14 +160,44 @@ ul li .active:hover::before, ul li .active:hover::after {
   }
 }
 @media (max-width: 775px) {
+  .code {
+    display: flex;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 20%;
+    right: 5%;
+    cursor: pointer;
+  }
+  .top .desk {
+    display: none;
+  }
+  .top .mobile {
+    display: flex;
+  }
+  .top .mobile ul {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 67px;
+    right: 0em;
+    width: 26em;
+    height: 4em;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 500px) {
   #coding {
-    font-size: 50px;
-    margin-left: 15px;
+    font-size: 45px;
+    margin-left: 20px;
   }
-  #coding .Small {
-    display: inline;
+  .top .mobile ul {
+    flex-direction: column;
+    right: 5em;
+    width: 3em;
+    height: 10em;
   }
-  .top {
-    height: 120px;
+  * ::-webkit-scrollbar {
+    display: none;
   }
 }/*# sourceMappingURL=navbar.css.map */

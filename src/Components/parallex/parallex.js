@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import React from "react";
 import './parallex.css';
 // import '../Cards/team.css'
-import binary from './binary1.jpg';
+// import binary from './binary1.jpg';
 import Team from '../Cards/team';
 import sir from '../img&vid/Subhashis_sir.jpg';
 // import background from './background.png'
@@ -19,17 +19,6 @@ import sir from '../img&vid/Subhashis_sir.jpg';
       {to : "https://google.com",icon : 'facebook'}
     ]
   },
-  {title : "Chandreshekhar",
-  about : "3rd year student of Btech under cse department",
-  img : "https://avatars.githubusercontent.com/u/68462214",
-  post: "Our Mentor",
-  id : 2,
-  links : [
-    {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
-    {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
-    {to : "https://github.com/tripathics",icon : 'github'}
-  ]
-  },
   {
     title : "Pursottam",
     about : "3rd year student of Btech under cse department",
@@ -41,6 +30,17 @@ import sir from '../img&vid/Subhashis_sir.jpg';
     {to : "https://instagram.com/rahulsah6003",icon : 'instagram'},
     {to : "https://github.com/pursottam6003",icon : 'github'}
     ]
+  },
+  {title : "Chandreshekhar tripathi",
+  about : "3rd year student of Btech under cse department",
+  img : "https://avatars.githubusercontent.com/u/68462214",
+  post: "Our Mentor",
+  id : 2,
+  links : [
+    {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
+    {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
+    {to : "https://github.com/tripathics",icon : 'github'}
+  ]
   },
   {
     title : "Dev Singh Kanyal",
@@ -118,7 +118,7 @@ return(
       cursor={true}
       repeat={Infinity}
       className="type"
-      style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
+      // style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
     />
           </div>
     <div className="hello">
