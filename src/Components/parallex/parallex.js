@@ -3,94 +3,86 @@ import React from "react";
 import './parallex.css';
 // import '../Cards/team.css'
 // import binary from './binary1.jpg';
-import Team from '../Cards/team';
-import sir from '../img&vid/Subhashis_sir.jpg';
+// import sir from '../img&vid/Subhashis_sir.jpg';
 // import background from './background.png'
 // import foreground from './foreground.png'
  function Parallex () {
 
-  const team = [
-    {title : "Subhashis Banarjee",
-    about : "cse faculty of our collage under them we all learn coding skills",
-    img : sir,
-    post: "Our Mentor",
-    id : 1,
-    links : [
-      {to : "https://google.com",icon : 'facebook'}
-    ]
-  },
-  {
-    title : "Pursottam",
-    about : "3rd year student of Btech under cse department",
-    img : "https://avatars.githubusercontent.com/u/81693090",
-    post: "Our Mentor",
-    id : 3,
-    links : [
-      {to : "https://www.linkedin.com/in/pursottamsah",icon : 'linkedin'},
-    {to : "https://instagram.com/rahulsah6003",icon : 'instagram'},
-    {to : "https://github.com/pursottam6003",icon : 'github'}
-    ]
-  },
-  {title : "Chandreshekhar tripathi",
-  about : "3rd year student of Btech under cse department",
-  img : "https://avatars.githubusercontent.com/u/68462214",
-  post: "Our Mentor",
-  id : 2,
-  links : [
-    {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
-    {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
-    {to : "https://github.com/tripathics",icon : 'github'}
-  ]
-  },
-  {
-    title : "Dev Singh Kanyal",
-    about : "3rd year student of Btech under cse Department",
-    img : "https://avatars.githubusercontent.com/u/77870205" ,
-    post : "Our Mentor",
-    id : 4,
-    links : [
-      {to : "https://www.linkedin.com/in/dev-singh-kanyal",icon : 'linkedin'},
-    {to : "https://instagram.com/dev_singh_kanyal",icon : 'instagram'},
-    {to : "https://github.com/dev-singh-kanyal",icon : 'github'}
-    ]  
-  },
-  {
-    title : "Keshav Arora",
-    about : "2nd year student of B.tech under CSE department",
-    img : "https://avatars.githubusercontent.com/u/124811079",
-    post : "Site Developer",
-    id : 5,
-    links : [
-      {to : "https://www.linkedin.com/in/keshav-arora-a5a20325b",icon : 'linkedin'},
-    {to : "https://instagram.com/keshav_7104",icon : 'instagram'},
-    {to : "https://github.com/Keshav7104",icon : 'github'}
-    ]
-  },
-  {
-    title : "Vanshika Marwaha",
-    about : "2nd year student of B.tech under CSE department",
-    img : "https://avatars.githubusercontent.com/u/101502532?v=4",
-    post : "Site Developer",
-    id : 6,
-    links : [
-      {to : "https://www.linkedin.com/in/vanshika-marwaha",icon : 'linkedin'},
-    {to : "https://instagram.com/d_chaotic_vibe",icon : 'instagram'},
-    {to : "https://github.com/marwahavanshika",icon : 'github'}
-    ]
-  },
-  {
-    title : "Sachin Pathak",
-    about : "2nd year student of B.tech under CSE department",
-    img : "https://avatars.githubusercontent.com/u/103988614?v=4",
-    post : "Site Developer",
-    id : 7,
-    links : [
-      {to : "https://www.linkedin.com/in/sachin-pathak-b52b20215",icon : 'linkedin'},
-    {to : "https://instagram.com/sup_sachin07",icon : 'instagram'},
-    {to : "https://github.com/sachinpathak123",icon : 'github'}
-    ]
-  }
-]
+//   const team = [
+//     {title : "Subhashis Banarjee",
+//     about : "cse faculty of our collage under them we all learn coding skills",
+//     img : sir,
+//     post: "Our Mentor",
+//     links : [
+//       {to : "https://google.com",icon : 'facebook'}
+//     ]
+//   },
+//   {
+//     title : "Pursottam",
+//     about : "3rd year student of Btech under cse department",
+//     img : "https://avatars.githubusercontent.com/u/81693090",
+//     post: "Our Mentor",
+//     links : [
+//       {to : "https://www.linkedin.com/in/pursottamsah",icon : 'linkedin'},
+//     {to : "https://instagram.com/rahulsah6003",icon : 'instagram'},
+//     {to : "https://github.com/pursottam6003",icon : 'github'}
+//     ]
+//   },
+//   {title : "Chandreshekhar tripathi",
+//   about : "3rd year student of Btech under cse department",
+//   img : "https://avatars.githubusercontent.com/u/68462214",
+//   post: "Our Mentor",
+//   links : [
+//     {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
+//     {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
+//     {to : "https://github.com/tripathics",icon : 'github'}
+//   ]
+//   },
+//   {
+//     title : "Dev Singh Kanyal",
+//     about : "3rd year student of Btech under cse Department",
+//     img : "https://avatars.githubusercontent.com/u/77870205" ,
+//     post : "Our Mentor",
+//     links : [
+//       {to : "https://www.linkedin.com/in/dev-singh-kanyal",icon : 'linkedin'},
+//     {to : "https://instagram.com/dev_singh_kanyal",icon : 'instagram'},
+//     {to : "https://github.com/dev-singh-kanyal",icon : 'github'}
+//     ]  
+//   },
+//   {
+//     title : "Keshav Arora",
+//     about : "2nd year student of B.tech under CSE department",
+//     img : "https://avatars.githubusercontent.com/u/124811079",
+//     post : "Site Developer",
+//     links : [
+//       {to : "https://www.linkedin.com/in/keshav-arora-a5a20325b",icon : 'linkedin'},
+//     {to : "https://instagram.com/keshav_7104",icon : 'instagram'},
+//     {to : "https://github.com/Keshav7104",icon : 'github'}
+//     ]
+//   },
+//   {
+//     title : "Vanshika Marwaha",
+//     about : "2nd year student of B.tech under CSE department",
+//     img : "https://avatars.githubusercontent.com/u/101502532?v=4",
+//     post : "Site Developer",
+//     links : [
+//       {to : "https://www.linkedin.com/in/vanshika-marwaha",icon : 'linkedin'},
+//     {to : "https://instagram.com/d_chaotic_vibe",icon : 'instagram'},
+//     {to : "https://github.com/marwahavanshika",icon : 'github'}
+//     ]
+//   },
+//   {
+//     title : "Sachin Pathak",
+//     about : "2nd year student of B.tech under CSE department",
+//     img : "https://avatars.githubusercontent.com/u/103988614?v=4",
+//     post : "Site Developer",
+//     links : [
+//       {to : "https://www.linkedin.com/in/sachin-pathak-b52b20215",icon : 'linkedin'},
+//     {to : "https://instagram.com/sup_sachin07",icon : 'instagram'},
+//     {to : "https://github.com/sachinpathak123",icon : 'github'}
+//     ]
+//   }
+// ]
 
 return(
     <>
@@ -129,18 +121,6 @@ return(
 
          </p>
      </div>
-
-
-
-<div className="smain">
-  <div className="content3">
-    <div className='team'>Our team</div>
-    {team.map((member,index)=>
-    <Team index={index} member={member} key={member.id}/>
-    )}
-
-  </div>
-</div>
 </div>
 </>
 );

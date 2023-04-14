@@ -2,12 +2,11 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';// to make for functional forms
 import { useState,useEffect } from 'react';// to get data from other pages,hold input and extract data from server
-// import { Info } from '../App';// context of info passed by main page
 import { db } from '../Config/firebase'//server database
 import { getDocs,collection,addDoc }  from 'firebase/firestore'//functions to mainuplate server
 import './Register.css'//stylesheets
 
-const Register = () => {
+const Register = ({setIsadmin,setId}) => {
   //boolean to determine is admin loged in or not and to store admin id
   // const {setIsadmin,setId}= useContext(Info);
 
@@ -29,12 +28,12 @@ const Register = () => {
       console.error(err);
     }
   }
-      // const Admins = collection(db,"Admins");
-      // const [Adminlist,setAdminlist] =useState([]);
+      const Admins = collection(db,"Admins");
+      const [Adminlist,setAdminlist] =useState([]);
 
   useEffect(()=>{
     getlist();
-    // getAdmins();
+    getAdmins();
   });
 
 //adding memeber data to server
@@ -80,35 +79,36 @@ const Register = () => {
 
 
       const checkadmin=(data)=>{
-        // for(let i=0;i<Adminlist.length;i++){
-        //   if(Adminlist[i].Id===data.login){
-        //     if(Adminlist[i].Password===data.password){
-        //       setIsadmin(1);
-        //       setId(Adminlist[i].id);
-        //     }
-        //     else{
-        //       setIsadmin(0);
-        //     }
-        //    }
-        //    else{
-        //     setIsadmin(0);
-        //    }
-        //   }
+        for(let i=0;i<Adminlist.length;i++){
+          if(Adminlist[i].Id===data.login){
+            if(Adminlist[i].Password===data.password){
+              setIsadmin(1);
+              setId(Adminlist[i].id);
+              console.log("Welcome chief...")
+            }
+            else{
+              setIsadmin(0);
+            }
+           }
+           else{
+            setIsadmin(0);
+           }
+          }
         }
 //get list of current admins from server
-        // const getAdmins = async () =>{
-        //   try{
-        //   const data1 = await getDocs(Admins);
-        //   const filterdata1= data1.docs.map((doc)=>({
-        //     ...doc.data(),
-        //     id : doc.id
-        //   }));
-        //   // setAdminlist(filterdata1);
-        // }
-        // catch(err){
-        //   console.error(err);
-        // }
-        // }
+        const getAdmins = async () =>{
+          try{
+          const data1 = await getDocs(Admins);
+          const filterdata1= data1.docs.map((doc)=>({
+            ...doc.data(),
+            id : doc.id
+          }));
+          setAdminlist(filterdata1);
+        }
+        catch(err){
+          console.error(err);
+        }
+        }
     //Register form template
       const registerschema = yup.object().shape({
         fullname : yup.string("Your name should consist only alphabets").required("Please enter your name"),
@@ -133,7 +133,10 @@ const Register = () => {
         mode: "onBlur"
       })
 
-
+      // const mess =(string)=>{
+      //   string.preventDefalut();
+      //   alert(string);
+      // }
     
         return(
           <>
@@ -143,11 +146,11 @@ const Register = () => {
               <div className='signup'>
           <form  onSubmit={handleSubmit(onsubmit)}>
           <label htmlFor="chk" aria-hidden="true" id='up'>Register</label>
-            <input type="text" placeholder="Name" {...register("fullname")}/>
-            <input type="text" placeholder="Email" {...register("email")}/>
-            <input type="text" placeholder="Branch" {...register("branch")}/>
-            <input type='number' placeholder="Year" {...register("year")}/>
-            <input type="text" placeholder="Preferred language" {...register("prolan")}/>
+            <input type="text" placeholder="Name" {...register("fullname")} />
+            <input type="text" placeholder="Email" {...register("email")} />
+            <input type="text" placeholder="Branch" {...register("branch")} />
+            <input type='number' placeholder="Year" {...register("year")} />
+            <input type="text" placeholder="Preferred language" {...register("prolan")} />
             <input type='submit' className='button'/>
           </form>
           </div>
