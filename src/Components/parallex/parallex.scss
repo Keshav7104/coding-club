@@ -70,38 +70,26 @@
     }
 }
 
-.smain{
-    overflow: hidden;
-    
-    height: 50vw;
+.scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
     width: 100vw;
-    margin: 0px;
-}
-  
-  .content3 {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  
-  .content3 {
-    background: linear-gradient(to right, lightseagreen 25%, #6ac8ca, lightseagreen 75%);
-    display: grid;
-    position: relative;
-    justify-items: center;
-    perspective:600px;
-    perspective-origin: center center;
-
+        height: 90vh;
     .team{
-        position: relative;
-        left:20%;
-        top:140%;
-        font-size:80px;
-        font-weight: bold;
-        font-family: Consolas;
-
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        height: 90vh;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        background-image: url("../img&vid/Events.jpg");
+        background-size: cover;
+        // overflow-y: hidden;
     }
-  }
+}
 
 @media (max-width:1000px) {
     #abc{
