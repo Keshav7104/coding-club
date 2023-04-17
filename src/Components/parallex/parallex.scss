@@ -51,7 +51,7 @@
     }
 }
 .hello{
-    height: 60vh;
+    height:80vh;
     width: 100vw;
     text-align: center;
 
@@ -71,6 +71,8 @@
 }
 
 .scroll{
+    // top: 1vw;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +87,8 @@
         &::-webkit-scrollbar{
             display: none;
         }
-        background-image: url("../img&vid/Events.jpg");
+        background-image: url("img2.jpg");
+        // background-position: center;
         background-size: cover;
         // overflow-y: hidden;
     }

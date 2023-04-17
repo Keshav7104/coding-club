@@ -49,7 +49,7 @@
 }
 
 .hello {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   text-align: center;
 }
@@ -68,6 +68,7 @@
 }
 
 .scroll {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +81,7 @@
   overflow-x: scroll;
   white-space: nowrap;
   height: 90vh;
-  background-image: url("../img&vid/Events.jpg");
+  background-image: url("img2.jpg");
   background-size: cover;
 }
 .scroll .team::-webkit-scrollbar {
