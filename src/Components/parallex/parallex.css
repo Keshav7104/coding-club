@@ -82,6 +82,7 @@
   white-space: nowrap;
   height: 90vh;
   background-image: url("img2.jpg");
+  background-position: top;
   background-size: cover;
 }
 .scroll .team::-webkit-scrollbar {
