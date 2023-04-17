@@ -10,7 +10,7 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     img : sir,
     post: "Mentor",
     links : [
-      {to : "https://google.com",icon : 'facebook'}
+      {to : "https://www.facebook.com/subhasish.banerjee.39",icon : 'facebook'}
     ]
   },
   {
