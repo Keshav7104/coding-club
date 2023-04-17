@@ -124,3 +124,9 @@
       font-size: 40px;
     }
   }
+
+  @media (max-width:500px) {
+    .wrapper1{
+      margin: 0vh;
+    }
+  }
