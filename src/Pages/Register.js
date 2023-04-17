@@ -14,20 +14,6 @@ const Register = ({setIsadmin,setId}) => {
   const members = collection(db,"Members");
   const [memberlist,setMemberlist] = useState([]);
 
-  const getlist = async () =>{
-    try{
-        const data = await getDocs(members);
-        const filterdata = data.docs.map((doc) => ({
-          ...doc.data(),
-          id : doc.id
-        }));
-        setMemberlist(filterdata);
-        
-    }
-    catch(err){
-      console.error(err);
-    }
-  }
       const Admins = collection(db,"Admins");
       const [Adminlist,setAdminlist] =useState([]);
 

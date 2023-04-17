@@ -10,16 +10,16 @@ export default function Team({member}){
         github: "https://img.icons8.com/dusk/40/null/github.png"
       }
 
-      useEffect(()=>{
-        const senior = document.getElementsByClassName("card2");
-        senior[2].classList.add("senior");
-      })
-
+      // useEffect(()=>{
+      //   const senior = document.getElementsByClassName("card2");
+      //   senior[2].classList.add("senior");
+      // })
+      // console.log(member.link.to);
     return(
         <>
     <div className="card2">
       <div className="img-bx">
-        <img src={member.img} alt="img" />
+        <img src={member.image} alt="img" />
       </div>
       <div className="content4">
         <div className="detail">
@@ -27,14 +27,11 @@ export default function Team({member}){
           <ul className="sci">
             {member.links.map(link=>(
                 <li key={crypto.randomUUID()}>
-                    <a href={link.to}>
+                    <a href={link.to} onClick={()=>console.log(link.to)}>
                         <img src={icons[link.icon]} alt="no..." />
                     </a>
                 </li>
             ))}
-            {/* <li>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li> */}
           </ul>
         </div>
       </div>
