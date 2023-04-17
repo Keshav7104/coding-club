@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './team.css'
 
 export default function Team({member}){
@@ -9,16 +10,21 @@ export default function Team({member}){
         github: "https://img.icons8.com/dusk/40/null/github.png"
       }
 
+      useEffect(()=>{
+        const senior = document.getElementsByClassName("card2");
+        senior[2].classList.add("senior");
+      })
+
     return(
         <>
-    <div class="card2">
-      <div class="img-bx">
+    <div className="card2">
+      <div className="img-bx">
         <img src={member.img} alt="img" />
       </div>
-      <div class="content4">
-        <div class="detail">
+      <div className="content4">
+        <div className="detail">
           <h2>{member.title}<br /><span>{member.post}</span></h2>
-          <ul class="sci">
+          <ul className="sci">
             {member.links.map(link=>(
                 <li key={crypto.randomUUID()}>
                     <a href={link.to}>

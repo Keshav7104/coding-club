@@ -8,15 +8,15 @@ import sir from '../img&vid/Subhashis_sir.jpg'
   const team = [
     {title : "Subhashis Banarjee",
     img : sir,
-    post: "Our Mentor",
+    post: "Mentor",
     links : [
       {to : "https://google.com",icon : 'facebook'}
     ]
   },
   {
-    title : "Pursottam",
+    title : "Pursottam Shah",
     img : "https://avatars.githubusercontent.com/u/81693090",
-    post: "Our Mentor",
+    post: "Mentor",
     links : [
       {to : "https://www.linkedin.com/in/pursottamsah",icon : 'linkedin'},
     {to : "https://instagram.com/rahulsah6003",icon : 'instagram'},
@@ -25,7 +25,7 @@ import sir from '../img&vid/Subhashis_sir.jpg'
   },
   {title : "Chandreshekhar tripathi",
   img : "https://avatars.githubusercontent.com/u/68462214",
-  post: "Our Mentor",
+  post: "Mentor",
   links : [
     {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
     {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
@@ -35,7 +35,7 @@ import sir from '../img&vid/Subhashis_sir.jpg'
   {
     title : "Dev Singh Kanyal",
     img : "https://avatars.githubusercontent.com/u/77870205" ,
-    post : "Our Mentor",
+    post : "Mentor",
     links : [
       {to : "https://www.linkedin.com/in/dev-singh-kanyal",icon : 'linkedin'},
     {to : "https://instagram.com/dev_singh_kanyal",icon : 'instagram'},
@@ -114,6 +114,7 @@ return(
 
      <div className='scroll'>
      <div className='team'>
+      <h1 className='squad'>Code Squad</h1>
           {team.map(member=>
           <Team member={member} key={crypto.randomUUID()} />
           )}

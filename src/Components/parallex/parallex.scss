@@ -51,7 +51,7 @@
     }
 }
 .hello{
-    height: 60vh;
+    height:80vh;
     width: 100vw;
     text-align: center;
 
@@ -71,6 +71,8 @@
 }
 
 .scroll{
+    // top: 1vw;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,9 +87,16 @@
         &::-webkit-scrollbar{
             display: none;
         }
-        background-image: url("../img&vid/Events.jpg");
-        background-size: cover;
+        background-image: url("img2.jpg");
+        // background-position: center;
+        background-size:cover;
         // overflow-y: hidden;
+        .squad{
+            padding-left: 40%;
+            position: fixed;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 3.6em;
+        }
     }
 }
 
@@ -104,18 +113,13 @@
             font-size: 16px;
         }
     }
-    .content3{
-        .team{
-        font-size: 50px;
-        margin-top: 0;
-        }
-    }
+    
 }
 
 @media (max-width:500px) {
     #abc{
         font-size: 55px;
-        bottom: 350px;
+        bottom: 400px;
     }
     .content1{
         .type{
@@ -134,10 +138,14 @@
             font-size: 11px;
         }
     }
-    .smain{
-        height: 100vh;
+    .scroll{
+        height: 80vh;
         .team{
-            font-size: 30px;
+            height: 80vh;
+            .squad{
+                font-size: 2.5em;
+                padding-left: 25%;
+            }
         }
     }
 }

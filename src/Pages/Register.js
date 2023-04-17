@@ -84,7 +84,8 @@ const Register = ({setIsadmin,setId}) => {
             if(Adminlist[i].Password===data.password){
               setIsadmin(1);
               setId(Adminlist[i].id);
-              console.log("Welcome chief...")
+              console.log("Welcome chief...");
+              break;
             }
             else{
               setIsadmin(0);

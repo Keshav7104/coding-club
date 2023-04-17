@@ -18,16 +18,23 @@ export default function Nav({isadmin}) {
         {to : './Register',name : "Register /"},
         {to : './Admin',name : "Admin /"}
     ]
-    if(isadmin===0){
-        Links.splice(Links.length-1,1)
-     }
-
-    const Navlink = <ul>
-    {Links.map(link =>
-        <li key={crypto.randomUUID()}>
+    
+    const mapping =(link)=>{
+        if(isadmin===0&&link.name==="Admin /"){
+            return null
+        }
+        else{
+            return (
+                <li key={crypto.randomUUID()}>
             <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to={link.to} onClick={()=>setOpen(!open)}>&#x3c;{link.name}&#x3e;
             </NavLink>
-        </li>)}
+        </li>
+            )
+        }
+    }
+
+    const Navlink = <ul>
+    {Links.map(mapping)}
     </ul>
 
     const desk = <nav className="desk" >{Navlink}</nav>

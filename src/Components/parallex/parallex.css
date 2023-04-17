@@ -49,7 +49,7 @@
 }
 
 .hello {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   text-align: center;
 }
@@ -68,6 +68,7 @@
 }
 
 .scroll {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,11 +81,17 @@
   overflow-x: scroll;
   white-space: nowrap;
   height: 90vh;
-  background-image: url("../img&vid/Events.jpg");
+  background-image: url("img2.jpg");
   background-size: cover;
 }
 .scroll .team::-webkit-scrollbar {
   display: none;
+}
+.scroll .team .squad {
+  padding-left: 40%;
+  position: fixed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 3.6em;
 }
 
 @media (max-width: 1000px) {
@@ -100,15 +107,11 @@
   .hello p {
     font-size: 16px;
   }
-  .content3 .team {
-    font-size: 50px;
-    margin-top: 0;
-  }
 }
 @media (max-width: 500px) {
   #abc {
     font-size: 55px;
-    bottom: 350px;
+    bottom: 400px;
   }
   .content1 .type {
     font-size: 1.5em;
@@ -125,10 +128,14 @@
     margin-inline: 2px;
     font-size: 11px;
   }
-  .smain {
-    height: 100vh;
+  .scroll {
+    height: 80vh;
   }
-  .smain .team {
-    font-size: 30px;
+  .scroll .team {
+    height: 80vh;
+  }
+  .scroll .team .squad {
+    font-size: 2.5em;
+    padding-left: 25%;
   }
 }/*# sourceMappingURL=parallex.css.map */

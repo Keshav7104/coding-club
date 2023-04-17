@@ -33,7 +33,7 @@ export default function Admin({id,isadmin}){
     }
 
     const help = () =>{
-        if(isadmin){
+        if(isadmin!=0){
             let ele = document.getElementById("non-admin");
             ele.classList.remove("message");
             ele.classList.add("non-display");
