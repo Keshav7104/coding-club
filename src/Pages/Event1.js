@@ -8,30 +8,33 @@ import c3 from '../Components/img&vid/card2.jpg';
 import pdf1 from '../Components/pdfs/pdf1.pdf'
 import pdf2 from '../Components/pdfs/pdf2.pdf'
 import pdf3 from '../Components/pdfs/pdf3.pdf'
+import Image from './Image.jpg';
+import Image2 from './Image2.jpg';
+import Image3 from './Image3.jpg';
 
 
 export default function Event1 (){
 
     const Events = [
         {
-            imgsrc : c1,
-            t : "CODEGROUND \n ~</inception>",
+            imgsrc : Image,
+            t : "<CODE_GROUND>",
             elink : pdf1,
-            abt : " The club conducted a Multiple Choice Question Quiz amongst the registered membership aspirants. It was the first activity of our club.",
+            abt : " The club conducted a Multiple Choice Question Quiz amongst the registered membership aspirants.",
             line :'The challenge began on 7th March 2020. Lets have look at the problem questions'
         },
         {
-            imgsrc : c2,
-            t : "~COOK THE CODE~",
+            imgsrc : Image2,
+            t : "<CODE_CHEF>",
             elink : pdf2,
             abt : "Students were provided with coding challenges each day of the week and the best code recipe will be rewarded.",
             line: "The challenge began on 13th March 2020. Lets have look at the problem questions  "
         },
         {
-            imgsrc : c3,
-            t : "CODEGROUND ~ <war-II/>",
+            imgsrc : Image3,
+            t : "<CODE_ERA>",
             elink : pdf3,
-            abt : "A challenge was organized which comprised of some multiple choice questions and a problem to code. The winners were awarded with  goodies",
+            abt : "A challenge was organized which comprised of some multiple choice questions and a problem to code",
             line : "The challenge began on 14th March 2020. Lets have look at the problem questions "
         }
     ]
