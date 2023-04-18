@@ -1,0 +1,12 @@
+.head{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-family: Inconsolata;
+    position: relative;
+    font-size: 8rem;
+    font-weight: 0rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
