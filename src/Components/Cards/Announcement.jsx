@@ -1,16 +1,17 @@
 import React from "react";
 import './Announcement.css';
-
+import Head from "./heading";
 function Annoucement() {
  return (
    <div>
      <section className="wrapper1">
        <div className="container">
-         <div className="row">
+        <Head title={"Announcements"} />
+         {/* <div className="row">
            <div className="col text-center mb-5">
              <div id="toptext"className="display-4">ANNOUNCEMENTS</div> 
            </div>
-         </div>
+         </div> */}
          <div className="row">
            <div className="col-sm-9 col-md-6 col-lg-4 mb-4"><div className="card text-white card-has-bg click-col" style={{backgroundImage: 'url("https://source.unsplash.com/600x900/?tech,street")'}}>
                <img className="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment" />

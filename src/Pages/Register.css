@@ -14,14 +14,10 @@
   align-self: center;
   width: 350px;
   height: 550px;
-  background: rgba(106, 200, 202, 0.8431372549);
   overflow: hidden;
   background: transparent;
   border-radius: 10px;
   box-shadow: 5px 20px 50px #000;
-}
-.main:hover {
-  box-shadow: 5px 20px 80px #000;
 }
 
 #up {

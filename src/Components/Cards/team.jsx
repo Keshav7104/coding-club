@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import './team.css'
 
 export default function Team({member}){
@@ -9,11 +8,6 @@ export default function Team({member}){
         instagram: 'https://static.cdninstagram.com/rsrc.php/yv/r/BTPhT6yIYfq.ico',
         github: "https://img.icons8.com/dusk/40/null/github.png"
       }
-
-      useEffect(()=>{
-        const senior = document.getElementsByClassName("card2");
-        senior[2].classList.add("senior");
-      })
 
     return(
         <>
@@ -26,15 +20,12 @@ export default function Team({member}){
           <h2>{member.title}<br /><span>{member.post}</span></h2>
           <ul className="sci">
             {member.links.map(link=>(
-                <li key={crypto.randomUUID()}>
+                <li key={link.to}>
                     <a href={link.to}>
                         <img src={icons[link.icon]} alt="no..." />
                     </a>
                 </li>
             ))}
-            {/* <li>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li> */}
           </ul>
         </div>
       </div>
