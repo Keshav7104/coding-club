@@ -10,6 +10,7 @@ import pdf2 from '../Components/pdfs/pdf2.pdf'
 import pdf3 from '../Components/pdfs/pdf3.pdf'
 import Image from './Image.jpg';
 import Image2 from './Image2.jpg';
+import './Event1.css';
 import Image3 from './Image3.jpg';
 
 
@@ -45,7 +46,7 @@ export default function Event1 (){
             <div className="top1">
             </div>
             <div id="top2">
-             <h5 className="gradient-text" id="text2">  Keeping in mind competitive, demanding, and ever changing computer programming career, CODING PUNDITS aims at organising all possible events that help in staying up to date, creative and versatile in their journeys to master their fields. <></> These events include <b>hackathons</b>,<b> workshops</b>, <b>classes</b>, <b>interactive sessions with alums</b> and other programs that fulfill the overarching goal of making programming exciting and accessible. <div id="spacebw"></div>
+             <h5>  Keeping in mind competitive, demanding, and ever changing computer programming career, CODING PUNDITS aims at organising all possible events that help in staying up to date, creative and versatile in their journeys to master their fields. <></> These events include <b>hackathons</b>,<b> workshops</b>, <b>classes</b>, <b>interactive sessions with alums</b> and other programs that fulfill the overarching goal of making programming exciting and accessible. <div id="spacebw"></div>
     <span><i><b>Follow, celebrate, and support these fantastic events!!!</b></i></span> </h5>
         </div>
        
@@ -63,4 +64,4 @@ export default function Event1 (){
        
         </>
     );
-}
+                }

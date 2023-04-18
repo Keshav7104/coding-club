@@ -23,15 +23,15 @@ background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 5
     padding-top: 50px;
  }
  #text2 span{
-    font-size: 30px;
+    font-size: 2.6rem;
  }
 #toptext h1{
     /* padding-left: 35%; */
-    padding-top: 10px;
-    font-weight: 500px;
-    font-size: 80px;
-    font-family: 'Consolas',monaco,monospace;
-    padding-left: 10%;
+    padding-top: 2rem;
+    font-weight: 10rem;
+    font-size: 2.5rem;
+    font-family: Inconsolata;
+    padding-left: 1rem;
     /* -webkit-text-stroke: 3px lightseagreen; */
     color: black;
 }
@@ -42,34 +42,32 @@ background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 5
  /* .card:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
  } */
- .card-body{
+ /* .card-body{
      padding: 1rem 0 !important;
- }
+ } */
  .card-text{
     position: absolute;
     bottom: 5rem;
      font-size: 0.8rem;
      line-height: 1rem;
      padding: 0.4rem 1.9rem;
-
  }
  .card-title{
-    font-size: 1.2rem;
     position: absolute;
+    font-size: 1.2rem;
     bottom: 14rem;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     left: 5.5rem;
  }
- .container-fluid .row{
+ /* .container-fluid .row{
      padding-top: 2rem;
      padding-bottom: 5rem;
- }
+ } */
  .card-img{
     height: 14rem;
     width: 20rem;
     object-fit: cover;
-    overflow: hidden;
-    filter: blur(0.09rem);
+    /* overflow: hidden; */
      /* transition: all 0.6s ease; */
  }
  .btn{

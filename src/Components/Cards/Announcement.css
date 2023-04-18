@@ -44,35 +44,39 @@ body {
   background: #E6F5F6;
   background: linear-gradient(to bottom, rgba(9, 66, 70, 0.7450980392) 0%, rgba(3, 68, 69, 0.9) 62%, rgba(4, 98, 100, 0.9) 38%);
 }
-
-.wrapper1 {
+.card .wrapper1 {
   margin: 10vh;
   margin-bottom: 20vh;
 }
-
-.card {
+.card .card {
   border: none;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
   border-radius: 20px;
   min-height: 450px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 768px) {
-  .card {
+  .card .card {
     min-height: 350px;
   }
 }
 @media (max-width: 420px) {
-  .card {
+  .card .card {
     min-height: 300px;
   }
 }
-.card.card-has-bg {
+.card .card.card-has-bg {
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: center center;
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
-.card.card-has-bg:before {
+.card .card.card-has-bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -83,16 +87,45 @@ body {
   background: #E6F5F6;
   background: linear-gradient(to bottom, rgba(9, 66, 70, 0.7450980392) 0%, rgba(3, 68, 69, 0.9) 62%, rgba(4, 98, 100, 0.9) 38%);
 }
-.card .card-footer {
+.card .card:hover {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px -2px rgba(1, 32, 33, 0.3019607843);
+  background-size: 130%;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.card .card:hover .card-img-overlay {
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 0.5);
+  background: linear-gradient(to bottom, rgba(9, 66, 70, 0.7450980392) 0%, rgba(3, 68, 69, 0.9) 38%, rgba(4, 98, 100, 0.9) 62%);
+  background: rgb(35, 79, 109);
+  background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, rgb(4, 69, 114) 100%);
+}
+.card .card .card-footer {
   background: none;
   border-top: none;
 }
-.card .card-footer .media img {
+.card .card .card-footer .media img {
   border: solid 3px rgba(255, 255, 255, 0.3);
 }
-.card:hover {
-  cursor: pointer;
+.card .card .card-meta {
+  color: #26BD75;
 }
+.card .card .card-body {
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.card .card:hover {
+  cursor: pointer;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.card .card:hover .card-body {
+  margin-top: 30px;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.card .card .card-img-overlay {
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  background: rgb(35, 79, 109);
+  background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, rgb(69, 95, 113) 100%);
+}
+
 #toptext {
   /* padding-left: 35%; */
   padding-top: 10px;
@@ -100,7 +133,7 @@ body {
   font-size: 80px;
   padding-left: 10%;
   color: black;
-  font-family: Consolas, monaco, monospace;
+  font-family: Inconsolata;
 }
 
 #text {
