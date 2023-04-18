@@ -6,7 +6,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
  function Parallex () {
 
   const team = [
-    {title : "Subhashis Banarjee",
+    {title1 : "Subhashis",
+     title2 : "Banerjee",
     img : sir,
     post: "Mentor",
     links : [
@@ -14,7 +15,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     ]
   },
   {
-    title : "Pursottam Shah",
+    title1 : "Pursottam",
+    title2 : "Shah",
     img : "https://avatars.githubusercontent.com/u/81693090",
     post: "Mentor",
     links : [
@@ -23,7 +25,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     {to : "https://github.com/pursottam6003",icon : 'github'}
     ]
   },
-  {title : "Chandreshekhar tripathi",
+  {title1 : "Chandreshekhar",
+   title2 : "Tripathi",
   img : "https://avatars.githubusercontent.com/u/68462214",
   post: "Mentor",
   links : [
@@ -33,7 +36,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
   ]
   },
   {
-    title : "Dev Singh Kanyal",
+    title1 : "Dev",
+    title2 : "Kanyal",
     img : "https://avatars.githubusercontent.com/u/77870205" ,
     post : "Mentor",
     links : [
@@ -43,7 +47,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     ]  
   },
   {
-    title : "Keshav Arora",
+    title1 : "Keshav",
+    title2 : "Arora",
     img : "https://avatars.githubusercontent.com/u/124811079",
     post : "Site Developer",
     links : [
@@ -53,7 +58,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     ]
   },
   {
-    title : "Vanshika Marwaha",
+    title1 : "Vanshika",
+    title2 : "Marwaha",
     img : "https://avatars.githubusercontent.com/u/101502532?v=4",
     post : "Site Developer",
     links : [
@@ -63,7 +69,8 @@ import sir from '../img&vid/Subhashis_sir.jpg'
     ]
   },
   {
-    title : "Sachin Pathak",
+    title1 : "Sachin",
+    title2 : "Pathak",
     img : "https://avatars.githubusercontent.com/u/103988614?v=4",
     post : "Site Developer",
     links : [
