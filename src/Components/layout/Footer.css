@@ -4,36 +4,7 @@
   font-family: Open Sans;
 }
 
-.down{
-	width: 100%;
-	display: inline-block;
-	background: #333;
-	height: 50vh;
-	text-align: center;
-	font-size: 22px;
-	font-weight: 700;
-	text-decoration: underline;
-	bottom: 0;
-	position:relative;	
-	
-	
-}
-/* section {
-  width: 100%;
-  display: inline-block;
-  background: #333;
-  height: 50vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
-  bottom: 0;
-} */
-
 .footer-distributed{
-	/* background: #666; */
-	/* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./footerimg.jpg); */
-	/* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./Untitled\ design.gif); */
 	background: linear-gradient(lightseagreen,#000000b3), url(../img&vid/Untitled\ design.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -159,7 +130,7 @@
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  #ffffff;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;

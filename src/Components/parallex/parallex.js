@@ -3,7 +3,8 @@ import React from "react";
 import './parallex.css';
 import Team from '../Cards/team';
 import sir from '../img&vid/Subhashis_sir.jpg'
- function Parallex () {
+import Head from '../Cards/heading';
+function Parallex() {
 
   const team = [
     {title1 : "Subhashis",
@@ -81,55 +82,51 @@ import sir from '../img&vid/Subhashis_sir.jpg'
   }
 ]
 
-return(
+  return (
     <>
-   <div id="wrapper">
-            <div className="content">
+      <section id="wrapper">
+        <section className="content1">
+          <div className='heading'>
+          <p id="abc">CODING_PUNDITS</p>
+          <p>
+            <TypeAnimation
+              sequence={[
+                'Eat, Sleep, Code, Repeat', // Types 'One'
+                2000, // Waits 2s // Types 'One'
+                'Fix the cause, not the symptom', // Types 'One'
+                2000, // Waits 1s
+                'Hands on Keys, Eyes on Screen.', // Types 'One'
+                2000, // Waits 1s
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              className="type"
+            // style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
+            />
+          </p>
           </div>
-          <div className="content1">
-                <p id="abc">CODING_PUNDITS</p>
-                <TypeAnimation
-      sequence={[
-        'Eat,Sleep,', // Types 'One'
-        1000, // Waits 1s
-        'Code,Repeat.', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s // Types 'One'
-        'Fix the cause,', // Types 'One'
-        1000, // Waits 1s
-        'not the symptoms.', // Types 'One'
-        2000, // Waits 1s
-        'Hands on Keys,', // Types 'One'
-        1000, // Waits 1s
-        'Eyes on Screens.', // Types 'One'
-        2000, // Waits 1s
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      className="type"
-      // style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
-    />
+        </section>
+        <section className="hello">
+          <Head  title={"Coding Coaches"}/>
+          <p>We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn<br /><br />
+            We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge<br /><br />
+            Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.<br /><br />
+
+          </p>
+        </section>
+
+        <section className='scroll'>
+        <Head title={"Code Squad"} />
+          <div className='team'>
+            {team.map(member =>
+              <Team member={member} key={member.title} />
+            )}
           </div>
-    <div className="hello">
-        <h2  id='coach'>CODING COACHES</h2>
-        <p>We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn<br /><br />
-        We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge<br /><br />
-        Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.<br /><br />
-
-         </p>
-     </div>
-
-     <div className='scroll'>
-     <div className='team'>
-      <h1 className='squad'>Code Squad </h1>
-          {team.map(member=>
-          <Team member={member} key={crypto.randomUUID()} />
-          )}
-     </div>
-     </div>
-</div>
-</>
-);
+        </section>
+      </section>
+    </>
+  );
 }
 
 export default Parallex

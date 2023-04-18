@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Components/Cards/Card";
+import Head from "../Components/Cards/heading";
 import "./Event1.css";
 import c1 from '../Components/img&vid/card4.jpg';
 import c2 from '../Components/img&vid/card5.jpg';
@@ -37,7 +38,7 @@ export default function Event1 (){
     return(
         <>
         <div  id="forbg">
-       <div id="toptext"><h1>EVENTS</h1> </div>
+       <Head title={"Events"}/>
             <div className="top1">
             </div>
             <div id="top2">
@@ -49,7 +50,7 @@ export default function Event1 (){
         <div className="container-fluid d-flex justify-content-center">
             <div className="row">
                 {Events.map(event =>
-                    <div key={crypto.randomUUID()} className="col-md-4">
+                    <div key={event.abt} className="col-md-4">
                         <Card  imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
                     </div>
                 )}

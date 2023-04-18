@@ -1,7 +1,7 @@
 import {BsCodeSlash} from 'react-icons/bs';
 import {BsCode} from 'react-icons/bs'
 import {NavLink} from 'react-router-dom'
-import { useState,useEffect} from 'react';
+import { useState} from 'react';
 import './navbar.css'
 
 export default function Nav({isadmin}) {
@@ -25,7 +25,7 @@ export default function Nav({isadmin}) {
         }
         else{
             return (
-                <li key={crypto.randomUUID()}>
+                <li key={link.name}>
             <NavLink className={({ isActive }) => (isActive ? 'active list-item' : 'list-item')} to={link.to} onClick={()=>setOpen(!open)}>&#x3c;{link.name}&#x3e;
             </NavLink>
         </li>
@@ -42,23 +42,19 @@ export default function Nav({isadmin}) {
 
     
 
-    const getwidth =()=>{
-       if(window.matchMedia("(max-width: 1000px)").matches){
-        setIsmobile(true);
-       }
-       else{
-        setIsmobile(false);
-       }
-    }
-    useEffect(()=>{
-        getwidth();
-        
-    })
+    //    if(window.matchMedia("(max-width: 1000px)").matches){
+    //     setIsmobile(true);
+    //    }
+    //    else{
+    //     setIsmobile(false);
+    //    }
+    
 
     return(
             <div className='top'>
                 <h1 id='coding'>Coding<span id='pundit'>Pundits</span></h1>
-                {ismobile ? mobile:desk}
+                {mobile}
+                {desk}
             </div>
     );
 }

@@ -8,90 +8,113 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
-#wrapper{
+#wrapper {
     overflow-x: hidden;
     perspective: 10px;
     margin: 0;
-    padding: 0;
-  
-    background-color:#cdeced ;
+    // padding: 2rem;
+
+    background-color: #cdeced;
 }
 
-.content{
-   background: url("binary1.jpg") fixed no-repeat;
-    background-size: cover;
-    height: 90vh;
-    width: 100vw;
-    filter: blur(2px);
-}
 
-#abc{
-    position: relative;
-    bottom: 380px;
+#abc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-family: Hacked, sans-serif;
     font-size: 110px;
-    text-align: center;
+
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
 
 
 }
-.content1{
-    background: rgb(245,245,220);
-    background: linear-gradient(51deg, rgba(245,245,220,1) 0%, rgba(230,245,246,1) 50%, rgba(67,191,199,1) 100%);
-    height: 0vh;
-    .type{
+
+.content1 {
+    position: relative;
+
+    
+    .heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.content1 {
+    background: url("binary1.jpg") fixed no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         font-family: Consolas;
         font-size: 1.6em;
         display: inline-block;
-        position: relative;
-        left: 40%;
-        bottom: 400px;
+        font-family: monospace;
+
+        // left: 40%;
+        // bottom: 400px;
     }
 }
-.hello{
-    height:80vh;
+
+.hello {
     width: 100vw;
     text-align: center;
+    padding: 3rem;
+    height: 100%;
+    background-color: #ffffff;
 
-    #coach{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    font-family: Consolas;
-    position: relative;
-    font-size: 80px;
-    font-weight: 50px;
-    text-align: center;
-    }
-    p{
+    p {
         margin: 0;
         font-size: 20px;
     }
 }
 
-.scroll{
+.scroll {
     // top: 1vw;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     overflow: auto;
-    width: 100vw;
-        height: 90vh;
-    .team{
+    width: 100%;
+    height: 90%;
+    background-image: url("img2.jpg");
+    background-position: top;
+    background-size: cover;
+
+    .squad {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding: ;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 3.6em;
+    }
+
+    .team {
         overflow-y: hidden;
         overflow-x: scroll;
         white-space: nowrap;
-        height: 90vh;
-        &::-webkit-scrollbar{
+        height: 90%;
+
+        &::-webkit-scrollbar {
             display: none;
         }
-        background-image: url("img2.jpg");
-        background-position: top;
-        background-size:cover;
+
         // overflow-y: hidden;
         .squad{
             padding-left: 40%;
@@ -104,48 +127,54 @@
 }
 
 @media (max-width:1000px) {
-    #abc{
+    #abc {
         font-size: 90px;
     }
-    .hello{
-        height: 55vh;
-        #coach{
+
+    .hello {
+        #coach {
             font-size: 60px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
     }
-    
+
 }
 
 @media (max-width:500px) {
-    #abc{
+    #abc {
         font-size: 55px;
         bottom: 400px;
     }
-    .content1{
-        .type{
+
+    .content1 {
+        .type {
             font-size: 1.5em;
             left: 20%;
             bottom: 370px;
         }
     }
-    .hello{
-        height: 47vh;
-        #coach{
+
+    .hello {
+        #coach {
             font-size: 30px;
         }
-        p{
+
+        p {
             margin-inline: 2px;
             font-size: 11px;
         }
     }
-    .scroll{
+
+    .scroll {
         height: 80vh;
-        .team{
+
+        .team {
             height: 80vh;
-            .squad{
+
+            .squad {
                 font-size: 2.5em;
                 padding-left: 25%;
             }
