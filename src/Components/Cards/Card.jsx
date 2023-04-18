@@ -1,5 +1,5 @@
 import React from "react";
-import '../../Pages/Event1.css'
+import './card.scss'
 
  export default function Card (props) {
     return(

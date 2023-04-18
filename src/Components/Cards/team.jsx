@@ -1,4 +1,4 @@
-import './team.css'
+import './team.scss'
 
 export default function Team({ member }) {
 

@@ -1,6 +1,6 @@
  .top1 {
      padding: 15px;
-     background-image: url(../Components/img&vid/card1.png);
+     background-image: url("../img&vid/card1.png");
      background-repeat: no-repeat;
      float: right;
      height: 370px;
@@ -60,7 +60,7 @@
  }
 
  .card-text {
-     font-size: o.9rem;
+     font-size: 0.9rem;
      padding: 0.4rem 1.9rem;
  }
 

@@ -2,7 +2,7 @@ import { BsCodeSlash } from 'react-icons/bs';
 import { BsCode } from 'react-icons/bs'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
-import './navbar.css'
+import './navbar.scss'
 
 export default function Nav({ isadmin }) {
     const [open, setOpen] = useState(false);

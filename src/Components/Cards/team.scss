@@ -79,19 +79,20 @@
       justify-content: center;
           h2 {
             color: #444;
-            font-size: 1.15em;
+            font-size: 1.3em;
             font-weight: bolder;
             position: absolute;
             padding-bottom: 2rem;
+            padding-top: 2rem;
             white-space: nowrap;
             top: 12rem;
-            span {
-              position: relative;
-              font-size: 0.8em;
-              color: rgba(15, 32, 209, 0.61);
-              font-weight: bold;
-              top: 0.5rem;
-            }
+          }
+          .position {
+            position: relative;
+            font-size: 1em;
+            color: rgba(15, 32, 209, 0.61);
+            font-weight: bold;
+            top: 3rem;
           }
         }
         .sci {

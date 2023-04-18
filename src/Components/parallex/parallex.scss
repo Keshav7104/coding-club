@@ -32,6 +32,9 @@
 
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
+    .break{
+        display: none;
+    }
 
 
 }
@@ -84,7 +87,6 @@
 }
 
 .scroll {
-    // top: 1vw;
     position: relative;
     overflow: hidden;
     background-image: url("img2.jpg");
@@ -92,15 +94,21 @@
     background-size: cover;
     .buttons{
         position: absolute;
-        bottom: 50%;
+        bottom: 25%;
         width: 100%;
         .left{
             left: 1%;
             position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
         .right{
             position: absolute;
             right: 1%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
         }
     }
 
@@ -120,7 +128,7 @@
         padding: 1rem 0;
         justify-content: center;
         animation-name: move;
-        overflow: visible;
+        overflow:visible;
 
         &::-webkit-scrollbar {
             display: none;
@@ -147,7 +155,7 @@
 
 @media (max-width:1000px) {
     #abc {
-        font-size: 50px;
+        font-size: 55px;
     }
 
     .hello {
@@ -160,12 +168,15 @@
 }
 @media (max-width:600px) {
     #abc{ 
-        font-size: 45px;
+        // font-size: 45px;
+        .break{
+            display: block;
+        }
     }
 }
 @media (max-width:500px) {
     #abc {
-        font-size: 35px;
+        // font-size: 45px;
         bottom: 400px;
     }
 
@@ -189,7 +200,7 @@
     }
 
     .scroll {
-        height: 45rem;
+        height: 32rem;
 
         .team {
             height: 27rem;

@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Components/Cards/Card";
 import Head from "../Components/Cards/heading";
-import "./Event1.css";
+import "../Components/Cards/card.scss";
 import c1 from '../Components/img&vid/card4.jpg';
 import c2 from '../Components/img&vid/card5.jpg';
 import c3 from '../Components/img&vid/card2.jpg';

@@ -1,12 +1,23 @@
 import { TypeAnimation } from 'react-type-animation';
 import React from "react";
-import './parallex.css';
+import './parallex.scss';
 import Team from '../Cards/team';
 import sir from '../img&vid/Subhashis_sir.jpg'
 import Head from '../Cards/heading';
 function Parallex() {
 
   const team = [
+    {
+      title1: "Sachin",
+      title2: "Pathak",
+      img: "https://avatars.githubusercontent.com/u/103988614?v=4",
+      post: "Site Developer",
+      links: [
+        { to: "https://www.linkedin.com/in/sachin-pathak-b52b20215", icon: 'linkedin' },
+        { to: "https://instagram.com/sup_sachin07", icon: 'instagram' },
+        { to: "https://github.com/sachinpathak123", icon: 'github' }
+      ]
+    },
     {
       title1: "Subhashis",
       title2: "Banerjee",
@@ -70,24 +81,12 @@ function Parallex() {
         { to: "https://instagram.com/d_chaotic_vibe", icon: 'instagram' },
         { to: "https://github.com/marwahavanshika", icon: 'github' }
       ]
-    },
-    {
-      title1: "Sachin",
-      title2: "Pathak",
-      img: "https://avatars.githubusercontent.com/u/103988614?v=4",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/sachin-pathak-b52b20215", icon: 'linkedin' },
-        { to: "https://instagram.com/sup_sachin07", icon: 'instagram' },
-        { to: "https://github.com/sachinpathak123", icon: 'github' }
-      ]
     }
   ]
 
   const Move = (direction) => {
     const cards = document.getElementById("carousal");
     if (direction === 'right') {
-      console.log("fuck")
       cards.classList.add("moveright")
     }
     else if (direction === 'left') {
@@ -114,7 +113,7 @@ function Parallex() {
       <section id="wrapper">
         <section className="content1">
           <div className='heading'>
-            <p id="abc">CODING_PUNDITS</p>
+            <p id="abc">CODING_<br className='break'/>PUNDITS</p>
             <p>
               <TypeAnimation
                 sequence={[
