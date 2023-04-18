@@ -183,8 +183,8 @@ function Parallex() {
               )}
             </div>
             <div className='buttons'>
-              <button className='left' onClick={() => Move("left")}>&#x3c;</button>
-              <button className='right' onClick={() => Move("right")}>&#x3e;</button>
+              <button className='left' onClick={() => Move("left")}>&larr;</button>
+              <button className='right' onClick={() => Move("right")}>&rarr;</button>
             </div>
           </div>
         </section>

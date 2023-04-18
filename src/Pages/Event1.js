@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Components/Cards/Card";
 import Head from "../Components/Cards/heading";
-import "../Components/Cards/card.scss";
+// import "../Components/Cards/card.scss";
 import c1 from '../Components/img&vid/card4.jpg';
 import c2 from '../Components/img&vid/card5.jpg';
 import c3 from '../Components/img&vid/card2.jpg';
@@ -10,7 +10,9 @@ import pdf2 from '../Components/pdfs/pdf2.pdf'
 import pdf3 from '../Components/pdfs/pdf3.pdf'
 import Image from './Image.jpg';
 import Image2 from './Image2.jpg';
+import './Event1.css';
 import Image3 from './Image3.jpg';
+import './Event1.css';
 
 
 export default function Event1 (){
@@ -63,4 +65,4 @@ export default function Event1 (){
        
         </>
     );
-}
+                }
