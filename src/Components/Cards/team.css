@@ -54,24 +54,27 @@
   font-size: 1.15em;
   font-weight: bolder;
   position: absolute;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
+  white-space: nowrap;
+  top: 12rem;
 }
 
 .content4 .detail h2 span {
+  position: relative;
   font-size: 0.8em;
   color: rgba(15, 32, 209, 0.61);
   font-weight: bold;
+  top: 0.5rem;
 }
 
 .sci {
   display: flex;
-  margin-top: 5px;
+  margin-top: 3rem;
 }
 
 .sci li {
   list-style: none;
-  padding-inline: 0.3rem;
-  padding-top: 2.2rem;
+  padding-inline: 0.5rem;
 }
 
 .sci li a {
