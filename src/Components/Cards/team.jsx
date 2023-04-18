@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
->>>>>>> 4f7c8391edaf771b6bea25286bcbf2f1a712c890
 import './team.css'
 
 export default function Team({member}){
