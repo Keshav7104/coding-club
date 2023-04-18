@@ -1,10 +1,10 @@
 @font-face {
     font-family: Hacked;
-   
     src: url(https://hackedfont.com/HACKED.ttf);
-}
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Roboto+Mono:wght@300&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -116,6 +116,13 @@
         }
 
         // overflow-y: hidden;
+        .squad{
+            padding-left: 40%;
+            position: fixed;
+            font-family: 'Inconsolata', monospace;
+            // font-family: 'Roboto Mono', monospace;
+            font-size: 4.6em;
+        }
     }
 }
 

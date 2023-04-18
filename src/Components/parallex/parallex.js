@@ -7,75 +7,80 @@ import Head from '../Cards/heading';
 function Parallex() {
 
   const team = [
-    {
-      title: "Subhashis Banarjee",
-      img: sir,
-      post: "Mentor",
-      links: [
-        { to: "https://www.facebook.com/subhasish.banerjee.39", icon: 'facebook' }
-      ]
-    },
-    {
-      title: "Pursottam Shah",
-      img: "https://avatars.githubusercontent.com/u/81693090",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/pursottamsah", icon: 'linkedin' },
-        { to: "https://instagram.com/rahulsah6003", icon: 'instagram' },
-        { to: "https://github.com/pursottam6003", icon: 'github' }
-      ]
-    },
-    {
-      title: "Chandreshekhar tripathi",
-      img: "https://avatars.githubusercontent.com/u/68462214",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/tripathics", icon: 'linkedin' },
-        { to: "https://instagram.com/c_strip.z", icon: 'instagram' },
-        { to: "https://github.com/tripathics", icon: 'github' }
-      ]
-    },
-    {
-      title: "Dev Singh Kanyal",
-      img: "https://avatars.githubusercontent.com/u/77870205",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/dev-singh-kanyal", icon: 'linkedin' },
-        { to: "https://instagram.com/dev_singh_kanyal", icon: 'instagram' },
-        { to: "https://github.com/dev-singh-kanyal", icon: 'github' }
-      ]
-    },
-    {
-      title: "Keshav Arora",
-      img: "https://avatars.githubusercontent.com/u/124811079",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/keshav-arora-a5a20325b", icon: 'linkedin' },
-        { to: "https://instagram.com/keshav_7104", icon: 'instagram' },
-        { to: "https://github.com/Keshav7104", icon: 'github' }
-      ]
-    },
-    {
-      title: "Vanshika Marwaha",
-      img: "https://avatars.githubusercontent.com/u/101502532?v=4",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/vanshika-marwaha", icon: 'linkedin' },
-        { to: "https://instagram.com/d_chaotic_vibe", icon: 'instagram' },
-        { to: "https://github.com/marwahavanshika", icon: 'github' }
-      ]
-    },
-    {
-      title: "Sachin Pathak",
-      img: "https://avatars.githubusercontent.com/u/103988614?v=4",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/sachin-pathak-b52b20215", icon: 'linkedin' },
-        { to: "https://instagram.com/sup_sachin07", icon: 'instagram' },
-        { to: "https://github.com/sachinpathak123", icon: 'github' }
-      ]
-    }
+    {title1 : "Subhashis",
+     title2 : "Banerjee",
+    img : sir,
+    post: "Mentor",
+    links : [
+      {to : "https://www.facebook.com/subhasish.banerjee.39",icon : 'facebook'}
+    ]
+  },
+  {
+    title1 : "Pursottam",
+    title2 : "Shah",
+    img : "https://avatars.githubusercontent.com/u/81693090",
+    post: "Mentor",
+    links : [
+      {to : "https://www.linkedin.com/in/pursottamsah",icon : 'linkedin'},
+    {to : "https://instagram.com/rahulsah6003",icon : 'instagram'},
+    {to : "https://github.com/pursottam6003",icon : 'github'}
+    ]
+  },
+  {title1 : "Chandreshekhar",
+   title2 : "Tripathi",
+  img : "https://avatars.githubusercontent.com/u/68462214",
+  post: "Mentor",
+  links : [
+    {to : "https://www.linkedin.com/in/tripathics",icon : 'linkedin'},
+    {to : "https://instagram.com/c_strip.z",icon : 'instagram'},
+    {to : "https://github.com/tripathics",icon : 'github'}
   ]
+  },
+  {
+    title1 : "Dev",
+    title2 : "Kanyal",
+    img : "https://avatars.githubusercontent.com/u/77870205" ,
+    post : "Mentor",
+    links : [
+      {to : "https://www.linkedin.com/in/dev-singh-kanyal",icon : 'linkedin'},
+    {to : "https://instagram.com/dev_singh_kanyal",icon : 'instagram'},
+    {to : "https://github.com/dev-singh-kanyal",icon : 'github'}
+    ]  
+  },
+  {
+    title1 : "Keshav",
+    title2 : "Arora",
+    img : "https://avatars.githubusercontent.com/u/124811079",
+    post : "Site Developer",
+    links : [
+      {to : "https://www.linkedin.com/in/keshav-arora-a5a20325b",icon : 'linkedin'},
+    {to : "https://instagram.com/keshav_7104",icon : 'instagram'},
+    {to : "https://github.com/Keshav7104",icon : 'github'}
+    ]
+  },
+  {
+    title1 : "Vanshika",
+    title2 : "Marwaha",
+    img : "https://avatars.githubusercontent.com/u/101502532?v=4",
+    post : "Site Developer",
+    links : [
+      {to : "https://www.linkedin.com/in/vanshika-marwaha",icon : 'linkedin'},
+    {to : "https://instagram.com/d_chaotic_vibe",icon : 'instagram'},
+    {to : "https://github.com/marwahavanshika",icon : 'github'}
+    ]
+  },
+  {
+    title1 : "Sachin",
+    title2 : "Pathak",
+    img : "https://avatars.githubusercontent.com/u/103988614?v=4",
+    post : "Site Developer",
+    links : [
+      {to : "https://www.linkedin.com/in/sachin-pathak-b52b20215",icon : 'linkedin'},
+    {to : "https://instagram.com/sup_sachin07",icon : 'instagram'},
+    {to : "https://github.com/sachinpathak123",icon : 'github'}
+    ]
+  }
+]
 
   return (
     <>

@@ -17,7 +17,7 @@ export default function Team({member}){
       </div>
       <div className="content4">
         <div className="detail">
-          <h2>{member.title}<br /><span>{member.post}</span></h2>
+          <h2>{member.title1}<br />{member.title2}<br /><span>{member.post}</span></h2>
           <ul className="sci">
             {member.links.map(link=>(
                 <li key={link.to}>

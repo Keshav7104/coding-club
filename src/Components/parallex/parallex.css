@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Roboto+Mono:wght@300&display=swap");
 @font-face {
   font-family: Hacked;
   src: url(https://hackedfont.com/HACKED.ttf);
@@ -92,6 +93,12 @@
 }
 .scroll .team::-webkit-scrollbar {
   display: none;
+}
+.scroll .team .squad {
+  padding-left: 40%;
+  position: fixed;
+  font-family: "Inconsolata", monospace;
+  font-size: 4.6em;
 }
 
 @media (max-width: 1000px) {
