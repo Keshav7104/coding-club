@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';// to make for functional 
 import { useState,useEffect } from 'react';// to get data from other pages,hold input and extract data from server
 import { db } from '../Config/firebase'//server database
 import { getDocs,collection,addDoc }  from 'firebase/firestore'//functions to mainuplate server
-import './Register.css'//stylesheets
+import './Register.scss'//stylesheets
 
 const Register = ({setIsadmin,setId}) => {
   //boolean to determine is admin loged in or not and to store admin id

@@ -1,5 +1,5 @@
 import React from "react";
-import './Announcement.css';
+import './Announcement.scss';
 import Head from "./heading";
 function Annoucement() {
  return (

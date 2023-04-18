@@ -1,4 +1,4 @@
-import './head.css'
+import './head.scss'
 export default function Head({title}){
 
     

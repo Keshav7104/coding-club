@@ -3,7 +3,7 @@ import { useState,useEffect} from 'react';//to hold input,get data from server,a
 import { db } from "../Config/firebase";// data from server
 import { getDocs,collection,deleteDoc,doc,addDoc,updateDoc } from 'firebase/firestore'// functions to mainuplate data on server
 import { useForm } from 'react-hook-form';// to make efficent form to add admin
-import "./Admin.css";// stylesheets
+import "./Admin.scss";// stylesheets
 
 export default function Admin({id,isadmin}){
 
@@ -33,7 +33,7 @@ export default function Admin({id,isadmin}){
     }
 
     const help = () =>{
-        if(isadmin!=0){
+        if(isadmin!==0){
             let ele = document.getElementById("non-admin");
             ele.classList.remove("message");
             ele.classList.add("non-display");
