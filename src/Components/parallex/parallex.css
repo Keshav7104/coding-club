@@ -1,5 +1,7 @@
 @font-face {
   font-family: Hacked;
+  font-family: Consolas;
+  src: url("Consolas.ttf");
   src: url(https://hackedfont.com/HACKED.ttf);
 }
 * {
@@ -21,7 +23,7 @@
   background-size: cover;
   height: 90vh;
   width: 100vw;
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 #abc {
@@ -41,7 +43,7 @@
 }
 .content1 .type {
   font-family: Consolas;
-  font-size: 2em;
+  font-size: 1.6em;
   display: inline-block;
   position: relative;
   left: 40%;

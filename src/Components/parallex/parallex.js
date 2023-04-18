@@ -114,7 +114,7 @@ return(
 
      <div className='scroll'>
      <div className='team'>
-      <h1 className='squad'>Code Squad</h1>
+      <h1 className='squad'>Code Squad </h1>
           {team.map(member=>
           <Team member={member} key={crypto.randomUUID()} />
           )}
