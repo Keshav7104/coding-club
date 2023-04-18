@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './team.css'
 
 export default function Team({member}){
@@ -19,7 +18,8 @@ export default function Team({member}){
       <div className="content4">
         <div className="detail">
           <h2>{member.title1}<br />{member.title2}<br /><span>{member.post}</span></h2>
-          <ul className="sci">
+        </div>
+        <ul className="sci">
             {member.links.map(link=>(
                 <li key={link.to}>
                     <a href={link.to}>
@@ -28,7 +28,6 @@ export default function Team({member}){
                 </li>
             ))}
           </ul>
-        </div>
       </div>
     </div>
         </>

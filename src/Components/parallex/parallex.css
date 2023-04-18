@@ -13,6 +13,7 @@
   overflow-x: hidden;
   perspective: 10px;
   margin: 0;
+  padding-top: 80px;
   background-color: #cdeced;
 }
 
@@ -78,6 +79,19 @@
   background-position: top;
   background-size: cover;
 }
+.scroll .buttons {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+}
+.scroll .buttons .left {
+  left: 1%;
+  position: absolute;
+}
+.scroll .buttons .right {
+  position: absolute;
+  right: 1%;
+}
 .scroll .squad {
   display: flex;
   align-items: center;
@@ -86,27 +100,45 @@
   font-size: 3.6em;
 }
 .scroll .team {
-  overflow-y: hidden;
-  overflow-x: scroll;
-  white-space: nowrap;
-  height: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+  animation-name: move;
+  overflow: hidden;
 }
 .scroll .team::-webkit-scrollbar {
   display: none;
 }
-.scroll .team .squad {
-  padding-left: 40%;
-  position: fixed;
-  font-family: "Inconsolata", monospace;
-  font-size: 4.6em;
+.scroll .moveright {
+  animation: moveright 0.65s ease-out;
+  animation-fill-mode: forwards;
+}
+.scroll .moveleft {
+  animation: moveleft 0.65s ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes moveleft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20rem);
+  }
+}
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20rem);
+  }
 }
 
 @media (max-width: 1000px) {
   #abc {
     font-size: 90px;
-  }
-  .hello #coach {
-    font-size: 60px;
   }
   .hello p {
     font-size: 16px;
@@ -114,11 +146,11 @@
 }
 @media (max-width: 500px) {
   #abc {
-    font-size: 55px;
+    font-size: 65px;
     bottom: 400px;
   }
   .content1 .type {
-    font-size: 1.5em;
+    font-size: 1.4em;
     left: 20%;
     bottom: 370px;
   }

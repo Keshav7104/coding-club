@@ -4,8 +4,9 @@ body {
 }
 
 .wrapper1 {
-  margin: 10vh;
-  margin-bottom: 20vh;
+  margin: 50px;
+  margin-bottom: 100px;
+  padding-top: 80px;
 }
 
 .card {
@@ -99,10 +100,5 @@ body {
     padding: 0px;
     font-weight: 300px;
     font-size: 40px;
-  }
-}
-@media (max-width: 500px) {
-  .wrapper1 {
-    margin: 0vh;
   }
 }/*# sourceMappingURL=Announcement.css.map */

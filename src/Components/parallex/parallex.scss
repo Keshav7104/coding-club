@@ -1,10 +1,11 @@
 @font-face {
     font-family: Hacked;
     src: url(https://hackedfont.com/HACKED.ttf);
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Roboto+Mono:wght@300&display=swap');
+}
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Roboto+Mono:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +16,7 @@
     overflow-x: hidden;
     perspective: 10px;
     margin: 0;
-    // padding: 2rem;
+    padding-top: 80px;
 
     background-color: #cdeced;
 }
@@ -38,7 +39,7 @@
 .content1 {
     position: relative;
 
-    
+
     .heading {
         position: absolute;
         top: 50%;
@@ -95,6 +96,19 @@
     background-image: url("img2.jpg");
     background-position: top;
     background-size: cover;
+    .buttons{
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        .left{
+            left: 1%;
+            position: absolute;
+        }
+        .right{
+            position: absolute;
+            right: 1%;
+        }
+    }
 
     .squad {
         display: flex;
@@ -106,23 +120,34 @@
     }
 
     .team {
-        overflow-y: hidden;
-        overflow-x: scroll;
-        white-space: nowrap;
-        height: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem 0;
+        justify-content: center;
+        animation-name: move;
+        overflow: hidden;
 
         &::-webkit-scrollbar {
             display: none;
         }
-
-        // overflow-y: hidden;
-        .squad{
-            padding-left: 40%;
-            position: fixed;
-            font-family: 'Inconsolata', monospace;
-            // font-family: 'Roboto Mono', monospace;
-            font-size: 4.6em;
-        }
+       
+    }
+    .moveright {
+        animation: moveright 0.65s ease-out;
+        animation-fill-mode: forwards;
+    }
+    .moveleft {
+        animation: moveleft 0.65s ease-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes moveleft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(20rem); }
+    }
+    @keyframes moveright {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-20rem); }
     }
 }
 
@@ -132,9 +157,6 @@
     }
 
     .hello {
-        #coach {
-            font-size: 60px;
-        }
 
         p {
             font-size: 16px;
@@ -145,13 +167,13 @@
 
 @media (max-width:500px) {
     #abc {
-        font-size: 55px;
+        font-size: 45px;
         bottom: 400px;
     }
 
     .content1 {
         .type {
-            font-size: 1.5em;
+            font-size: 1.4em;
             left: 20%;
             bottom: 370px;
         }
