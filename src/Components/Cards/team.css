@@ -1,8 +1,8 @@
 .card2 {
   min-width: 18rem;
   height: 25rem;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  padding: 16rem 0 4rem;
   background: #fff;
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.1);
@@ -12,31 +12,31 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 .card2 .img-bx {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 12rem;
+  width: 12rem;
 }
 .card2 .img-bx img {
-  height: 90%;
-  width: 70%;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
 }
 .card2 .content4 .detail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 .card2 .content4 .detail h2 {
   color: #444;
   font-size: 1.15em;
   font-weight: bolder;
-  position: absolute;
-  padding-bottom: 2rem;
   white-space: nowrap;
-  top: 12rem;
 }
-.card2 .content4 .detail h2 span {
+.card2 .content4 .detail .position {
   position: relative;
   font-size: 0.8em;
   color: rgba(15, 32, 209, 0.61);
@@ -44,10 +44,12 @@
   top: 0.5rem;
 }
 .card2 .content4 .sci {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
 }
 .card2 .content4 .sci li {
   list-style: none;
