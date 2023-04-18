@@ -129,7 +129,6 @@ function Parallex() {
                 cursor={true}
                 repeat={Infinity}
                 className="type"
-              // style={{ fontFamily:'Consolas' ,fontSize: '2em', display: 'inline-block', position:'relative', left:'40%', bottom:'420px' }}
               />
             </p>
           </div>
@@ -139,14 +138,12 @@ function Parallex() {
           <p>We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn<br /><br />
             We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge<br /><br />
             Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.<br /><br />
-
           </p>
         </section>
 
         <section className='scroll'>
           <Head title={"Code Squad"} />
           <div className='team' id='carousal'>
-
             {team.map(member =>
               <Team member={member} key={member.title1} />
             )}
