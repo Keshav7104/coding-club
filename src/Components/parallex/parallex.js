@@ -105,7 +105,7 @@ function Parallex() {
           cards.removeChild(cards.lastChild)
         );
       }
-    }, 500);
+    }, 650);
   }
 
   return (
@@ -142,14 +142,16 @@ function Parallex() {
 
         <section className='scroll'>
           <Head title={"Code Squad"} />
-          <div className='team' id='carousal'>
-            {team.map(member =>
-              <Team member={member} key={member.title1} />
-            )}
-          </div>
-          <div className='buttons'>
-            <button className='left' onClick={() => Move("left")}>&#x3c;</button>
-            <button className='right' onClick={() => Move("right")}>&#x3e;</button>
+          <div className='team-wrapper'>
+            <div className='team' id='carousal'>
+              {team.map(member =>
+                <Team member={member} key={member.title1} />
+              )}
+            </div>
+            <div className='buttons'>
+              <button className='left' onClick={() => Move("left")}>&#x3c;</button>
+              <button className='right' onClick={() => Move("right")}>&#x3e;</button>
+            </div>
           </div>
         </section>
       </section>

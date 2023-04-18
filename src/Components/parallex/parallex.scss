@@ -92,10 +92,17 @@
     background-image: url("img2.jpg");
     background-position: top;
     background-size: cover;
+    padding: 1rem 0 4rem;
+
+    .team-wrapper {
+        position: relative;
+    }
+
     .buttons{
         position: absolute;
-        bottom: 25%;
+        top: 50%;
         width: 100%;
+        transform: translateY(-50%);
         .left{
             left: 1%;
             position: absolute;
@@ -124,8 +131,7 @@
     .team {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-        padding: 1rem 0;
+        gap: 2.5rem;
         justify-content: center;
         animation-name: move;
         overflow:visible;
@@ -145,11 +151,11 @@
     }
     @keyframes moveleft {
         0% { transform: translateX(0); }
-        100% { transform: translateX(20rem); }
+        100% { transform: translateX(20.5rem); }
     }
     @keyframes moveright {
         0% { transform: translateX(0); }
-        100% { transform: translateX(-20rem); }
+        100% { transform: translateX(-20.5rem); }
     }
 }
 
