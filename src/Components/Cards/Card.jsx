@@ -10,7 +10,7 @@ import './card.scss'
 <div className="card-body text-dark">
 <h4 className="card-title">{props.t}</h4>
 <div className="card-text text secondary" ><div><div>{props.abt}</div></div><br />{props.line}</div>
-<a href={props.elink} target={"blank"} className="btn btn-outline-info">sneak into the questions</a>
+<div className="BuTTon"><a href={props.elink} target={"blank"} className="btn">sneak into the questions</a></div>
 </div>
 </div>
 
