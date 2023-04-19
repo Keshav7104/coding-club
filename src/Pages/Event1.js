@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Components/Cards/Card";
 import Head from "../Components/Cards/heading";
-import "../Components/Cards/card.scss";
+// import "../Components/Cards/card.scss";
 import c1 from '../Components/img&vid/card4.jpg';
 import c2 from '../Components/img&vid/card5.jpg';
 import c3 from '../Components/img&vid/card2.jpg';
@@ -12,6 +12,7 @@ import Image from './Image.jpg';
 import Image2 from './Image2.jpg';
 import './Event1.css';
 import Image3 from './Image3.jpg';
+import './Event1.css';
 
 
 export default function Event1 (){
@@ -46,7 +47,7 @@ export default function Event1 (){
             <div className="top1">
             </div>
             <div id="top2">
-             <h5>  Keeping in mind competitive, demanding, and ever changing computer programming career, CODING PUNDITS aims at organising all possible events that help in staying up to date, creative and versatile in their journeys to master their fields. <></> These events include <b>hackathons</b>,<b> workshops</b>, <b>classes</b>, <b>interactive sessions with alums</b> and other programs that fulfill the overarching goal of making programming exciting and accessible. <div id="spacebw"></div>
+             <h5 className="gradient-text" id="text2">  Keeping in mind competitive, demanding, and ever changing computer programming career, CODING PUNDITS aims at organising all possible events that help in staying up to date, creative and versatile in their journeys to master their fields. <></> These events include <b>hackathons</b>,<b> workshops</b>, <b>classes</b>, <b>interactive sessions with alums</b> and other programs that fulfill the overarching goal of making programming exciting and accessible. <div id="spacebw"></div>
     <span><i><b>Follow, celebrate, and support these fantastic events!!!</b></i></span> </h5>
         </div>
        

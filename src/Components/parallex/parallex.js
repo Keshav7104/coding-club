@@ -4,6 +4,14 @@ import './parallex.scss';
 import Team from '../Cards/team';
 import sir from '../img&vid/Subhashis_sir.jpg'
 import Head from '../Cards/heading';
+import Card from "../Cards/Card";
+import pdf1 from '../pdfs/pdf1.pdf'
+import pdf2 from '../pdfs/pdf2.pdf'
+import pdf3 from '../pdfs/pdf3.pdf'
+import Image from '../../Pages/Image.jpg';
+import Image2 from '../../Pages/Image2.jpg';
+import Image3 from '../../Pages/Image3.jpg';
+
 function Parallex() {
 
   const team = [
@@ -84,6 +92,32 @@ function Parallex() {
     }
   ]
 
+
+  const Events = [
+    {
+      imgsrc: Image,
+      t: "<CODE_GROUND>",
+      elink: pdf1,
+      abt: " The club conducted a Multiple Choice Question Quiz amongst the registered membership aspirants.",
+      line: 'The challenge began on 7th March 2020. Lets have look at the problem questions'
+    },
+    {
+      imgsrc: Image2,
+      t: "<CODE_CHEF>",
+      elink: pdf2,
+      abt: "Students were provided with coding challenges each day of the week and the best code recipe will be rewarded.",
+      line: "The challenge began on 13th March 2020. Lets have look at the problem questions  "
+    },
+    {
+      imgsrc: Image3,
+      t: "<CODE_ERA>",
+      elink: pdf3,
+      abt: "A challenge was organized which comprised of some multiple choice questions and a problem to code",
+      line: "The challenge began on 14th March 2020. Lets have look at the problem questions "
+    }
+  ]
+
+
   const Move = (direction) => {
     const cards = document.getElementById("carousal");
     if (direction === 'right') {
@@ -112,8 +146,9 @@ function Parallex() {
     <>
       <section id="wrapper">
         <section className="content1">
+          <div className='background'></div>
           <div className='heading'>
-            <p id="abc">CODING_<br className='break'/>PUNDITS</p>
+            <p id="abc">CODING_<br className='break' />PUNDITS</p>
             <p>
               <TypeAnimation
                 sequence={[
@@ -133,11 +168,10 @@ function Parallex() {
           </div>
         </section>
         <section className="hello">
-          <Head title={"Coding Coaches"} />
-          <p>We are an enthusiastic group of coders from National Institute of Technology, Arunachal Pradesh.<br /> We want to replace code fear with inspiration and motivation to learn<br /><br />
-            We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.<br />Coding Club is for everyone, regardless of their stream or current level of knowledge<br /><br />
-            Coding club is a place that brings people together, regardless of their gender or background.<br /> We all have the right to learn, and we believe learning is more fun and efficient when we help each other along the way.<br /><br />
-          </p>
+          <Head title={"Recent Events"} />
+          {Events.map(event=>(
+             <Card  imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
+          ))}
         </section>
 
         <section className='scroll'>
@@ -149,8 +183,8 @@ function Parallex() {
               )}
             </div>
             <div className='buttons'>
-              <button className='left' onClick={() => Move("left")}>&#x3c;</button>
-              <button className='right' onClick={() => Move("right")}>&#x3e;</button>
+              <button className='left' onClick={() => Move("left")}>&larr;</button>
+              <button className='right' onClick={() => Move("right")}>&rarr;</button>
             </div>
           </div>
         </section>
