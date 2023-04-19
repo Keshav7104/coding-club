@@ -84,13 +84,17 @@
 
 .hello {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
     padding: 2rem 2rem;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .Events{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }
 

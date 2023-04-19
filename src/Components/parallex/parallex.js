@@ -169,9 +169,11 @@ function Parallex() {
         </section>
         <section className="hello">
           <Head title={"Recent Events"} />
-          {Events.map(event => (
-            <Card key={event.t} imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
-          ))}
+          <section className='Events'>
+            {Events.map(event => (
+              <Card key={event.t} imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
+            ))}
+          </section>
         </section>
 
         <section className='scroll'>
