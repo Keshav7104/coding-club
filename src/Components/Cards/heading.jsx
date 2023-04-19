@@ -1,8 +1,8 @@
 import './head.scss'
-export default function Head({title}){
+export default function Head({ title }) {
 
-    
-    return(
+
+    return (
         <h2 className="head">
             {title}
         </h2>

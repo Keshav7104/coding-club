@@ -8,9 +8,9 @@ import Card from "../Cards/Card";
 import pdf1 from '../pdfs/pdf1.pdf'
 import pdf2 from '../pdfs/pdf2.pdf'
 import pdf3 from '../pdfs/pdf3.pdf'
-import Image from '../../Pages/Image.jpg';
-import Image2 from '../../Pages/Image2.jpg';
-import Image3 from '../../Pages/Image3.jpg';
+import Image from '../img&vid/Image.jpg'
+import Image2 from '../img&vid/Image2.jpg'
+import Image3 from '../img&vid/Image3.jpg';
 
 function Parallex() {
 
@@ -169,8 +169,8 @@ function Parallex() {
         </section>
         <section className="hello">
           <Head title={"Recent Events"} />
-          {Events.map(event=>(
-             <Card  imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
+          {Events.map(event => (
+            <Card key={event.t} imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
           ))}
         </section>
 
