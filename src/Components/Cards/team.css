@@ -1,0 +1,92 @@
+@media (max-width: 1000px) {
+  .card2 {
+    width: 16rem;
+  }
+}
+@media (max-width: 2000px) {
+  .card2 {
+    width: 20rem;
+  }
+}
+@media (max-width: 500px) {
+  .card2 {
+    width: 13rem;
+    height: 27rem;
+  }
+}
+.card2 {
+  width: 18rem;
+  flex-shrink: 0;
+  height: 25rem;
+  position: relative;
+  padding: 16rem 0 4rem;
+  background: #fff;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.card2 .img-bx {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  width: 12rem;
+}
+.card2 .img-bx img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.card2 .content4 .detail {
+  text-align: center;
+}
+.card2 .content4 .detail h2 {
+  color: #444;
+  font-size: 1.15em;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+.card2 .content4 .detail .position {
+  position: relative;
+  font-size: 0.8em;
+  color: rgba(15, 32, 209, 0.61);
+  font-weight: bold;
+  top: 0.5rem;
+}
+.card2 .content4 .sci {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card2 .content4 .sci li {
+  list-style: none;
+  padding-inline: 0.5rem;
+}
+.card2 .content4 .sci li a {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+.card2 .content4 .sci li a:hover {
+  background: rgba(0, 0, 0, 0.269);
+  color: #fff;
+}/*# sourceMappingURL=team.css.map */
