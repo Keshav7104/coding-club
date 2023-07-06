@@ -48,7 +48,7 @@ export default function Event1() {
 
                 <div id="top" ></div>
                 <div className="container-fluid d-flex justify-content-center">
-                    <div className="row">
+                    <div className="row2">
                         {Events.map(event =>
                             <div key={event.abt} className="col-md-4">
                                 <Card imgsrc={event.imgsrc} t={event.t} abt={event.abt} elink={event.elink} line={event.line} />
