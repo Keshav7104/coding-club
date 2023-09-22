@@ -7,7 +7,12 @@ body {
 .wrapper1 {
   margin: 10vh;
   margin-bottom: 20vh;
+  @media (max-width:468px) {
+    margin: 0;
+    margin-top: 100px;
+  }
 }
+
 
 //post card styles
 
