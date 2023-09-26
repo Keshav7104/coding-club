@@ -42,14 +42,8 @@ const Register = ({ setIsadmin, setId }) => {
       for (let i = 0; i < memberlist.length; i++) {
         if (memberlist[i].Name === data.fullname) {
           if (memberlist[i].Email === data.email) {
-            if (memberlist[i].Roll === data.roll) {
-              alert("can't register with same roll-no.");
-              break;
-            }
-            else {
               alert("can't register with same email")
               break;
-            }
           }
           else {
             alert("can't register with same username")
@@ -62,8 +56,7 @@ const Register = ({ setIsadmin, setId }) => {
             Email: data.email,
             Branch: data.branch,
             Year: data.year,
-            Language: data.prolan,
-            Roll: data.roll
+            Language: data.prolan
           })
           alert("Congrats you are registerd");
           break;
