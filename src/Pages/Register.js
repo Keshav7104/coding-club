@@ -58,7 +58,7 @@ const Register = ({ setIsadmin, setId }) => {
             Year: data.year,
             Language: data.prolan
           })
-          alert("Congrats you are registerd");
+          alert("Congrats you Applied Succesfully for our club.");
           break;
         }
       }
@@ -77,6 +77,7 @@ const Register = ({ setIsadmin, setId }) => {
         if (Adminlist[i].Password === data.password) {
           setIsadmin(1);
           setId(Adminlist[i].id);
+          alert("Logged In Succesfully.");
           console.log("Welcome chief...");
           break;
         }
