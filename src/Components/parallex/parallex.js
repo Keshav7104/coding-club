@@ -36,39 +36,6 @@ function Parallex() {
       ]
     },
     {
-      title1: "Pursottam",
-      title2: "Shah",
-      img: "https://avatars.githubusercontent.com/u/81693090",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/pursottamsah", icon: 'linkedin' },
-        { to: "https://instagram.com/rahulsah6003", icon: 'instagram' },
-        { to: "https://github.com/pursottam6003", icon: 'github' }
-      ]
-    },
-    {
-      title1: "Chandreshekhar",
-      title2: "Tripathi",
-      img: "https://avatars.githubusercontent.com/u/68462214",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/tripathics", icon: 'linkedin' },
-        { to: "https://instagram.com/c_strip.z", icon: 'instagram' },
-        { to: "https://github.com/tripathics", icon: 'github' }
-      ]
-    },
-    {
-      title1: "Dev",
-      title2: "Kanyal",
-      img: "https://avatars.githubusercontent.com/u/77870205",
-      post: "Mentor",
-      links: [
-        { to: "https://www.linkedin.com/in/dev-singh-kanyal", icon: 'linkedin' },
-        { to: "https://instagram.com/dev_singh_kanyal", icon: 'instagram' },
-        { to: "https://github.com/dev-singh-kanyal", icon: 'github' }
-      ]
-    },
-    {
       title1: "Keshav",
       title2: "Arora",
       img: "https://avatars.githubusercontent.com/u/124811079",
