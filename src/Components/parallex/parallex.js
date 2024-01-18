@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import React from "react";
+import React,{useState,useEffect} from "react";
 import './parallex.scss';
 import Team from '../Cards/team';
 import sir from '../img&vid/Subhashis_sir.jpg'
@@ -11,53 +11,80 @@ import pdf3 from '../pdfs/pdf3.pdf'
 import Image from '../img&vid/Image.jpg'
 import Image2 from '../img&vid/Image2.jpg'
 import Image3 from '../img&vid/Image3.jpg';
+import { collection, getDocs } from '@firebase/firestore';
+import { db } from '../../Config/firebase';
+import LoadingScreen from '../layout/loading';
+
+const team = [
+  {
+    title1: "Sachin",
+    title2: "Pathak",
+    img: "https://avatars.githubusercontent.com/u/103988614?v=4",
+    post: "Site Developer",
+    links: [
+      { to: "https://www.linkedin.com/in/sachin-pathak-b52b20215", icon: 'linkedin' },
+      { to: "https://instagram.com/sup_sachin07", icon: 'instagram' },
+      { to: "https://github.com/sachinpathak123", icon: 'github' }
+    ]
+  },
+  {
+    title1: "Subhashis",
+    title2: "Banerjee",
+    img: sir,
+    post: "Mentor",
+    links: [
+      { to: "https://www.facebook.com/subhasish.banerjee.39", icon: 'facebook' }
+    ]
+  },
+  {
+    title1: "Keshav",
+    title2: "Arora",
+    img: "https://avatars.githubusercontent.com/u/124811079",
+    post: "Site Developer",
+    links: [
+      { to: "https://www.linkedin.com/in/keshav-arora-a5a20325b", icon: 'linkedin' },
+      { to: "https://instagram.com/keshav_7104", icon: 'instagram' },
+      { to: "https://github.com/Keshav7104", icon: 'github' }
+    ]
+  },
+  {
+    title1: "Vanshika",
+    title2: "Marwaha",
+    img: "https://avatars.githubusercontent.com/u/101502532?v=4",
+    post: "Site Developer",
+    links: [
+      { to: "https://www.linkedin.com/in/vanshika-marwaha", icon: 'linkedin' },
+      { to: "https://instagram.com/d_chaotic_vibe", icon: 'instagram' },
+      { to: "https://github.com/marwahavanshika", icon: 'github' }
+    ]
+  }
+]
 
 function Parallex() {
 
-  const team = [
-    {
-      title1: "Sachin",
-      title2: "Pathak",
-      img: "https://avatars.githubusercontent.com/u/103988614?v=4",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/sachin-pathak-b52b20215", icon: 'linkedin' },
-        { to: "https://instagram.com/sup_sachin07", icon: 'instagram' },
-        { to: "https://github.com/sachinpathak123", icon: 'github' }
-      ]
-    },
-    {
-      title1: "Subhashis",
-      title2: "Banerjee",
-      img: sir,
-      post: "Mentor",
-      links: [
-        { to: "https://www.facebook.com/subhasish.banerjee.39", icon: 'facebook' }
-      ]
-    },
-    {
-      title1: "Keshav",
-      title2: "Arora",
-      img: "https://avatars.githubusercontent.com/u/124811079",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/keshav-arora-a5a20325b", icon: 'linkedin' },
-        { to: "https://instagram.com/keshav_7104", icon: 'instagram' },
-        { to: "https://github.com/Keshav7104", icon: 'github' }
-      ]
-    },
-    {
-      title1: "Vanshika",
-      title2: "Marwaha",
-      img: "https://avatars.githubusercontent.com/u/101502532?v=4",
-      post: "Site Developer",
-      links: [
-        { to: "https://www.linkedin.com/in/vanshika-marwaha", icon: 'linkedin' },
-        { to: "https://instagram.com/d_chaotic_vibe", icon: 'instagram' },
-        { to: "https://github.com/marwahavanshika", icon: 'github' }
-      ]
+  const team2= collection(db,"Team")
+  const [teamlist, setteamlist] = useState(team)
+  const [isloaded, setisloaded] = useState(true)
+  const getTeam = async ()=>{
+    setisloaded(false);
+    try{
+      const data = await getDocs(team2)
+      const filteredData = data.docs.map((doc)=>({
+      ...doc.data(),
+      id:doc.id,
+    }))
+    const sorted = [...filteredData].sort((a,b)=>a.priority-b.priority);
+    setteamlist(sorted.length===0?team:sorted);
+    setisloaded(true);
+    } catch(error){
+      console.log(error);
+      setteamlist(team);
+      setisloaded(true);
     }
-  ]
+  }
+  useEffect(()=>{
+    getTeam();
+  },[]);
 
 
   const Events = [
@@ -111,7 +138,8 @@ function Parallex() {
 
   return (
     <>
-      <section id="wrapper">
+    {isloaded ? <div>
+      <section id="wrapper" className='Parallax'>
         <section className="content1">
           <div className='background'></div>
           <div className='heading'>
@@ -147,7 +175,7 @@ function Parallex() {
           <Head title={"Code Squad"} />
           <div className='team-wrapper'>
             <div className='team' id='carousal'>
-              {team.map(member =>
+              {teamlist.map((member,) =>
                 <Team member={member} key={member.title1} />
               )}
             </div>
@@ -158,6 +186,8 @@ function Parallex() {
           </div>
         </section>
       </section>
+      <script src='/parallax.js'></script>
+    </div>:<LoadingScreen />}
     </>
   );
 }
