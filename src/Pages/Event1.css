@@ -18,7 +18,7 @@
 
  #forbg {
      background: rgb(245, 245, 220);
-     background: linear-gradient(51deg, rgba(245, 245, 220, 1) 0%, rgba(230, 245, 246, 1) 50%, rgba(67, 191, 199, 1) 100%);
+     background: linear-gradient(51deg, rgba(245, 245, 220, 1) 0%, rgb(230, 245, 246) 50%, rgb(67, 191, 199) 100%);
      padding: auto;
  }
 

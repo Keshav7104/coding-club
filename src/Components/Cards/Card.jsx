@@ -1,18 +1,36 @@
 import React from "react";
-import './card.scss'
+import "./card.scss";
 
 export default function Card(props) {
-    return (
-        <div className="card text-center">
-            <div className="overflow">
-                <img src={props.imgsrc} alt="/" className="card-img" />
-            </div>
-            <div className="card-body text-dark">
-                <h4 className="card-title">{props.t}</h4>
-                <div className="card-text text secondary" ><div><div>{props.abt}</div></div><br />{props.line}</div>
-                <div className="BuTTon"><a href={props.elink} target={"blank"} className="btn">sneak into the questions</a></div>
-            </div>
+  return (
+      <div class="card-hover">
+        <div class="card-hover__content">
+          <h3 class="card-hover__title">
+            {props.t}
+          </h3>
+          <p class="card-hover__text">
+            {props.abt}
+          </p>
+          <a href={props.elink} class="card-hover__link">
+            <span>See Questions</span>
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </a>
         </div>
-
-    );
+        <img
+          src={props.imgsrc}
+          alt=""
+        />
+      </div>
+  );
 }

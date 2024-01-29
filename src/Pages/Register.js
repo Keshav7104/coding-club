@@ -1,36 +1,11 @@
-import { useState, useEffect } from 'react';// to get data from other pages,hold input and extract data from server
+import { useState } from 'react';// to get data from other pages,hold input and extract data from server
 import { db } from '../Config/firebase'//server database
-import { getDocs, collection, addDoc } from 'firebase/firestore'//functions to mainuplate server
+import {  collection, addDoc } from 'firebase/firestore'//functions to mainuplate server
 import './Register.scss'//stylesheets
 
-const Register = ({ setIsadmin, setId }) => {
+const Register = () => {
   const members = collection(db, "Members");
   const [data, setdata] = useState({fullname:"",email:"",branch:"",year:0,prolan:""})
-  const [adminDat, setadminDat] = useState({id:"",pass:""});
-  const [memberlist, setMemberlist] = useState([]);
-
-  const getlist = async () => {
-    try {
-      const data = await getDocs(members);
-      const filterdata = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id
-      }));
-      setMemberlist(filterdata);
-
-    }
-    catch (err) {
-      console.error(err);
-    }
-  }
-  const Admins = collection(db, "Admins");
-  const [Adminlist, setAdminlist] = useState([]);
-
-  useEffect(() => {
-    getlist();
-    getAdmins();
-    console.log(memberlist);
-  },[]);
 
   //adding memeber data to server
   const onsubmit = async  (e) => {
@@ -50,43 +25,6 @@ const Register = ({ setIsadmin, setId }) => {
     }
   }
 
-  //admin log-in
-
-
-  const checkadmin = (e) => {
-    e.preventDefault();
-    for (let i = 0; i < Adminlist.length; i++) {
-      if (Adminlist[i].Id === adminDat.id) {
-        if (Adminlist[i].Password === adminDat.pass) {
-          setIsadmin(1);
-          setId(Adminlist[i].id);
-          alert("Logged In Succesfully.");
-          console.log("Welcome chief...");
-          break;
-        }
-        else {
-          setIsadmin(0);
-        }
-      }
-      else {
-        setIsadmin(0);
-      }
-    }
-  }
-  //get list of current admins from server
-  const getAdmins = async () => {
-    try {
-      const data1 = await getDocs(Admins);
-      const filterdata1 = data1.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id
-      }));
-      setAdminlist(filterdata1);
-    }
-    catch (err) {
-      console.error(err);
-    }
-  }
 
   return (
     <>
@@ -105,10 +43,10 @@ const Register = ({ setIsadmin, setId }) => {
             </form>
           </div>
           <div className='login'>
-            <form onSubmit={checkadmin}>
+            <form >
               <label htmlFor="chk" aria-hidden="true">Admin</label>
-              <input type="text" placeholder='Login-id' onChange={(e)=>setadminDat((prev)=>({...prev,id:e.target.value}))}  />
-              <input type="password" placeholder='Password' onChange={(e)=>setadminDat((prev)=>({...prev,pass:e.target.value}))}  />
+              <input type="text" placeholder='Login-id'  />
+              <input type="password" placeholder='Password'   />
               <button type="submit" className='button'>LOG-IN</button>
             </form>
           </div>
