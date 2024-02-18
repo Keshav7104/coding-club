@@ -4,20 +4,20 @@ import Team from '../Components/Cards/team'
 function Alumni() {
 const alumni =[
     {
-        img: "https://avatars.githubusercontent.com/u/124811079",
+        img: "https://avatars.githubusercontent.com/u/81693090?v=4",
         title:"Purushottam Shah",
         batch:"2020-2024",
         post:"Software Engineer",
     },
     {
-        img: "https://avatars.githubusercontent.com/u/124811079",
-        title:"Purushottam Shah",
+        img: "https://avatars.githubusercontent.com/u/68462214?v=4",
+        title:"Chandrashekhar Tripathi",
         batch:"2020-2024",
         post:"Software Engineer",
     },
     {
-        img: "https://avatars.githubusercontent.com/u/124811079",
-        title:"Purushottam Shah",
+        img: "https://avatars.githubusercontent.com/u/77870205?v=4",
+        title:"Dev Singh Kanyal",
         batch:"2020-2024",
         post:"Software Engineer",
     },
@@ -26,14 +26,14 @@ const alumni =[
   return (
     <>
         <div className="alumnibg">
-         <h1 className="alumnititle">ALUMNI ASSOCIATION</h1>
+         <h1 className="alumnititle">ALUMNI COUP</h1>
   <br />
          <div className="CaRd">
     <div className='alumnicard'>
   {alumni.map((member, index) => (
               <div key={index} className="alumni-member">
                 <img src={member.img} alt={member.title} id="alumniimg" />
-                <h2>{member.title}</h2>
+                <h2 id="alumnititle">{member.title}</h2>
                 <p>{member.batch}</p>
                 <p>{member.post}</p>
               </div>

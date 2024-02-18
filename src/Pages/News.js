@@ -8,7 +8,7 @@ import { collection, getDocs } from "@firebase/firestore";
 import { db } from "../Config/firebase";
 import { useEffect, useState } from "react";
 import LoadingScreen from "../Components/layout/loading";
-
+import './News.scss';
 const News = () => {
   const news = [
     {
@@ -91,7 +91,7 @@ const News = () => {
         <div>
           <section className="wrapper1">
             <div className="container">
-              <Head title={" Announcement"} />
+              <h1 id="newsTitle">ANNOUNCEMENTS</h1>
               <div className="row">
                 {NewsList.map((eve) => {
                   return <Annoucement {...eve} key={eve.title} />;

@@ -38,7 +38,7 @@ export default function Event1() {
     return (
         <>
             <div id="forbg">
-                <Head title={"Events"} />
+                <h1 id="eventTitle">EVENTS</h1>
                 <div className="top1">
                 </div>
                 <div id="top2">
