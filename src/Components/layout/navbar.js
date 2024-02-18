@@ -15,6 +15,7 @@ export default function Nav() {
     { to: "", name: "Home" },
     { to: "./News", name: "News" },
     { to: "./Events", name: "Events" },
+    {to: "./Alumni",name:"Alumni /"},
     { to: "./Register", name: "Register /" },
   ];
 
