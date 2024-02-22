@@ -6,6 +6,7 @@ import Event1 from "./Pages/Event1";
 import Home from "./Pages/Home";
 import News from "./Pages/News";
 import { useEffect, useState } from "react";
+import Alumni from "./Pages/Alumni";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/events" element={<Event1 />} />
           <Route path="/News" element={<News />} />
+          <Route path="/Alumni" element={<Alumni />} />
           <Route path="*" element={<h1>Sorry,you connected to wrong wire</h1>} />
         </Routes>
         <Footer visitors={Visitors} />
