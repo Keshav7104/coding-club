@@ -12,7 +12,7 @@
 .alumnititle {
     font-family: Hacked, sans-serif;
     padding-top: 50px; /* Adjusted padding for smaller screens */
-    font-size: 30px; /* Default font size for smaller screens */
+    font-size: 50px; /* Default font size for smaller screens */
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
 }
@@ -21,17 +21,19 @@ $white: #e8e8de;
 
 .alumnicard {
     display: flex;
-    flex-direction: column; /* Adjusted for mobile and smaller screens */
+    flex-direction: row; /* Adjusted for mobile and smaller screens */
     justify-content: center;
     align-items: center;
+    gap: 4;
+    padding: 3rem;
 }
 
 .alumni-member {
     background: $white;
-    padding: 1.5em; /* Adjusted padding for smaller screens */
+    padding: 2em; /* Adjusted padding for smaller screens */
     margin: 1.5em; /* Adjusted margin for smaller screens */
     height: auto; /* Adjusted height for smaller screens */
-    width: 80%; /* Adjusted width for smaller screens */
+    width: 100%; /* Adjusted width for smaller screens */
     border-radius: 20px;
     border: 1px solid $white; /* Combined border properties */
     backdrop-filter: blur(15px); /* Adjusted blur for smaller screens */
@@ -79,6 +81,6 @@ $white: #e8e8de;
     }
 
     .alumni-member {
-        width: 50%; /* Adjusted width for larger screens */
+        width: 100%; /* Adjusted width for larger screens */
     }
 }
