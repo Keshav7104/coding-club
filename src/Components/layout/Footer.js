@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.scss';
 import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export default function Footer({visitors}) {
   return (
     <footer className="footer-distributed">
 
@@ -25,6 +25,7 @@ export default function Footer() {
         </p>
 
         <p className="footer-company-name">Coding Pundits © 2023</p>
+        <h4>Visitors:- <span>{visitors}</span></h4>
       </div>
 
       <div className="footer-center">

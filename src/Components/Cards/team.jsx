@@ -6,9 +6,11 @@ export default function Team({ member }) {
     facebook: 'https://img.icons8.com/fluent/40/000000/facebook-new.png',
     linkedin: 'https://img.icons8.com/fluent/40/000000/linkedin-circled.png',
     instagram: 'https://static.cdninstagram.com/rsrc.php/yv/r/BTPhT6yIYfq.ico',
-    github: "https://img.icons8.com/dusk/40/null/github.png"
+    github: "https://img.icons8.com/dusk/40/null/github.png",
+    twitter:"https://img.icons8.com/ios-filled/50/twitterx--v1.png",
+    youtube:"https://img.icons8.com/color/48/youtube-play.png"
   }
-
+  
   return (
     <>
       <div className="card2">

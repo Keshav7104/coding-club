@@ -5,10 +5,20 @@ import Register from "./Pages/Register";
 import Event1 from "./Pages/Event1";
 import Home from "./Pages/Home";
 import News from "./Pages/News";
+import { useEffect, useState } from "react";
 import Alumni from "./Pages/Alumni";
 
 
 function App() {
+  const [Visitors, setVisitors] = useState(0);
+
+  useEffect(()=>{
+    const storedCount = localStorage.getItem("visitors");
+    const initialCount = Number(storedCount) || 0;
+    setVisitors(initialCount+1);
+    localStorage.setItem("visitors",initialCount+1);
+  },[])
+
   return (
     <>
       <Router>
@@ -21,10 +31,8 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="*" element={<h1>Sorry,you connected to wrong wire</h1>} />
         </Routes>
-
-        <Footer></Footer>
+        <Footer visitors={Visitors} />
       </Router>
-      <footer></footer>
     </>
   );
 }
