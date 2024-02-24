@@ -11,7 +11,7 @@ const alumni =[
     },
     {
         img: "https://avatars.githubusercontent.com/u/68462214?v=4",
-        title:"Chandrashekhar Tripathi",
+        title:"Chandra\nshekhar\nTripathi",
         batch:"2020-2024",
         post:"Software Engineer",
     },
@@ -33,7 +33,7 @@ const alumni =[
   {alumni.map((member, index) => (
               <div key={index} className="alumni-member">
                 <img src={member.img} alt={member.title} id="alumniimg" />
-                <h2 id="alumnititle">{member.title}</h2>
+                <h5 id="alumnititle">{member.title}</h5>
                 <p>{member.batch}</p>
                 <p>{member.post}</p>
               </div>
