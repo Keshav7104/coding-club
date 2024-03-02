@@ -25,7 +25,7 @@ export default function Footer({visitors}) {
         </p>
 
         <p className="footer-company-name">Coding Pundits © 2023</p>
-        <h4>Visitors:- <span>{visitors}</span></h4>
+     
       </div>
 
       <div className="footer-center">

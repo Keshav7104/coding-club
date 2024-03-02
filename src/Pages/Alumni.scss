@@ -1,5 +1,4 @@
-
-.alumnibg{
+.alumnibg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,45 +8,73 @@
     height: 100%;
     width: 100%;
 }
-.alumnititle{
+
+.alumnititle {
     font-family: Hacked, sans-serif;
-    padding-top: 100px;
-    font-size: 90px;
+    padding-top: 8.5rem; /* Adjusted padding for smaller screens */
+    font-size: 5rem; /* Default font size for smaller screens */
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
 }
+
 $white: #e8e8de;
 
-
-
-.alumnicard{
+.alumnicard {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Adjusted for mobile and smaller screens */
     justify-content: center;
     align-items: center;
+    gap: 8;
+    padding: 3rem;
 }
-.alumni-member{
+
+.alumni-member {
     background: $white;
-    padding: 2em;
-    margin: 3em;
-    height: 25rem;
-    width: 20rem;
+    padding: 2em; /* Adjusted padding for smaller screens */
+    margin: 1.5em; /* Adjusted margin for smaller screens */
+    height: auto; /* Adjusted height for smaller screens */
+    width: 100%; /* Adjusted width for smaller screens */
     border-radius: 20px;
-    border-left: 1px solid $white;
-    border-top: 1px solid $white;
-    backdrop-filter: blur(25px);
-    box-shadow: 20px 20px 60px 10px rgba(0,0,0,0.2);
+    border: 1px solid $white; /* Combined border properties */
+    backdrop-filter: blur(15px); /* Adjusted blur for smaller screens */
+    box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: all 0.2s ease-in-out;
 }
 
-#alumniimg{
+#alumniimg {
     border-radius: 50%;
-    height: 9rem;
-    width: 9rem;
+    height: 7rem; /* Adjusted height for smaller screens */
+    width: 7rem; /* Adjusted width for smaller screens */
 }
-  
-#alumnititle{
-    padding-top: 1.3rem;
+
+#alumnititle {
+    padding-top: 1rem; /* Adjusted padding for smaller screens */
 }
-  
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 480px) {
+    .alumnicard{
+        flex-direction: column;
+    }
+    /* Adjust font size for screens larger than 480px (common for small smartphones) */
+    .alumnititle {
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Add styles specific for tablets and larger screens */
+    .alumnicard{
+        flex-direction: column;
+    }
+    .alumnititle {
+        text-align: center;
+        font-size: 80px;
+    }
+
+    .alumni-member {
+        width: 80%; /* Adjusted width for tablets and larger screens */
+    }
+}
