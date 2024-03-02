@@ -11,8 +11,8 @@
 
 .alumnititle {
     font-family: Hacked, sans-serif;
-    padding-top: 50px; /* Adjusted padding for smaller screens */
-    font-size: 50px; /* Default font size for smaller screens */
+    padding-top: 8.5rem; /* Adjusted padding for smaller screens */
+    font-size: 5rem; /* Default font size for smaller screens */
     color: rgba(32, 178, 171, 1);
     -webkit-text-stroke: 1.5px black;
 }
@@ -24,7 +24,7 @@ $white: #e8e8de;
     flex-direction: row; /* Adjusted for mobile and smaller screens */
     justify-content: center;
     align-items: center;
-    gap: 4;
+    gap: 8;
     padding: 3rem;
 }
 
@@ -53,34 +53,28 @@ $white: #e8e8de;
 }
 
 /* Media queries for responsiveness */
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
+    .alumnicard{
+        flex-direction: column;
+    }
     /* Adjust font size for screens larger than 480px (common for small smartphones) */
     .alumnititle {
-        padding-top: 10rem;
+        text-align: center;
         font-size: 40px;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     /* Add styles specific for tablets and larger screens */
+    .alumnicard{
+        flex-direction: column;
+    }
     .alumnititle {
-        padding-top: 10rem;
-        font-size: 50px;
+        text-align: center;
+        font-size: 80px;
     }
 
     .alumni-member {
-        width: 50%; /* Adjusted width for tablets and larger screens */
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    /* Add styles specific for larger screens */
-    .alumnititle {
-        padding-top: 10rem;
-        font-size: 70px;
-    }
-
-    .alumni-member {
-        width: 100%; /* Adjusted width for larger screens */
+        width: 80%; /* Adjusted width for tablets and larger screens */
     }
 }
