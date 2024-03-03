@@ -172,7 +172,7 @@ function Parallex() {
         </section>
 
         <section className='scroll'>
-          <Head title={"Code Squad"} />
+          <Head title={"Code Crew"} />
           <div className='team-wrapper'>
             <div className='team' id='carousal'>
               {teamlist.map((member,) =>

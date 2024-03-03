@@ -164,8 +164,9 @@
     .team {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: 6rem;
         padding: 1rem 0;
+        padding-bottom: 3rem;
         justify-content: center;
         animation-name: move;
         overflow: visible;
@@ -177,12 +178,12 @@
     }
 
     .moveright {
-        animation: moveright 0.65s ease-out;
+        animation: moveright 0.45s ease-in-out;
         animation-fill-mode: forwards;
     }
 
     .moveleft {
-        animation: moveleft 0.65s ease-out;
+        animation: moveleft 0.45s ease-in-out;
         animation-fill-mode: forwards;
     }
 
@@ -192,7 +193,7 @@
         }
 
         100% {
-            transform: translateX(20rem);
+            transform: translateX(24rem);
         }
     }
 
@@ -202,7 +203,7 @@
         }
 
         100% {
-            transform: translateX(-20rem);
+            transform: translateX(-24rem);
         }
     }
 }
