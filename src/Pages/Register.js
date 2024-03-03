@@ -1,6 +1,6 @@
 import { useState } from 'react';// to get data from other pages,hold input and extract data from server
 import { db } from '../Config/firebase'//server database
-import {  collection, addDoc } from 'firebase/firestore'//functions to mainuplate server
+import {  collection, addDoc, doc, setDoc } from 'firebase/firestore'//functions to mainuplate server
 import './Register.scss'//stylesheets
 
 const Register = () => {
@@ -10,14 +10,16 @@ const Register = () => {
   //adding memeber data to server
   const onsubmit = async  (e) => {
     e.preventDefault();
+    const docref = doc(db,"Members",data.fullname);
+    const details = {
+      Name: data.fullname,
+      Email: data.email,
+      Branch: data.branch,
+      Year: data.year,
+      Language: data.prolan
+    }
     try {
-      await addDoc(members, {
-        Name: data.fullname,
-        Email: data.email,
-        Branch: data.branch,
-        Year: data.year,
-        Language: data.prolan
-      })
+      await setDoc(docref,details);
       alert("Congrats you Applied Succesfully for our club.");
     }
     catch (err) {
